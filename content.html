@@ -60,624 +60,683 @@ E-learning &amp; báo cáo
 </div>
 </aside>
 
-<main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 32px 40px 48px; display: flex; flex-direction: column; gap: 24px">
-<section style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 28px 36px 48px; display: flex; flex-direction: column; gap: 18px">
+
+<section style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 16px">
 <div style="display: flex; align-items: center; gap: 14px; min-width: 0; flex: 1 1 380px">
-<span style="flex: 0 0 auto; color: #8F2333; display: flex"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 5-2.414-2.414A2 2 0 0 0 14.172 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12"/><path d="M21.378 12.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/><path d="M8 18h1"/></svg></span>
-<div style="display: flex; flex-direction: column; gap: 4px; min-width: 0">
-<h1 style="font-family: 'Be Vietnam Pro', 'Inter', system-ui, sans-serif; margin: 0; font-size: 28px; font-weight: 800; line-height: 1.2">VIẾT CONTENT &amp; THIẾT KẾ</h1>
-<span style="font-size: 13px; line-height: 1.5">Nhập brief, nhận 3 phương án bài viết đúng giọng NSV, dựng hình demo, duyệt rồi đưa sang Lịch đăng</span>
+<span style="flex: 0 0 auto; color: #8F2333; display: flex"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 5-2.414-2.414A2 2 0 0 0 14.172 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12"/><path d="M21.378 12.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/><path d="M8 18h1"/></svg></span>
+<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<h1 style="font-family: 'Be Vietnam Pro', 'Inter', system-ui, sans-serif; margin: 0; font-size: 26px; font-weight: 800; line-height: 1.2">VIẾT CONTENT &amp; THIẾT KẾ</h1>
+<span style="font-size: 13px; line-height: 1.5">Nhập yêu cầu một chỗ, nhận bài viết và hình ảnh đi cùng, rồi đưa vào Lịch đăng.</span>
 </div>
 </div>
-<span style="background: #FFFFFF; border: 1px solid #817971; font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 999px">Bản mẫu</span>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px">
+<button type="button" onClick="{{ openSig }}" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; min-height: 38px; padding: 0 16px; border: 1.5px solid #8F2333; background: #FFFFFF; color: #8F2333; display: inline-flex; align-items: center; gap: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></svg>Chữ ký cố định</button>
+<button type="button" onClick="{{ openKho }}" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; min-height: 38px; padding: 0 16px; border: 1.5px solid #8F2333; background: #FFFFFF; color: #8F2333; display: inline-flex; align-items: center; gap: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>Kho bài viết · {{ khoCount }}</button>
+<span style="background: #FFFFFF; border: 1.5px solid #D99A32; font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 999px">Bản demo · nội dung viết sẵn</span>
+</div>
 </section>
 
-<section style="background: #F0EBE2; border-radius: 12px; padding: 12px 16px; display: flex; align-items: flex-start; gap: 12px">
-<span style="color: #8F2333; display: flex; flex: 0 0 auto; margin-top: 1px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg></span>
-<span style="font-size: 13px; line-height: 1.5">Bản mẫu: bài chỉ dùng thông tin chị nhập trong brief, chỗ nào thiếu sẽ hiện [điền: …], trợ lý không tự bịa số liệu, tên hay ngày. Bản nháp được ghép từ khuôn của từng loại bài, chưa phải AI tự viết theo yêu cầu bất kỳ. Bản thật cần kết nối AI.</span>
-</section>
-
-<div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch">
-<sc-for list="{{ steps }}" as="p" hint-placeholder-count="4">
-<div style="flex: 1 1 200px; background: #FFFFFF; border: 1px solid #F0EBE2; border-radius: 14px; padding: 12px 14px; display: flex; align-items: center; gap: 12px">
-<span style="flex: 0 0 auto; width: 36px; height: 36px; border-radius: 999px; background: {{ p.bg }}; color: {{ p.fg }}; border: 2px solid #8F2333; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px">{{ p.n }}</span>
-<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 700">{{ p.label }}</span><span style="font-size: 12px">{{ p.state }}</span></div>
-</div>
+<section aria-label="Gợi ý bắt đầu nhanh" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px">
+<span style="font-size: 12px; font-weight: 700; color: #817971">Gợi ý hôm nay</span>
+<sc-for list="{{ starters }}" as="g" hint-placeholder-count="2">
+<button type="button" onClick="{{ g.pick }}" style="min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1.5px solid {{ g.border }}; background: {{ g.bg }}; color: {{ g.fg }}; font-family: inherit; font-size: 12.5px; font-weight: 700; cursor: pointer">{{ g.label }}</button>
 </sc-for>
+<span style="font-size: 12px">Lấy từ “Top bài phải có tuần này” và trang Xu hướng &amp; ý tưởng.</span>
+</section>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 18px; align-items: start">
+
+<section aria-labelledby="c1" style="background: #FFFFFF; border: 1px solid #F0EBE2; border-radius: 18px; box-shadow: 0 1px 3px rgba(52,45,41,0.08); padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; gap: 8px; color: #8F2333"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg><h2 id="c1" style="font-family: 'Be Vietnam Pro', 'Inter', system-ui, sans-serif; margin: 0; font-size: 17px; font-weight: 800; color: #8F2333">Nhập yêu cầu sáng tạo</h2></div>
+<div style="position: relative">
+<textarea aria-label="Yêu cầu sáng tạo" value="{{ prompt }}" onChange="{{ onPrompt }}" rows="8" style="width: 100%; box-sizing: border-box; padding: 12px 12px 26px; border-radius: 12px; border: 1px solid #E4DCCB; background: #FBF8F2; font-family: inherit; font-size: 13.5px; line-height: 1.6; color: #342D29; resize: vertical"></textarea>
+<span style="position: absolute; right: 12px; bottom: 8px; font-size: 11.5px">{{ promptCount }} / 1.000</span>
 </div>
 
-<section style="background: #FFFFFF; border: 1px solid #F0EBE2; border-radius: 16px; box-shadow: 0 1px 3px rgba(52,45,41,0.08); padding: 20px; display: flex; flex-direction: column; gap: 12px">
-<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
-<div style="display: flex; align-items: center; gap: 10px; color: #8F2333"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg><h2 style="font-family: 'Be Vietnam Pro', 'Inter', system-ui, sans-serif; margin: 0; font-size: 18px; font-weight: 700; color: #342D29">GỢI Ý BÀI NÊN VIẾT</h2></div>
-<span style="background: #FFFFFF; border: 1.5px solid #817971; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 999px">Gợi ý minh họa</span>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<label style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><span style="font-size: 11.5px; font-weight: 700; color: #817971">Loại nội dung</span><select value="{{ fType }}" onChange="{{ onType }}" style="width: 100%; min-height: 40px; box-sizing: border-box; padding: 0 8px; border-radius: 10px; border: 1px solid #E4DCCB; background: #FFFFFF; font-family: inherit; font-size: 13px; font-weight: 600; color: #342D29"><option value="Ngày lễ">Ngày lễ</option><option value="Bản tin nội bộ">Bản tin nội bộ</option><option value="Tuyển dụng">Tuyển dụng</option><option value="Văn hóa">Văn hóa</option><option value="Recap sự kiện">Recap sự kiện</option><option value="Kịch bản video">Kịch bản video</option><option value="SEO">SEO</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><span style="font-size: 11.5px; font-weight: 700; color: #817971">Kênh đăng tải</span><select value="{{ fChan }}" onChange="{{ onChan }}" style="width: 100%; min-height: 40px; box-sizing: border-box; padding: 0 8px; border-radius: 10px; border: 1px solid #E4DCCB; background: #FFFFFF; font-family: inherit; font-size: 13px; font-weight: 600; color: #342D29"><option value="Fanpage NSV">Fanpage NSV</option><option value="TikTok">TikTok</option><option value="Zalo nội bộ">Zalo nội bộ</option><option value="Website">Website</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><span style="font-size: 11.5px; font-weight: 700; color: #817971">Đối tượng</span><select value="{{ fAud }}" onChange="{{ onAud }}" style="width: 100%; min-height: 40px; box-sizing: border-box; padding: 0 8px; border-radius: 10px; border: 1px solid #E4DCCB; background: #FFFFFF; font-family: inherit; font-size: 13px; font-weight: 600; color: #342D29"><option value="NSVers (nội bộ)">NSVers (nội bộ)</option><option value="Ứng viên">Ứng viên</option><option value="Đối tác và công chúng">Đối tác và công chúng</option><option value="Cộng đồng theo dõi (Fanpage, TikTok)">Cộng đồng theo dõi (Fanpage, TikTok)</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><span style="font-size: 11.5px; font-weight: 700; color: #817971">Độ dài</span><select value="{{ fLen }}" onChange="{{ onLen }}" style="width: 100%; min-height: 40px; box-sizing: border-box; padding: 0 8px; border-radius: 10px; border: 1px solid #E4DCCB; background: #FFFFFF; font-family: inherit; font-size: 13px; font-weight: 600; color: #342D29"><option value="Ngắn (<150 chữ)">Ngắn (<150 chữ)</option><option value="Vừa (<400 chữ)">Vừa (<400 chữ)</option><option value="Dài (SEO)">Dài (SEO)</option></select></label>
+<div style="grid-column: 1 / -1"><label style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><span style="font-size: 11.5px; font-weight: 700; color: #817971">Nhóm nội dung (hashtag cố định)</span><select value="{{ fPil }}" onChange="{{ onPil }}" style="width: 100%; min-height: 40px; box-sizing: border-box; padding: 0 8px; border-radius: 10px; border: 1px solid #E4DCCB; background: #FFFFFF; font-family: inherit; font-size: 13px; font-weight: 600; color: #342D29"><option value="#NSVluv · Holiday">#NSVluv · Holiday</option><option value="#NSVnews · Tin tức">#NSVnews · Tin tức</option><option value="#NSVedu · Chia sẻ">#NSVedu · Chia sẻ</option><option value="#NSVrecruit · Tuyển dụng">#NSVrecruit · Tuyển dụng</option><option value="#NSVj4f · Giải trí">#NSVj4f · Giải trí</option></select></label></div>
 </div>
-<span style="font-size: 13px; line-height: 1.5">Lấy từ Top bài tuần này, ý tưởng AI và xu hướng. Bấm Dùng làm brief để điền sẵn loại bài, kênh, pillar và những thông tin đã biết. Chị kiểm tra lại trước khi tạo bài.</span>
-<div style="display: flex; flex-wrap: wrap; gap: 12px">
-<sc-for list="{{ sugCards }}" as="g" hint-placeholder-count="6">
-<div style="flex: 1 1 280px; min-width: 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 8px; padding: 14px; border-radius: 14px; border: 1.5px solid {{ g.border }}; background: {{ g.bg }}">
-<span style="font-size: 14px; font-weight: 700; line-height: 1.4">{{ g.title }}</span>
+
+<label style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 700; color: #8F2333">Mục tiêu <span style="font-weight: 500; color: #817971">(tự ghi, có thể nhiều mục tiêu)</span></span>
+<textarea value="{{ goal }}" onChange="{{ onGoal }}" rows="3" placeholder="Ví dụ: tăng tương tác fanpage; kéo NSVers tham gia hoạt động; có đủ CV trước hạn nộp..." style="width: 100%; box-sizing: border-box; padding: 10px 12px; border-radius: 12px; border: 1px solid #E4DCCB; background: #FFFFFF; font-family: inherit; font-size: 13px; line-height: 1.55; color: #342D29; resize: vertical"></textarea></label>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="font-size: 12px; font-weight: 700; color: #8F2333">Giọng văn</span><span style="font-size: 12px; font-weight: 700; color: #8F2333">{{ toneCount }}</span></div>
 <div style="display: flex; flex-wrap: wrap; gap: 6px">
-<span style="background: #FFFFFF; border: 1.5px solid #8F2333; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 999px">{{ g.pillar }}</span>
-<span style="background: #FFFFFF; border: 1px solid #F0EBE2; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 999px">{{ g.typeCh }}</span>
-</div>
-<span style="font-size: 12px; line-height: 1.5">{{ g.why }}</span>
-<div><button type="button" onClick="{{ g.pick }}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 12px; border: 1.5px solid #8F2333; background: {{ g.btnBg }}; color: {{ g.btnFg }}; font-family: inherit; font-size: 13px; font-weight: 700">{{ g.btnLabel }}</button></div>
-</div>
+<sc-for list="{{ toneChips }}" as="t" hint-placeholder-count="6">
+<button type="button" onClick="{{ t.pick }}" style="min-height: 34px; padding: 0 12px; border-radius: 999px; border: 1.5px solid {{ t.border }}; background: {{ t.bg }}; color: {{ t.fg }}; font-family: inherit; font-size: 12.5px; font-weight: 700; cursor: pointer">{{ t.label }}</button>
 </sc-for>
 </div>
-</section>
-
-<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
-
-<section style="background: #FFFFFF; border: 1px solid #F0EBE2; border-radius: 16px; box-shadow: 0 1px 3px rgba(52,45,41,0.08); padding: 20px; flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
-<div style="display: flex; align-items: center; gap: 10px; color: #8F2333"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg><h2 style="font-family: 'Be Vietnam Pro', 'Inter', system-ui, sans-serif; margin: 0; font-size: 18px; font-weight: 700; color: #342D29">BRIEF</h2></div>
-
-<div style="display: flex; flex-direction: column; gap: 8px">
-<span style="font-size: 13px; font-weight: 600">Loại bài</span>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<sc-for list="{{ typeChips }}" as="c" hint-placeholder-count="3">
-<button type="button" onClick="{{ c.pick }}" aria-pressed="{{ c.on }}" style="min-height: 44px; padding: 0 14px; border-radius: 999px; border: 1.5px solid {{ c.border }}; background: {{ c.bg }}; color: {{ c.fg }}; font-family: inherit; font-size: 13px; font-weight: 700">{{ c.label }}</button>
-</sc-for>
-</div>
+<span style="font-size: 11.5px; line-height: 1.5; color: {{ toneNoteColor }}">{{ toneNote }}</span>
 </div>
 
 <div style="display: flex; flex-direction: column; gap: 8px">
-<span style="font-size: 13px; font-weight: 600">Kênh đăng</span>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<sc-for list="{{ channelChips }}" as="c" hint-placeholder-count="5">
-<button type="button" onClick="{{ c.pick }}" aria-pressed="{{ c.on }}" style="min-height: 44px; padding: 0 14px; border-radius: 999px; border: 1.5px solid {{ c.border }}; background: {{ c.bg }}; color: {{ c.fg }}; font-family: inherit; font-size: 13px; font-weight: 700">{{ c.label }}</button>
+<span style="font-size: 12px; font-weight: 700; color: #8F2333">Link tham khảo <span style="font-weight: 500; color: #817971">(bài muốn viết theo, nếu có)</span></span>
+<div style="display: flex; gap: 6px">
+<input type="url" aria-label="Link bài tham khảo" value="{{ linkInput }}" onChange="{{ onLinkInput }}" placeholder="Dán link bài viết, tin tức, Google Docs..." style="width: 100%; box-sizing: border-box; min-height: 40px; padding: 0 12px; border-radius: 10px; border: 1px solid #E4DCCB; background: #FFFFFF; font-family: inherit; font-size: 13px; color: #342D29; flex: 1; min-width: 0">
+<button type="button" onClick="{{ addLink }}" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; min-height: 40px; padding: 0 14px; border: 1.5px solid #8F2333; background: #FFFFFF; color: #8F2333">Thêm</button>
+</div>
+<sc-if value="{{ hasLinks }}">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<sc-for list="{{ links }}" as="l" hint-placeholder-count="1">
+<div style="display: flex; align-items: center; gap: 8px; border: 1px solid #E4DCCB; border-radius: 10px; padding: 8px 10px; background: #FBF8F2">
+<span style="color: #8F2333; display: flex; flex: 0 0 auto"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>
+<div style="min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 1px"><b style="font-size: 12.5px; overflow-wrap: anywhere">{{ l.host }}</b><span style="font-size: 11.5px; color: #B8860B; font-weight: 700">Chờ trợ lý đọc và viết theo</span></div>
+<button type="button" aria-label="Bỏ link" onClick="{{ l.remove }}" style="border: 0; background: transparent; cursor: pointer; color: #817971; display: flex; padding: 4px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+</div>
 </sc-for>
 </div>
-<span style="font-size: 12px; line-height: 1.5">{{ channelNote }}</span>
+</sc-if>
+<span style="font-size: 11.5px; line-height: 1.5; color: #817971">Link công khai và Google Docs đã chia sẻ thì trợ lý đọc được. Nhóm kín hoặc bài cần đăng nhập thì dán nội dung vào ô yêu cầu.</span>
+</div>
+
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; border: 1.5px dashed #C8A96B; border-radius: 12px; background: #FBF8F2; padding: 10px 12px">
+<span style="font-size: 12.5px; line-height: 1.5; font-weight: 600">{{ starLine }}</span>
+<button type="button" onClick="{{ openKho }}" style="border: 0; background: transparent; color: #8F2333; font-family: inherit; font-size: 12.5px; font-weight: 800; cursor: pointer; white-space: nowrap">Mở kho</button>
+</div>
+
+<button type="button" onClick="{{ runGen }}" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; min-height: 50px; border: 0; background: linear-gradient(135deg, #8F2333, #A83243); color: #FFFFFF; font-size: 14px; display: inline-flex; align-items: center; justify-content: center; gap: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>{{ genLabel }}</button>
+<span style="font-size: 12px; line-height: 1.5">{{ genNote }}</span>
+</section>
+
+<section aria-labelledby="c2" style="background: #FFFFFF; border: 1px solid #F0EBE2; border-radius: 18px; box-shadow: 0 1px 3px rgba(52,45,41,0.08); padding: 20px; display: flex; flex-direction: column; gap: 14px; min-height: 640px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px">
+<div role="tablist" style="display: flex; gap: 6px">
+<button type="button" role="tab" aria-selected="{{ tabPost }}" onClick="{{ goPost }}" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; min-height: 38px; padding: 0 12px; white-space: nowrap; border: 0; background: {{ tabPostBg }}; color: {{ tabPostFg }}; display: inline-flex; align-items: center; gap: 6px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h5"/></svg><span id="c2">Bài viết</span></button>
+<button type="button" role="tab" aria-selected="{{ tabVer }}" onClick="{{ goVer }}" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; min-height: 38px; padding: 0 12px; white-space: nowrap; border: 0; background: {{ tabVerBg }}; color: {{ tabVerFg }}">{{ verCount }}</button>
+</div>
+<span style="font-size: 12px; font-weight: 800; white-space: nowrap; padding: 5px 10px; border-radius: 999px; border: 1.5px solid {{ statusColor }}; color: {{ statusColor }}; background: #FFFFFF">{{ statusText }}</span>
+</div>
+
+<sc-if value="{{ isPost }}">
+<div style="display: flex; flex-direction: column; gap: 12px; flex: 1">
+<div style="display: flex; flex-wrap: wrap; gap: 6px"><span style="font-size: 11px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; background: #F7F2E9; color: #8F2333">Phiên bản {{ verTone }}</span></div>
+<h3 style="font-family: 'Be Vietnam Pro', 'Inter', system-ui, sans-serif; margin: 0; font-size: 18px; font-weight: 800; line-height: 1.4">{{ title }}</h3>
+<sc-for list="{{ paras }}" as="p" hint-placeholder-count="4">
+<p style="margin: 0; font-size: 13.5px; line-height: 1.7; white-space: pre-line">{{ p.text }}</p>
+</sc-for>
+<sc-if value="{{ hasSig }}">
+<div style="border-left: 3px solid #C8A96B; background: #FBF8F2; border-radius: 0 10px 10px 0; padding: 10px 12px; display: flex; flex-direction: column; gap: 4px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: #8F2333">{{ sigLabel }}</span><button type="button" onClick="{{ openSig }}" style="border: 0; background: transparent; color: #8F2333; font-family: inherit; font-size: 12px; font-weight: 800; cursor: pointer">Sửa</button></div>
+<span style="font-size: 13px; line-height: 1.65; white-space: pre-line; overflow-wrap: anywhere">{{ sigText }}</span>
+</div>
+</sc-if>
+<span style="font-size: 13px; line-height: 1.6; color: #2A5DA8; overflow-wrap: anywhere">{{ tags }}</span>
+</div>
+</sc-if>
+
+<sc-if value="{{ isVer }}">
+<div style="display: flex; flex-direction: column; gap: 10px; flex: 1">
+<sc-for list="{{ versions }}" as="v" hint-placeholder-count="3">
+<article style="border: 1.5px solid {{ v.border }}; border-radius: 14px; padding: 12px 14px; background: #FFFFFF; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><b style="font-size: 13px; color: #8F2333">{{ v.tone }}</b><span style="font-size: 12px">{{ v.words }}</span></div>
+<b style="font-size: 13.5px; line-height: 1.45">{{ v.title }}</b>
+<span style="font-size: 12.5px; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">{{ v.lead }}</span>
+<button type="button" onClick="{{ v.use }}" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; min-height: 36px; align-self: flex-start; padding: 0 14px; border: 1px solid #8F2333; background: {{ v.btnBg }}; color: {{ v.btnFg }}">{{ v.btnLabel }}</button>
+</article>
+</sc-for>
+</div>
+</sc-if>
+
+<div style="border-top: 1px solid #F0EBE2; padding-top: 12px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 12px; font-weight: 700; color: {{ wordColor }}">{{ wordText }}</span>
+<span style="font-size: 12px; line-height: 1.5; color: {{ fillColor }}">{{ fillText }}</span>
+<div style="display: flex; gap: 8px">
+<button type="button" onClick="{{ actChot }}" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; flex: 1; border: 0; background: {{ chotBg }}; color: #FFFFFF">{{ chotLabel }}</button>
+<button type="button" aria-label="Sao chép bài" onClick="{{ copyPost }}" style="width: 46px; border-radius: 12px; border: 1px solid #E4DCCB; background: #FFFFFF; cursor: pointer; color: #342D29"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg></button>
+</div>
+<span style="font-size: 11.5px; line-height: 1.5; color: #817971">Chốt để lưu bài vào Kho và chuyển sang Lịch đăng. Trợ lý dùng bài đã chốt làm mẫu giọng cho các lần viết sau.</span>
+<div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px dashed #E4DCCB; padding-top: 10px">
+<span style="font-size: 12px; font-weight: 700">Kiểm tra trước khi gửi duyệt ({{ checkDone }} / 6)</span>
+<span style="font-size: 11.5px; line-height: 1.5; color: #817971">Theo SOP, bài phải qua các mục này trước khi Quản lý duyệt. Tick đủ và hết chỗ [điền] thì khi chốt, bài vào Lịch đăng ở trạng thái Chờ duyệt, chưa đủ thì là Nháp.</span>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<sc-for list="{{ checks }}" as="k" hint-placeholder-count="6">
+<button type="button" onClick="{{ k.toggle }}" aria-pressed="{{ k.on }}" style="min-height: 32px; padding: 0 10px; border-radius: 999px; border: 1.5px solid {{ k.border }}; background: {{ k.bg }}; color: {{ k.fg }}; font-family: inherit; font-size: 12px; font-weight: 600; cursor: pointer">{{ k.label }}</button>
+</sc-for>
+</div>
+<span style="font-size: 12px; line-height: 1.5; font-weight: 700; color: {{ readyColor }}">{{ readyText }}</span>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="c3" style="background: #FFFFFF; border: 1px solid #F0EBE2; border-radius: 18px; box-shadow: 0 1px 3px rgba(52,45,41,0.08); padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; gap: 8px; color: #8F2333"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg><h2 id="c3" style="font-family: 'Be Vietnam Pro', 'Inter', system-ui, sans-serif; margin: 0; font-size: 17px; font-weight: 800; color: #8F2333">Thiết kế hình ảnh</h2></div>
+
+<div style="display: flex; align-items: center; justify-content: center; height: 430px; background: #F0EBE2; border-radius: 14px; padding: 10px; box-sizing: border-box">
+<div role="img" aria-label="Xem trước hình ảnh bài đăng" style="width: {{ pw }}px; height: {{ ph }}px; container-type: inline-size; position: relative; overflow: hidden; border-radius: 6px; background: {{ pBg }}; color: {{ pFg }}; border: {{ pBorder }}; display: flex; flex-direction: column; align-items: {{ pAlign }}; justify-content: space-between; text-align: {{ pText }}; box-sizing: border-box; box-shadow: 0 6px 18px rgba(52,45,41,0.18)">
+<div style="width: 100%; box-sizing: border-box; padding: 5cqw 6cqw 0; display: flex; align-items: center; justify-content: {{ pLogoJ }}; gap: 2cqw">
+<div style="width: 9cqw; height: 9cqw; border-radius: 2cqw; background: #C8A96B; color: #342D29; font-family: 'Be Vietnam Pro', 'Inter', system-ui, sans-serif; font-weight: 800; font-size: 3.4cqw; display: flex; align-items: center; justify-content: center">NSV</div>
+<span style="font-size: 2.8cqw; font-weight: 700; letter-spacing: 0.04em; color: {{ pFg }}">NGUỒN SỐNG VIỆT GROUP</span>
+</div>
+<div style="width: 100%; box-sizing: border-box; padding: 0 8cqw; display: flex; flex-direction: column; align-items: {{ pAlign }}; gap: 2.4cqw">
+<span style="font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-size: {{ pKick }}cqw; color: {{ pAccent }}; line-height: 1.1">{{ pKicker }}</span>
+<span style="font-family: 'Be Vietnam Pro', 'Inter', system-ui, sans-serif; font-weight: 800; font-size: {{ pHead }}cqw; line-height: 1.15; overflow-wrap: anywhere">{{ pTitle }}</span>
+<span style="display: inline-block; font-family: Georgia, 'Times New Roman', serif; font-weight: 700; font-size: {{ pBig }}cqw; line-height: 1.1; padding: 1cqw 5cqw; border-radius: 2cqw; background: {{ pChipBg }}; color: {{ pChipFg }}">{{ pBigText }}</span>
+<span style="font-size: 3cqw; line-height: 1.5; max-width: 80cqw; color: {{ pFg }}">{{ pSub }}</span>
+</div>
+<div style="width: 100%; box-sizing: border-box; padding: 2.6cqw 6cqw; background: {{ pFootBg }}; color: {{ pFootFg }}; font-size: 2.6cqw; font-weight: 600; display: flex; justify-content: space-between; gap: 2cqw"><span>Nguồn Sống Việt Group</span><span>[điền: link Fanpage]</span></div>
+</div>
 </div>
 
 <div style="display: flex; flex-direction: column; gap: 8px">
-<span style="font-size: 13px; font-weight: 600">Pillar nội dung</span>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<sc-for list="{{ pillarChips }}" as="p" hint-placeholder-count="5">
-<button type="button" onClick="{{ p.pick }}" aria-pressed="{{ p.on }}" style="min-height: 44px; padding: 0 14px; border-radius: 999px; border: 1.5px solid {{ p.border }}; background: {{ p.bg }}; color: {{ p.fg }}; font-family: inherit; font-size: 13px; font-weight: 700">{{ p.label }}</button>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="font-size: 12px; font-weight: 700; color: #8F2333">Ảnh thật &amp; tư liệu (để bắt mood)</span><span style="font-size: 12px; font-weight: 700; color: #8F2333">{{ imgCount }}</span></div>
+<sc-if value="{{ hasImgs }}">
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{ imgs }}" as="m" hint-placeholder-count="3">
+<div style="position: relative">
+<button type="button" aria-label="{{ m.name }}" onClick="{{ m.pick }}" style="display: block; width: 100%; aspect-ratio: 1 / 1; box-sizing: border-box; border-radius: 10px; border: {{ m.border }}; background: {{ m.bg }}; cursor: pointer; padding: 0; position: relative; overflow: hidden"><span style="position: absolute; left: 0; right: 0; bottom: 0; font-size: 10.5px; font-weight: 700; color: #FFFFFF; padding: 3px 4px; background: {{ m.tagBg }}">{{ m.tag }}</span></button>
+<button type="button" aria-label="Bỏ ảnh" onClick="{{ m.remove }}" style="position: absolute; top: 4px; right: 4px; width: 22px; height: 22px; border-radius: 999px; border: 0; background: rgba(255,255,255,0.92); color: #342D29; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+</div>
 </sc-for>
 </div>
-<span style="font-size: 12px; line-height: 1.5">{{ pillarNote }}</span>
-<sc-if value="{{ showExtra }}" hint-placeholder-val="true">
-<label for="extratags" style="font-size: 13px; font-weight: 600">Hashtag bổ sung (1–2 hashtag theo chủ đề bài)</label>
-<input id="extratags" type="text" value="{{ extraTags }}" onChange="{{ onExtra }}" placeholder="VD: #aitrongcongviec #daotaonoibo" style="box-sizing: border-box; width: 100%; min-height: 44px; padding: 0 14px; border-radius: 12px; border: 1px solid #817971; background: #FFFFFF; font-family: inherit; font-size: 14px; color: #342D29" />
 </sc-if>
+<label style="display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; border: 1.5px dashed #C8A96B; border-radius: 12px; background: #FBF8F2; font-size: 12.5px; font-weight: 700; color: #8F2333; cursor: pointer; padding: 6px 10px; text-align: center">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m17 8-5-5-5 5"/><path d="M12 3v12"/></svg><span>Tải ảnh văn phòng, sự kiện, đội ngũ (PNG, JPG)</span>
+<input type="file" accept="image/*" multiple onChange="{{ onImgs }}" style="display: none">
+</label>
+<span style="font-size: 11.5px; line-height: 1.5; color: #817971">Ảnh thật giúp trợ lý bắt tone màu, ánh sáng và bố cục. Bấm vào ảnh để thử làm nền poster. Ảnh chỉ nằm trong trình duyệt của bạn.</span>
 </div>
 
-<div style="display: flex; flex-direction: column; gap: 10px; background: #F7F2E9; border-radius: 12px; padding: 14px">
-<span style="font-size: 13px; font-weight: 700">Thông tin bắt buộc cho loại bài này</span>
-<sc-for list="{{ fieldRows }}" as="f" hint-placeholder-count="4">
-<div style="display: flex; flex-direction: column; gap: 6px">
-<label for="{{ f.id }}" style="font-size: 13px; font-weight: 600">{{ f.label }}</label>
-<sc-if value="{{ f.isText }}" hint-placeholder-val="{{ true }}">
-<input id="{{ f.id }}" type="text" value="{{ f.value }}" onChange="{{ f.onChange }}" placeholder="{{ f.hint }}" style="min-height: 44px; box-sizing: border-box; padding: 0 14px; border-radius: 12px; border: 1px solid #817971; background: #FFFFFF; font-family: inherit; font-size: 14px; color: #342D29">
-</sc-if>
-<sc-if value="{{ f.isArea }}" hint-placeholder-val="{{ false }}">
-<textarea id="{{ f.id }}" rows="4" value="{{ f.value }}" onChange="{{ f.onChange }}" placeholder="{{ f.hint }}" style="box-sizing: border-box; padding: 10px 14px; border-radius: 12px; border: 1px solid #817971; background: #FFFFFF; font-family: inherit; font-size: 14px; line-height: 1.5; color: #342D29; resize: vertical"></textarea>
-</sc-if>
-</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 12px; font-weight: 700; color: #8F2333">Tùy chỉnh &amp; tạo phiên bản khác</span>
+<label style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><span style="font-size: 11.5px; font-weight: 700; color: #817971">Kích thước</span><select value="{{ size }}" onChange="{{ onSize }}" style="width: 100%; min-height: 40px; box-sizing: border-box; padding: 0 8px; border-radius: 10px; border: 1px solid #E4DCCB; background: #FFFFFF; font-family: inherit; font-size: 13px; font-weight: 600; color: #342D29"><option value="Social · 1200 × 1200 px">Social · 1200 × 1200 px</option><option value="Bản tin nội bộ · A5 14,8 × 21 cm">Bản tin nội bộ · A5 14,8 × 21 cm</option><option value="Facebook dọc · 1080 × 1350 px">Facebook dọc · 1080 × 1350 px</option><option value="Story · TikTok 1080 × 1920 px">Story · TikTok 1080 × 1920 px</option><option value="Banner · 1200 × 628 px">Banner · 1200 × 628 px</option></select></label>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 11.5px; font-weight: 700; color: #817971">Phong cách</span>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px">
+<sc-for list="{{ styles }}" as="s" hint-placeholder-count="3">
+<button type="button" onClick="{{ s.pick }}" style="min-height: 38px; border-radius: 10px; border: 1.5px solid {{ s.border }}; background: {{ s.bg }}; color: {{ s.fg }}; font-family: inherit; font-size: 12.5px; font-weight: 700; cursor: pointer">{{ s.label }}</button>
 </sc-for>
-<span style="font-size: 12px; line-height: 1.5">{{ missText }}</span>
+</div></div>
+<button type="button" onClick="{{ nextLayout }}" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; border: 0; background: linear-gradient(135deg, #8F2333, #A83243); color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; gap: 8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>Tạo phiên bản khác ({{ layoutNo }} / 3)</button>
 </div>
 
 <div style="display: flex; flex-direction: column; gap: 8px">
-<span style="font-size: 13px; font-weight: 600">Giọng ưu tiên (chọn tối đa 4): {{ toneCount }}</span>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<sc-for list="{{ toneChips }}" as="c" hint-placeholder-count="3">
-<button type="button" onClick="{{ c.pick }}" aria-pressed="{{ c.on }}" style="min-height: 44px; padding: 0 14px; border-radius: 999px; border: 1.5px solid {{ c.border }}; background: {{ c.bg }}; color: {{ c.fg }}; font-family: inherit; font-size: 13px; font-weight: 700">{{ c.label }}</button>
-</sc-for>
-</div>
-<span style="font-size: 12px; line-height: 1.5">{{ toneNote }}</span>
-</div>
+<span style="font-size: 12px; font-weight: 700; color: #8F2333">Thao tác</span>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<button type="button" onClick="{{ actDownload }}" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; border: 1px solid #E4DCCB; background: #FFFFFF; color: #342D29">Tải xuống</button>
+<button type="button" onClick="{{ actShare }}" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; border: 1px solid #E4DCCB; background: #FFFFFF; color: #342D29">Chia sẻ</button>
 
-<div style="display: flex; flex-direction: column; gap: 8px">
-<span style="font-size: 13px; font-weight: 600">Độ dài</span>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<sc-for list="{{ lenChips }}" as="c" hint-placeholder-count="2">
-<button type="button" onClick="{{ c.pick }}" aria-pressed="{{ c.on }}" style="min-height: 44px; padding: 0 14px; border-radius: 999px; border: 1.5px solid {{ c.border }}; background: {{ c.bg }}; color: {{ c.fg }}; font-family: inherit; font-size: 13px; font-weight: 700">{{ c.label }}</button>
-</sc-for>
 </div>
-<span style="font-size: 12px; line-height: 1.5">{{ lenNote }}</span>
+<sc-if value="{{ inSched }}">
+<div style="border: 1.5px solid #27845D; border-radius: 12px; padding: 12px; background: #F3FAF6; display: flex; flex-direction: column; gap: 4px">
+<b style="font-size: 13px; color: #27845D">✓ Đã chuyển sang Lịch đăng</b>
+<span style="font-size: 12.5px; font-weight: 700; color: {{ schedColor }}">{{ schedStatusText }}</span>
+<span style="font-size: 12px; line-height: 1.5">{{ schedMissText }}</span>
+<a href="schedule.html" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; margin-top: 6px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; border: 1.5px solid #8F2333; background: #FFFFFF; color: #8F2333">Mở Lịch đăng</a>
 </div>
-
-<div style="display: flex; flex-direction: column; gap: 6px">
-<label for="briefnote" style="font-size: 13px; font-weight: 600">Ý muốn nhấn thêm (không bắt buộc)</label>
-<textarea id="briefnote" rows="3" value="{{ note }}" onChange="{{ onNote }}" placeholder="VD: nhắc thêm lịch phỏng vấn trong tuần" style="box-sizing: border-box; padding: 10px 14px; border-radius: 12px; border: 1px solid #817971; background: #FFFFFF; font-family: inherit; font-size: 14px; line-height: 1.5; color: #342D29; resize: vertical"></textarea>
+</sc-if>
+<sc-if value="{{ notInSched }}">
+<div style="border: 1.5px dashed #C8A96B; border-radius: 12px; padding: 12px; background: #FBF8F2; font-size: 12.5px; line-height: 1.55">Bấm <b>Chốt bài này</b> ở cột Bài viết, bài tự chuyển sang Lịch đăng.</div>
+</sc-if>
+<span role="status" style="font-size: 12px; line-height: 1.5; min-height: 18px; color: #342D29">{{ toast }}</span>
 </div>
-
-<button type="button" onClick="{{ generate }}" style="display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; border-radius: 12px; border: 0; background: linear-gradient(135deg, #8F2333, #A83243); color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 700"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>{{ genLabel }}</button>
 </section>
 
-<section style="flex: 2 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
-
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<button type="button" onClick="{{ goWrite }}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 12px; border: 1.5px solid {{ tabWrite.border }}; background: {{ tabWrite.bg }}; color: {{ tabWrite.fg }}; font-family: inherit; font-size: 13px; font-weight: 700"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 5-2.414-2.414A2 2 0 0 0 14.172 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12"/><path d="M21.378 12.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/><path d="M8 18h1"/></svg>Bài viết</button>
-<button type="button" onClick="{{ goDesign }}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 12px; border: 1.5px solid {{ tabDesign.border }}; background: {{ tabDesign.bg }}; color: {{ tabDesign.fg }}; font-family: inherit; font-size: 13px; font-weight: 700"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>Thiết kế hình</button>
 </div>
 
-<sc-if value="{{ noDraft }}" hint-placeholder-val="{{ false }}">
-<section style="background: #FFFFFF; border: 1px solid #F0EBE2; border-radius: 16px; box-shadow: 0 1px 3px rgba(52,45,41,0.08); padding: 20px; display: flex; flex-direction: column; gap: 8px; align-items: flex-start">
-<span style="font-size: 16px; font-weight: 700">Chưa có bản nháp</span>
-<span style="font-size: 14px; line-height: 1.6">Chọn loại bài, điền thông tin ở khung Brief rồi bấm Tạo bài viết. Thông tin còn thiếu sẽ để [điền: …].</span>
-</section>
-</sc-if>
-
-<sc-if value="{{ isLoading }}" hint-placeholder-val="{{ false }}">
-<section style="background: #FFFFFF; border: 1px solid #F0EBE2; border-radius: 16px; box-shadow: 0 1px 3px rgba(52,45,41,0.08); padding: 20px; display: flex; align-items: center; gap: 12px"><span style="color: #8F2333; display: flex"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></span><span style="font-size: 14px; font-weight: 600">Đang ghép 3 phương án từ brief của chị...</span></section>
-</sc-if>
-
-<sc-if value="{{ showWrite }}" hint-placeholder-val="{{ true }}">
-<section style="background: #FFFFFF; border: 1px solid #F0EBE2; border-radius: 16px; box-shadow: 0 1px 3px rgba(52,45,41,0.08); padding: 20px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px">
-<div style="display: flex; align-items: center; gap: 10px; color: #8F2333"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg><h2 style="font-family: 'Be Vietnam Pro', 'Inter', system-ui, sans-serif; margin: 0; font-size: 18px; font-weight: 700; color: #342D29">BẢN NHÁP</h2></div>
-<span style="font-size: 12px">{{ draftMeta }}</span>
+<sc-if value="{{ sigOpen }}">
+<div style="position: fixed; inset: 0; z-index: 60; background: rgba(52,45,41,0.45); display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box">
+<div role="dialog" aria-label="Chữ ký cố định" style="width: min(620px, 100%); max-height: 100%; overflow-y: auto; background: #FFFFFF; border-radius: 18px; box-shadow: 0 12px 40px rgba(0,0,0,0.25); padding: 22px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px">
+<div style="display: flex; align-items: center; gap: 8px; color: #8F2333"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></svg><h2 style="font-family: 'Be Vietnam Pro', 'Inter', system-ui, sans-serif; margin: 0; font-size: 17px; font-weight: 800; color: #8F2333; font-size: 19px">Chữ ký cố định</h2></div>
+<button type="button" aria-label="Đóng" onClick="{{ closeSig }}" style="width: 36px; height: 36px; border-radius: 10px; border: 1px solid #E4DCCB; background: #FFFFFF; cursor: pointer; color: #342D29; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
 </div>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<sc-for list="{{ variantTabs }}" as="v" hint-placeholder-count="3">
-<button type="button" onClick="{{ v.pick }}" aria-pressed="{{ v.on }}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1.5px solid {{ v.border }}; background: {{ v.bg }}; color: {{ v.fg }}; font-family: inherit; font-size: 13px; font-weight: 700">{{ v.label }}<span style="font-size: 11px; font-weight: 700; opacity: {{ v.starOp }}">{{ v.star }}</span></button>
+<span style="font-size: 12.5px; line-height: 1.55">Bài chọn kênh Fanpage NSV tự gắn chữ ký Fanpage, kênh Website tự gắn chữ ký Website. Chữ ký nằm dưới phần nội dung, trên hashtag, và không tính vào giới hạn 400 chữ. Sửa ở đây thì lưu ngay.</span>
+<label style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 700; color: #8F2333">Chữ ký Fanpage</span>
+<textarea value="{{ sigFan }}" onChange="{{ onSigFan }}" rows="5" style="width: 100%; box-sizing: border-box; padding: 10px 12px; border-radius: 12px; border: 1px solid #E4DCCB; background: #FFFFFF; font-family: inherit; font-size: 13px; line-height: 1.55; color: #342D29; resize: vertical"></textarea></label>
+<label style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 700; color: #8F2333">Chữ ký Website</span>
+<textarea value="{{ sigWeb }}" onChange="{{ onSigWeb }}" rows="5" style="width: 100%; box-sizing: border-box; padding: 10px 12px; border-radius: 12px; border: 1px solid #E4DCCB; background: #FFFFFF; font-family: inherit; font-size: 13px; line-height: 1.55; color: #342D29; resize: vertical"></textarea></label>
+<span style="font-size: 11.5px; line-height: 1.5; color: #817971">Còn chữ [điền: …] thì bài được tính là chưa đủ thông tin. Chữ ký lưu trong trình duyệt này, không đưa lên GitHub.</span>
+<button type="button" onClick="{{ closeSig }}" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; border: 0; background: #8F2333; color: #FFFFFF">Xong</button>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ khoOpen }}">
+<div style="position: fixed; inset: 0; z-index: 50; background: rgba(52,45,41,0.45); display: flex; justify-content: flex-end">
+<aside role="dialog" aria-label="Kho bài viết" style="width: min(620px, 100%); height: 100%; background: #FBF8F2; box-shadow: -8px 0 30px rgba(0,0,0,0.22); display: flex; flex-direction: column; box-sizing: border-box">
+<div style="padding: 20px 22px 12px; display: flex; flex-direction: column; gap: 10px; border-bottom: 1px solid #F0EBE2; background: #FFFFFF">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px">
+<div style="display: flex; align-items: center; gap: 8px; color: #8F2333"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg><h2 style="font-family: 'Be Vietnam Pro', 'Inter', system-ui, sans-serif; margin: 0; font-size: 17px; font-weight: 800; color: #8F2333; font-size: 19px">Kho bài viết</h2></div>
+<button type="button" aria-label="Đóng kho" onClick="{{ closeKho }}" style="width: 36px; height: 36px; border-radius: 10px; border: 1px solid #E4DCCB; background: #FFFFFF; cursor: pointer; color: #342D29; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+</div>
+<span style="font-size: 12.5px; line-height: 1.55">Bài nào có dấu sao thì trợ lý dùng làm mẫu giọng văn khi viết bài mới.</span>
+<div role="tablist" style="display: flex; gap: 6px; background: #F7F2E9; padding: 4px; border-radius: 12px">
+<button type="button" role="tab" onClick="{{ goKhoChot }}" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; flex: 1; min-height: 38px; border: 0; background: {{ tabChotBg }}; color: {{ tabChotFg }}">{{ chotLabelTab }}</button>
+<button type="button" role="tab" onClick="{{ goKhoPast }}" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; flex: 1; min-height: 38px; border: 0; background: {{ tabPastBg }}; color: {{ tabPastFg }}">{{ pastLabelTab }}</button>
+</div>
+</div>
+
+<div style="flex: 1; overflow-y: auto; padding: 16px 22px; display: flex; flex-direction: column; gap: 12px">
+
+<sc-if value="{{ khoChot }}">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<sc-if value="{{ chotEmpty }}">
+<div style="border: 1.5px dashed #C8A96B; border-radius: 14px; padding: 18px; font-size: 13px; line-height: 1.6; background: #FFFFFF">Chưa có bài nào được chốt. Viết xong một bài ưng ý, bấm <b>Chốt bài này</b> ở cột Bài viết, bài sẽ vào đây.</div>
+</sc-if>
+<sc-for list="{{ chotList }}" as="it" hint-placeholder-count="2">
+<article style="border: 1px solid #E4DCCB; border-radius: 14px; padding: 14px; background: #FFFFFF; display: flex; flex-direction: column; gap: 8px">
+<b style="font-size: 14px; line-height: 1.45">{{ it.title }}</b>
+<span style="font-size: 12px; color: #817971">{{ it.meta }}</span>
+<span style="font-size: 12.5px; line-height: 1.6; white-space: pre-line; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden">{{ it.text }}</span>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<button type="button" onClick="{{ it.toggle }}" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; min-height: 34px; padding: 0 12px; border: 1.5px solid {{ it.starBorder }}; background: {{ it.starBg }}; color: {{ it.starFg }}">{{ it.starLabel }}</button>
+<button type="button" onClick="{{ it.copy }}" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; min-height: 34px; padding: 0 12px; border: 1px solid #E4DCCB; background: #FFFFFF; color: #342D29">Sao chép</button>
+<button type="button" onClick="{{ it.remove }}" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; min-height: 34px; padding: 0 12px; border: 1px solid #E4DCCB; background: #FFFFFF; color: #C94B4B">Xóa</button>
+</div>
+</article>
 </sc-for>
 </div>
-<span style="font-size: 12px; line-height: 1.5">{{ toneLine }}</span>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<sc-for list="{{ checks }}" as="k" hint-placeholder-count="4">
-<span style="background: #FFFFFF; border: 1.5px solid {{ k.color }}; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 6px">{{ k.text }}</span>
-</sc-for>
-</div>
-<div style="display: flex; gap: 12px; align-items: flex-start">
-<div style="flex: 0 0 auto; display: flex; flex-direction: column; gap: 4px; padding-top: 14px">
-<span style="font-size: 11px; font-weight: 800; color: #8F2333">{{ l1 }}</span><span style="font-size: 11px; font-weight: 800; color: #8F2333">{{ l2 }}</span><span style="font-size: 11px; font-weight: 800; color: #8F2333">{{ l3 }}</span>
-</div>
-<div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 6px">
-<label for="drafttext" style="font-size: 13px; font-weight: 600">Sửa trực tiếp trong khung này</label>
-<textarea id="drafttext" rows="16" value="{{ draftText }}" onChange="{{ onDraft }}" style="box-sizing: border-box; width: 100%; padding: 14px 16px; border-radius: 12px; border: 1px solid #817971; background: #F7F2E9; font-family: inherit; font-size: 14px; line-height: 1.7; color: #342D29; resize: vertical"></textarea>
-</div>
-</div>
-<div style="background: #F7F2E9; border-radius: 12px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px">
-<span style="font-size: 13px; font-weight: 700">Đối chiếu với brief (thông tin bài đang dùng)</span>
-<sc-for list="{{ usedRows }}" as="u" hint-placeholder-count="4">
-<div style="display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: 12px; line-height: 1.5"><span style="flex: 0 0 200px; font-weight: 700">{{ u.label }}</span><span style="flex: 1 1 200px; min-width: 0; white-space: pre-line">{{ u.value }}</span></div>
-</sc-for>
-</div>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
-<button type="button" onClick="{{ copyDraft }}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 12px; border: 1px solid #817971; background: #FFFFFF; color: #342D29; font-family: inherit; font-size: 13px; font-weight: 700"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>{{ copyLabel }}</button>
-<button type="button" onClick="{{ resetDraft }}" style="min-height: 44px; padding: 0 16px; border-radius: 12px; border: 1px solid #817971; background: #FFFFFF; color: #342D29; font-family: inherit; font-size: 13px; font-weight: 700">Quay về bản gốc</button>
-<button type="button" onClick="{{ goDesign }}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 12px; border: 1.5px solid #8F2333; background: #FFFFFF; color: #8F2333; font-family: inherit; font-size: 13px; font-weight: 700"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>Dựng hình cho bài này</button>
-</div>
-</section>
 </sc-if>
 
-<sc-if value="{{ showDesign }}" hint-placeholder-val="{{ false }}">
-<section style="background: #FFFFFF; border: 1px solid #F0EBE2; border-radius: 16px; box-shadow: 0 1px 3px rgba(52,45,41,0.08); padding: 20px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; align-items: center; gap: 10px; color: #8F2333"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg><h2 style="font-family: 'Be Vietnam Pro', 'Inter', system-ui, sans-serif; margin: 0; font-size: 18px; font-weight: 700; color: #342D29">THIẾT KẾ HÌNH DEMO</h2></div>
-<span style="font-size: 13px; line-height: 1.6">Hình dựng từ chữ trong brief và bảng màu NSV. Đây là bản bố cục để chị duyệt ý tưởng, chưa có logo thật và ảnh chụp thật. Muốn có file thiết kế cuối, chị gửi logo và ảnh, hoặc đưa bố cục này cho bộ phận thiết kế.</span>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px">
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<sc-for list="{{ fmtChips }}" as="c" hint-placeholder-count="3">
-<button type="button" onClick="{{ c.pick }}" aria-pressed="{{ c.on }}" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1.5px solid {{ c.border }}; background: {{ c.bg }}; color: {{ c.fg }}; font-family: inherit; font-size: 13px; font-weight: 700">{{ c.label }}</button>
+<sc-if value="{{ khoPast }}">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="border: 1px solid #E4DCCB; border-radius: 14px; padding: 14px; background: #FFFFFF; display: flex; flex-direction: column; gap: 10px">
+<b style="font-size: 13.5px; color: #8F2333">Thêm bài bạn từng làm</b>
+<input type="text" aria-label="Tên bài" value="{{ pfTitle }}" onChange="{{ onPfTitle }}" placeholder="Tên bài, ví dụ: Bài Trung thu 2025" style="width: 100%; box-sizing: border-box; min-height: 40px; padding: 0 12px; border-radius: 10px; border: 1px solid #E4DCCB; background: #FFFFFF; font-family: inherit; font-size: 13px; color: #342D29">
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<label style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><span style="font-size: 11.5px; font-weight: 700; color: #817971">Loại nội dung</span><select value="{{ pfType }}" onChange="{{ onPfType }}" style="width: 100%; min-height: 40px; box-sizing: border-box; padding: 0 8px; border-radius: 10px; border: 1px solid #E4DCCB; background: #FFFFFF; font-family: inherit; font-size: 13px; font-weight: 600; color: #342D29"><option value="Ngày lễ">Ngày lễ</option><option value="Bản tin nội bộ">Bản tin nội bộ</option><option value="Tuyển dụng">Tuyển dụng</option><option value="Văn hóa">Văn hóa</option><option value="Recap sự kiện">Recap sự kiện</option><option value="Kịch bản video">Kịch bản video</option><option value="SEO">SEO</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><span style="font-size: 11.5px; font-weight: 700; color: #817971">Kênh đăng</span><select value="{{ pfChan }}" onChange="{{ onPfChan }}" style="width: 100%; min-height: 40px; box-sizing: border-box; padding: 0 8px; border-radius: 10px; border: 1px solid #E4DCCB; background: #FFFFFF; font-family: inherit; font-size: 13px; font-weight: 600; color: #342D29"><option value="Fanpage NSV">Fanpage NSV</option><option value="TikTok">TikTok</option><option value="Zalo nội bộ">Zalo nội bộ</option><option value="Website">Website</option></select></label>
+</div>
+<textarea aria-label="Nội dung bài" value="{{ pfText }}" onChange="{{ onPfText }}" rows="5" placeholder="Dán nội dung bài đã đăng vào đây" style="width: 100%; box-sizing: border-box; padding: 10px 12px; border-radius: 12px; border: 1px solid #E4DCCB; background: #FFFFFF; font-family: inherit; font-size: 13px; line-height: 1.55; color: #342D29; resize: vertical"></textarea>
+<input type="url" aria-label="Link bài đã đăng" value="{{ pfLink }}" onChange="{{ onPfLink }}" placeholder="Hoặc dán link bài đã đăng (không bắt buộc)" style="width: 100%; box-sizing: border-box; min-height: 40px; padding: 0 12px; border-radius: 10px; border: 1px solid #E4DCCB; background: #FFFFFF; font-family: inherit; font-size: 13px; color: #342D29">
+<button type="button" onClick="{{ addPast }}" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; border: 0; background: #8F2333; color: #FFFFFF">Thêm vào kho</button>
+</div>
+<sc-if value="{{ pastEmpty }}">
+<div style="border: 1.5px dashed #C8A96B; border-radius: 14px; padding: 18px; font-size: 13px; line-height: 1.6; background: #FFFFFF">Chưa có bài nào. Dán 3 đến 5 bài bạn ưng nhất (ngày lễ, tuyển dụng, giải trí, recap) để trợ lý bắt đúng giọng NSV.</div>
+</sc-if>
+<sc-for list="{{ pastList }}" as="it" hint-placeholder-count="2">
+<article style="border: 1px solid #E4DCCB; border-radius: 14px; padding: 14px; background: #FFFFFF; display: flex; flex-direction: column; gap: 8px">
+<b style="font-size: 14px; line-height: 1.45">{{ it.title }}</b>
+<span style="font-size: 12px; color: #817971">{{ it.meta }}</span>
+<sc-if value="{{ it.hasText }}"><span style="font-size: 12.5px; line-height: 1.6; white-space: pre-line; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden">{{ it.text }}</span></sc-if>
+<sc-if value="{{ it.hasLink }}"><span style="font-size: 12px; color: #2A5DA8; overflow-wrap: anywhere">{{ it.link }}</span></sc-if>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<button type="button" onClick="{{ it.toggle }}" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; min-height: 34px; padding: 0 12px; border: 1.5px solid {{ it.starBorder }}; background: {{ it.starBg }}; color: {{ it.starFg }}">{{ it.starLabel }}</button>
+<button type="button" onClick="{{ it.copy }}" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; min-height: 34px; padding: 0 12px; border: 1px solid #E4DCCB; background: #FFFFFF; color: #342D29">Sao chép</button>
+<button type="button" onClick="{{ it.remove }}" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; min-height: 34px; padding: 0 12px; border: 1px solid #E4DCCB; background: #FFFFFF; color: #C94B4B">Xóa</button>
+</div>
+</article>
 </sc-for>
 </div>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<sc-for list="{{ styleChips }}" as="c" hint-placeholder-count="2">
-<button type="button" onClick="{{ c.pick }}" aria-pressed="{{ c.on }}" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1.5px solid {{ c.border }}; background: {{ c.bg }}; color: {{ c.fg }}; font-family: inherit; font-size: 13px; font-weight: 700">{{ c.label }}</button>
-</sc-for>
-</div>
+</sc-if>
 </div>
 
-<sc-if value="{{ isPoster }}" hint-placeholder-val="{{ true }}">
-<div style="display: flex; justify-content: center; background: #F0EBE2; border-radius: 14px; padding: 24px">
-<div style="width: 380px; max-width: 100%; box-sizing: border-box; aspect-ratio: 3 / 4; background: {{ art.bg }}; color: {{ art.fg }}; border-radius: 6px; box-shadow: 0 8px 24px rgba(52,45,41,0.18); padding: 28px; display: flex; flex-direction: column; gap: 16px">
-<div style="display: flex; align-items: center; gap: 10px"><div style="width: 34px; height: 34px; border-radius: 10px; background: #C8A96B; color: #342D29; font-family: 'Be Vietnam Pro', 'Inter', system-ui, sans-serif; font-weight: 800; font-size: 12px; display: flex; align-items: center; justify-content: center">NSV</div><span style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em">NGUỒN SỐNG VIỆT GROUP</span></div>
-<div style="height: 3px; width: 56px; background: {{ art.accent }}"></div>
-<span style="font-size: 12px; font-weight: 800; letter-spacing: 0.12em; color: {{ art.accent }}">{{ art.kicker }}</span>
-<span style="font-family: 'Be Vietnam Pro', 'Inter', system-ui, sans-serif; font-size: 26px; font-weight: 800; line-height: 1.2">{{ art.headline }}</span>
-<span style="font-size: 13px; line-height: 1.5">{{ art.sub }}</span>
-<div style="display: flex; flex-direction: column; gap: 8px; margin-top: 4px">
-<sc-for list="{{ artItems }}" as="i" hint-placeholder-count="4">
-<div style="display: flex; align-items: center; gap: 10px; background: {{ art.itemBg }}; border: 1px solid {{ art.itemBorder }}; border-radius: 10px; padding: 8px 12px"><span style="flex: 0 0 auto; width: 6px; height: 6px; border-radius: 999px; background: {{ art.accent }}"></span><span style="font-size: 12px; line-height: 1.4; font-weight: 600">{{ i.text }}</span></div>
-</sc-for>
+<div style="padding: 12px 22px 18px; border-top: 1px solid #F0EBE2; background: #FFFFFF; display: flex; flex-direction: column; gap: 8px">
+<span role="status" style="font-size: 12px; line-height: 1.5; min-height: 18px; color: #342D29">{{ toast }}</span>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 10px">
+<span style="font-size: 11.5px; line-height: 1.5; color: #817971; flex: 1">Kho lưu trong trình duyệt này, không đưa lên GitHub. Tải file về để sao lưu hoặc gửi trợ lý.</span>
+<button type="button" onClick="{{ exportKho }}" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; min-height: 38px; padding: 0 14px; border: 1.5px solid #8F2333; background: #FFFFFF; color: #8F2333; display: inline-flex; align-items: center; gap: 6px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>Tải kho về</button>
 </div>
-<div style="margin-top: auto; background: {{ art.ctaBg }}; color: {{ art.ctaFg }}; border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; font-weight: 800">{{ art.cta }}</span><span style="font-size: 11px; font-weight: 600">{{ art.meta }}</span></div>
 </div>
+</aside>
 </div>
 </sc-if>
-
-<sc-if value="{{ isStandee }}" hint-placeholder-val="{{ false }}">
-<div style="display: flex; justify-content: center; background: #F0EBE2; border-radius: 14px; padding: 24px">
-<div style="width: 220px; box-sizing: border-box; aspect-ratio: 2 / 5; background: {{ art.bg }}; color: {{ art.fg }}; border-radius: 6px; box-shadow: 0 8px 24px rgba(52,45,41,0.18); padding: 20px 16px; display: flex; flex-direction: column; gap: 12px">
-<div style="display: flex; align-items: center; gap: 8px"><div style="width: 28px; height: 28px; border-radius: 8px; background: #C8A96B; color: #342D29; font-family: 'Be Vietnam Pro', 'Inter', system-ui, sans-serif; font-weight: 800; font-size: 10px; display: flex; align-items: center; justify-content: center">NSV</div><span style="font-size: 9px; font-weight: 700; letter-spacing: 0.08em">NGUỒN SỐNG VIỆT GROUP</span></div>
-<div style="height: 3px; width: 40px; background: {{ art.accent }}"></div>
-<span style="font-size: 10px; font-weight: 800; letter-spacing: 0.12em; color: {{ art.accent }}">{{ art.kicker }}</span>
-<span style="font-family: 'Be Vietnam Pro', 'Inter', system-ui, sans-serif; font-size: 22px; font-weight: 800; line-height: 1.2">{{ art.headline }}</span>
-<span style="font-size: 11px; line-height: 1.5">{{ art.sub }}</span>
-<div style="display: flex; flex-direction: column; gap: 6px">
-<sc-for list="{{ artItems }}" as="i" hint-placeholder-count="4">
-<div style="background: {{ art.itemBg }}; border: 1px solid {{ art.itemBorder }}; border-radius: 8px; padding: 6px 10px"><span style="font-size: 10px; line-height: 1.4; font-weight: 600">{{ i.text }}</span></div>
-</sc-for>
-</div>
-<div style="margin-top: auto; background: {{ art.ctaBg }}; color: {{ art.ctaFg }}; border-radius: 8px; padding: 10px 12px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 11px; font-weight: 800">{{ art.cta }}</span><span style="font-size: 10px; font-weight: 600">{{ art.meta }}</span></div>
-</div>
-</div>
-<span style="font-size: 12px; line-height: 1.5">Tỉ lệ standee 2:5 (ví dụ 80 × 200 cm). Khi in, chữ nhỏ cần phóng lớn theo kích thước thật.</span>
-</sc-if>
-
-<sc-if value="{{ isCarousel }}" hint-placeholder-val="{{ false }}">
-<div style="display: flex; flex-wrap: wrap; gap: 12px; background: #F0EBE2; border-radius: 14px; padding: 20px; justify-content: center">
-<sc-for list="{{ slides }}" as="s" hint-placeholder-count="4">
-<div style="flex: 0 0 auto; width: 232px; aspect-ratio: 1 / 1; box-sizing: border-box; background: {{ s.bg }}; color: {{ s.fg }}; border: 1px solid {{ s.border }}; border-radius: 8px; box-shadow: 0 4px 14px rgba(52,45,41,0.14); padding: 18px; display: flex; flex-direction: column; gap: 10px">
-<div style="display: flex; align-items: center; justify-content: space-between"><span style="font-size: 9px; font-weight: 700; letter-spacing: 0.08em">NGUỒN SỐNG VIỆT GROUP</span><span style="font-size: 10px; font-weight: 800; color: {{ s.accent }}">{{ s.idx }}</span></div>
-<span style="font-size: 10px; font-weight: 800; letter-spacing: 0.12em; color: {{ s.accent }}">{{ s.kicker }}</span>
-<span style="font-family: 'Be Vietnam Pro', 'Inter', system-ui, sans-serif; font-size: 17px; font-weight: 800; line-height: 1.25">{{ s.headline }}</span>
-<span style="font-size: 11px; line-height: 1.55; white-space: pre-line">{{ s.body }}</span>
-</div>
-</sc-for>
-</div>
-<span style="font-size: 12px; line-height: 1.5">Carousel 4 slide, tỉ lệ 1:1. Slide 1 là hook, slide cuối là kêu gọi hành động.</span>
-</sc-if>
-</section>
-</sc-if>
-
-<sc-if value="{{ showApprove }}" hint-placeholder-val="{{ false }}">
-<section style="background: #FFFFFF; border: 1px solid #F0EBE2; border-radius: 16px; box-shadow: 0 1px 3px rgba(52,45,41,0.08); padding: 20px; border-top: 4px solid #C8A96B; display: flex; flex-direction: column; gap: 12px">
-<div style="display: flex; align-items: center; gap: 10px; color: #8F2333"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg><h2 style="font-family: 'Be Vietnam Pro', 'Inter', system-ui, sans-serif; margin: 0; font-size: 18px; font-weight: 700; color: #342D29">DUYỆT VÀ ĐƯA SANG LỊCH ĐĂNG</h2></div>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
-<span style="background: #FFFFFF; border: 1.5px solid {{ apprColor }}; font-size: 12px; font-weight: 700; padding: 5px 12px; border-radius: 999px">{{ apprText }}</span>
-<button type="button" onClick="{{ toggleApprove }}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 12px; border: 1.5px solid #8F2333; background: {{ apprBtnBg }}; color: {{ apprBtnFg }}; font-family: inherit; font-size: 13px; font-weight: 700"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>{{ apprBtn }}</button>
-</div>
-<span style="font-size: 12px; line-height: 1.5">Duyệt phương án đang mở: <b>{{ variantName }}</b>. Hình đang chọn: {{ designName }}.</span>
-<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end">
-<div style="display: flex; flex-direction: column; gap: 6px">
-<label for="schdate" style="font-size: 13px; font-weight: 600">Ngày đăng</label>
-<input id="schdate" type="date" value="{{ schedDate }}" onChange="{{ onSchedDate }}" style="min-height: 44px; box-sizing: border-box; padding: 0 12px; border-radius: 12px; border: 1px solid #817971; background: #FFFFFF; font-family: inherit; font-size: 14px; color: #342D29">
-</div>
-<div style="display: flex; flex-direction: column; gap: 6px">
-<label for="schtime" style="font-size: 13px; font-weight: 600">Giờ đăng</label>
-<select id="schtime" value="{{ schedTime }}" onChange="{{ onSchedTime }}" style="min-height: 44px; box-sizing: border-box; padding: 0 12px; border-radius: 12px; border: 1px solid #817971; background: #FFFFFF; font-family: inherit; font-size: 14px; color: #342D29">
-<option value="08:30">08:30</option><option value="09:00">09:00</option><option value="11:30">11:30</option><option value="14:00">14:00</option><option value="17:00">17:00</option><option value="20:00">20:00</option>
-</select>
-</div>
-<button type="button" onClick="{{ toSchedule }}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 20px; border-radius: 12px; border: 0; background: linear-gradient(135deg, #8F2333, #A83243); color: #FFFFFF; font-family: inherit; font-size: 14px; font-weight: 700; opacity: {{ toSchedOp }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>Đưa sang Lịch đăng</button>
-</div>
-<sc-if value="{{ schedMsgShow }}" hint-placeholder-val="{{ false }}">
-<div style="background: #F7F2E9; border-left: 4px solid {{ schedMsgColor }}; border-radius: 10px; padding: 12px 14px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px">
-<span style="font-size: 13px; line-height: 1.6; flex: 1 1 260px">{{ schedMsg }}</span>
-<a href="schedule.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #8F2333; font-size: 13px; font-weight: 700; text-decoration: underline">Mở Lịch đăng</a>
-</div>
-</sc-if>
-</section>
-</sc-if>
-
-</section>
-</div>
 
 </main>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1700}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1100}}'>
 class Component extends DCLogic {
 constructor(props) {
 super(props);
-this.state = {
-type: 'tuyendung', channel: 'Fanpage', pillar: 'recruit', extraTags: '', tones: ['Năng động', 'Chuyên nghiệp'], len: 'Vừa', note: '', toneMsg: false,
-f: {
-bantin: { topic: '', points: '', scope: '', contact: '' },
-tuyendung: { pos: 'Thực tập sinh Content', loc: 'TP.HCM', dl: '', cv: '', perks: 'Lương trả đúng hạn 100%\nỨng dụng AI vào công việc\nMôi trường trẻ, cởi mở, không drama\nTập gym miễn phí tại Gymaster Fitness Center\nƯu đãi 50% sản phẩm trong hệ sinh thái NSV' },
-vanhoa: { value: '', story: '', who: '', msg: '' },
-recap: { event: 'Đào tạo ứng dụng Claude AI trong công việc', when: '15/11/2026', host: 'Anh Nông Việt Bảo Hoàng – Giám đốc Kinh doanh', moment: '' },
-video: { topic: '', dur: '', cast: '', cta: '' },
-seo: { kw: '', kws: '', facts: '', intent: '' }
+const sc = this.scenarioDefs().nhagiao;
+let kho = { chot: [], past: [] };
+try { const raw = localStorage.getItem('nsv-kho-v1'); if (raw) { const o = JSON.parse(raw); kho = { chot: o.chot || [], past: o.past || [] }; } } catch (e) { /* bỏ qua */ }
+let sig = { fan: '[điền: chữ ký cố định của Fanpage, ví dụ link website, hotline, lời mời theo dõi Fanpage]', web: '[điền: chữ ký cố định của Website, ví dụ thông tin liên hệ, địa chỉ, link nộp hồ sơ]' };
+try { const rs = localStorage.getItem('nsv-sig-v1'); if (rs) { const o = JSON.parse(rs); sig = { fan: typeof o.fan === 'string' ? o.fan : sig.fan, web: typeof o.web === 'string' ? o.web : sig.web }; } } catch (e) { /* bỏ qua */ }
+let sch = [];
+try { const rq = localStorage.getItem('nsv-lichdang-v1'); if (rq) { const a = JSON.parse(rq); if (Array.isArray(a)) { sch = a; } } } catch (e) { /* bỏ qua */ }
+this.state = Object.assign({ sched: sch, sigFan: sig.fan, sigWeb: sig.web, sigOpen: false, scenario: 'nhagiao', ver: 0, tab: 'post', genState: 'done', planned: false, toast: '',
+size: 'Social · 1200 × 1200 px', style: 'brand', layout: 0, checks: [],
+tones: ['Năng động', 'Tinh tế', 'Sáng tạo'], toneMsg: '', links: [], linkInput: '', imgs: [], bgImg: '',
+khoOpen: false, khoTab: 'chot', chot: kho.chot, past: kho.past,
+pfTitle: '', pfType: 'Ngày lễ', pfChan: 'Fanpage NSV', pfLink: '', pfText: '' }, sc.form, { prompt: sc.prompt, goal: sc.goal });
+}
+scenarioDefs() {
+return {
+nhagiao: {
+prompt: 'Viết bài Fanpage chúc mừng Ngày Nhà giáo Việt Nam 20/11 của NSV Group. Nội dung tri ân những người thầy đã dạy NSVers, trong lớp học và ngoài đời. Có tiêu đề, mở bài, nội dung và lời chúc. Đồng thời gợi ý hình ảnh kèm theo phù hợp để đăng Fanpage. Hoạt động tại văn phòng: [điền: tên hoạt động, thời gian, địa điểm].',
+goal: 'Tri ân những người thầy của NSVers; tạo cảm giác gắn kết; khuyến khích NSVers gửi lời cảm ơn.',
+form: { fType: 'Ngày lễ', fChan: 'Fanpage NSV', fAud: 'Cộng đồng theo dõi (Fanpage, TikTok)', fLen: 'Vừa (<400 chữ)', fPil: '#NSVluv · Holiday' },
+tags: '#NSVluv #nguonsongvietgroup #holiday #NgayNhaGiaoVietNam',
+poster: { kicker: 'Chúc mừng', title: 'Ngày Nhà giáo Việt Nam', big: '20/11', sub: 'Gửi lời cảm ơn đến những người thầy, người cô đã dạy NSVers, trong lớp học và ngoài đời.' },
+vers: [
+{ tone: 'Năng động', title: '🌸 [HOLIDAY] NGUỒN SỐNG VIỆT GROUP | 20/11 – CẢM ƠN NGƯỜI ĐÃ DẠY MÌNH', paras: [
+'🌟 Bạn còn nhớ người thầy, người cô đầu tiên dạy mình điều gì không? Ngày 20/11 này, chúng mình không chỉ nhớ về thầy cô thời đi học. Mỗi NSVer đều có một “người thầy” ngoài đời: người chỉ cách làm việc, người kiên nhẫn sửa từng lỗi nhỏ, người tin mình khi mình còn chưa tin chính mình.',
+'🎁 Tuần này, NSV có [điền: tên hoạt động, ví dụ góc lời cảm ơn tại văn phòng] dành cho NSVers. Chỉ cần một câu cảm ơn gửi người thầy của riêng mình, thật là đủ. Hoạt động diễn ra [điền: thời gian, địa điểm].',
+'💚 Chúng mình xin gửi lời cảm ơn chân thành đến tất cả những người thầy, người cô đã dạy dỗ NSVers, trong lớp học và ngoài đời. Cùng nhau gửi lời cảm ơn thật ấm trong ngày 20/11 nhé!'] },
+{ tone: 'Tinh tế', title: '🌸 [HOLIDAY] NGUỒN SỐNG VIỆT GROUP | 20/11 – LỜI CẢM ƠN GỬI NGƯỜI THẦY', paras: [
+'🌿 Có những người thầy không đứng trên bục giảng. Họ ngồi cạnh chúng ta trong một buổi chiều làm việc, chỉ cho ta một cách làm gọn hơn, rồi lặng lẽ đi tiếp.',
+'💐 Nhân ngày Nhà giáo Việt Nam 20/11, NSV mời mỗi NSVer dành một phút nghĩ về người đã dạy mình điều gì đó, dù lớn hay nhỏ, và gửi đến họ một lời cảm ơn. [điền: cách gửi lời cảm ơn, ví dụ góc thư tay tại văn phòng hoặc Group Zalo Tổng].',
+'💚 Chúng mình trân trọng cảm ơn quý thầy cô và tất cả những người đã đồng hành, dạy dỗ NSVers. Chúc quý thầy cô ngày 20/11 nhiều sức khỏe và niềm vui.'] },
+{ tone: 'Sáng tạo', title: '🎯 [HOLIDAY] NGUỒN SỐNG VIỆT GROUP | 20/11 – ĐOÁN NGƯỜI THẦY QUA 3 GỢI Ý', paras: [
+'❓ Đố NSVers: ai là “người thầy” được nhắc đến qua 3 gợi ý này? Gợi ý 1: [điền: gợi ý 1]. Gợi ý 2: [điền: gợi ý 2]. Gợi ý 3: [điền: gợi ý 3].',
+'🎁 Trả lời trong phần bình luận hoặc Group Zalo Tổng trước [điền: hạn trả lời]. [điền: phần quà hoặc hình thức ghi nhận].',
+'💚 Nhân ngày 20/11, chúng mình cảm ơn tất cả những người thầy, người cô đã dạy NSVers. Cảm ơn vì đã cho chúng mình những bài học đáng nhớ.'] },
+{ tone: 'Chuyên nghiệp', title: '🌸 [HOLIDAY] NGUỒN SỐNG VIỆT GROUP | 20/11 – TRI ÂN NHÀ GIÁO VIỆT NAM', paras: [
+'🌸 Nhân ngày Nhà giáo Việt Nam 20/11, Nguồn Sống Việt Group xin gửi lời tri ân đến các thầy cô, những người đã dạy dỗ và đồng hành cùng mỗi NSVer trong học tập và trong công việc.',
+'🤝 Những kiến thức, kỹ năng và cách làm việc mà NSVers có hôm nay đều bắt đầu từ sự tận tâm của những người thầy. NSV mời toàn thể NSVers dành một lời cảm ơn gửi người đã dạy mình. [điền: hoạt động tại văn phòng, thời gian, địa điểm].',
+'💚 Chúc quý thầy cô ngày 20/11 nhiều sức khỏe, hạnh phúc và niềm vui trong sự nghiệp trồng người.'] }
+]
 },
-gen: 'idle', snap: null, snapId: 0, variant: 'A', edits: {},
-view: 'write', fmt: 'poster', style: 'ruby', approved: false, copied: false,
-schedDate: '2026-11-19', schedTime: '09:00', scheduled: false, sug: ''
+tuyendung: {
+prompt: 'Viết bài tuyển dụng tuần cho Fanpage NSV. Vị trí [điền: vị trí đang tuyển], hạn nộp [điền: ngày], nhận CV qua [điền: email hoặc link]. Nêu quyền lợi thật của NSV, kèm hình ảnh đăng Fanpage.',
+goal: 'Thu hút ứng viên cho vị trí đang tuyển; giới thiệu môi trường làm việc thật của NSV; có đủ CV trước hạn nộp.',
+form: { fType: 'Tuyển dụng', fChan: 'Fanpage NSV', fAud: 'Ứng viên', fLen: 'Vừa (<400 chữ)', fPil: '#NSVrecruit · Tuyển dụng' },
+tags: '#NSVrecruit #nguonsongvietgroup #tuyendung #hotjobs [điền: 1–2 hashtag theo chủ đề]',
+poster: { kicker: 'Cùng NSV', title: '[điền: vị trí] đang chờ Bạn', big: 'Hạn [điền: ngày]', sub: 'Môi trường trẻ, cởi mở, không drama. Lương trả đúng hạn 100%.' },
+vers: [
+{ tone: 'Năng động', title: '🎯 BẢN TIN TUYỂN DỤNG | NGUỒN SỐNG VIỆT GROUP | [điền: vị trí] ĐANG CHỜ BẠN', paras: [
+'🚀 Bạn đã sẵn sàng thử một vai trò mới? Nguồn Sống Việt Group đang tuyển [điền: vị trí], làm việc tại [điền: địa điểm].',
+'✨ Vào NSV, Bạn nhận được:\n💰 Lương trả đúng hạn 100%.\n🤖 Ứng dụng AI vào công việc hằng ngày.\n💼 Môi trường trẻ, cởi mở, không drama.\n💪 Gym miễn phí tại Gymaster Fitness Center.\n🛍️ Ưu đãi 50% sản phẩm trong hệ sinh thái NSV.',
+'👉 Hạn nộp hồ sơ: [điền: ngày]. Gửi CV về [điền: email hoặc link] ngay hôm nay nhé!'] },
+{ tone: 'Tinh tế', title: '🌱 [TUYỂN DỤNG] NGUỒN SỐNG VIỆT GROUP | MỘT CHỖ ĐỨNG MỚI CHO BẠN', paras: [
+'🌱 Nếu Bạn đang tìm một nơi để học thật và làm thật, NSV đang mở vị trí [điền: vị trí] tại [điền: địa điểm].',
+'💼 Bạn được ứng dụng AI vào công việc, làm trong môi trường trẻ, cởi mở, không drama, và được trả lương đúng hạn 100%. [điền: một chi tiết thật của vị trí, ví dụ việc đầu tiên Bạn sẽ làm].',
+'👉 Gửi CV về [điền: email hoặc link] trước [điền: ngày] để chúng mình sớm liên hệ Bạn.'] },
+{ tone: 'Sáng tạo', title: '🧩 [TUYỂN DỤNG] NGUỒN SỐNG VIỆT GROUP | NẾU CÔNG VIỆC LÀ MỘT TRÒ CHƠI', paras: [
+'🧩 Nếu công việc là một trò chơi, Bạn muốn chơi ở màn nào? NSV đang mở vị trí [điền: vị trí] tại [điền: địa điểm].',
+'🎮 Phần thưởng đang chờ Bạn: lương trả đúng hạn 100%, AI hỗ trợ công việc, gym miễn phí tại Gymaster Fitness Center, ưu đãi 50% trong hệ sinh thái NSV.',
+'👉 Vào game: gửi CV về [điền: email hoặc link] trước [điền: ngày].'] },
+{ tone: 'Chuyên nghiệp', title: '💼 BẢN TIN TUYỂN DỤNG | NGUỒN SỐNG VIỆT GROUP | [điền: vị trí]', paras: [
+'💼 Nguồn Sống Việt Group tuyển dụng vị trí [điền: vị trí] tại [điền: địa điểm].',
+'✨ Quyền lợi:\n💰 Lương trả đúng hạn 100%.\n🤖 Ứng dụng AI vào công việc hằng ngày.\n💼 Môi trường trẻ, cởi mở, không drama.\n💪 Gym miễn phí tại Gymaster Fitness Center.\n🛍️ Ưu đãi 50% sản phẩm trong hệ sinh thái NSV.',
+'👉 Hạn nộp hồ sơ: [điền: ngày]. Ứng viên gửi CV về [điền: email hoặc link].'] }
+]
+}
 };
-try { const hm = (window.location.hash || '').match(/sg=([a-z0-9-]+)/); if (hm) { const pp = this.sugPatch(hm[1]); if (pp) { Object.assign(this.state, pp); } } } catch (err) { }
 }
-sugDefs() {
-const perks = 'Lương trả đúng hạn 100%\nỨng dụng AI vào công việc\nMôi trường trẻ, cởi mở, không drama\nTập gym miễn phí tại Gymaster Fitness Center\nƯu đãi 50% sản phẩm trong hệ sinh thái NSV';
-return [
-{ key: 'tuyendung', title: 'Bài tuyển dụng tuần này', why: 'Top bài tuần này. Quyền lợi điền sẵn từ điểm nổi bật thật của NSV, vị trí và hạn nộp chị điền.', type: 'tuyendung', channel: 'Fanpage', pillar: 'recruit', f: { pos: '', loc: 'TP.HCM', dl: '', cv: '', perks: perks } },
-{ key: 'vanhoa-20-11', title: 'Bài Ngày Nhà giáo 20/11', why: 'Top bài tuần này, hạn 20/11. Câu chuyện thật chị điền.', type: 'vanhoa', channel: 'Fanpage', pillar: 'luv', f: { value: 'Ngày Nhà giáo Việt Nam 20/11: lời cảm ơn người thầy', story: '', who: '', msg: '' } },
-{ key: 'video-thay-co', title: 'Video “Lời cảm ơn thầy cô” tập 1', why: 'Ý tưởng AI cho 20/11: video 15–20 giây, mỗi NSVer cảm ơn một người thầy.', type: 'video', channel: 'TikTok', pillar: 'luv', f: { topic: 'Lời cảm ơn thầy cô, tập 1', dur: '20 giây', cast: '1 NSVer nói lời cảm ơn người thầy, người hướng dẫn đầu tiên', cta: '' } },
-{ key: 'bantin-20-11', title: 'Bản tin nội bộ chủ đề 20/11', why: 'Ý tưởng AI: bản tin 1 trang gồm lời cảm ơn, hoạt động trong tuần, ảnh khoảnh khắc. Chị kiểm tra nội dung.', type: 'bantin', channel: 'Zalo', pillar: 'news', f: { topic: 'Bản tin nội bộ chủ đề 20/11', points: 'Lời cảm ơn từ ban lãnh đạo\nHoạt động trong tuần\nẢnh khoảnh khắc', scope: 'toàn thể NSVers', contact: '' } },
-{ key: 'video-day', title: 'Video “Một ngày làm việc của tôi”', why: 'Xu hướng điểm 89, cao nhất tuần. Kết video bằng lời mời ứng tuyển.', type: 'video', channel: 'TikTok', pillar: 'recruit', f: { topic: 'Một ngày làm việc của tôi tại NSV', dur: '20 giây', cast: '', cta: '' } },
-{ key: 'video-pov', title: 'POV: ngày đầu đi làm tại NSV', why: 'Ý tưởng AI cho Employer Branding: video 15–20 giây theo góc nhìn người mới.', type: 'video', channel: 'TikTok', pillar: 'recruit', f: { topic: 'POV: ngày đầu đi làm tại NSV', dur: '20 giây', cast: '', cta: '' } },
-{ key: 'recap-ai', title: 'Recap buổi đào tạo Claude AI', why: 'Sự kiện 15/11 đã diễn ra. Khoảnh khắc đáng nhớ chị điền.', type: 'recap', channel: 'Zalo', pillar: 'news', f: { event: 'Đào tạo ứng dụng Claude AI trong công việc', when: '15/11/2026', host: 'Anh Nông Việt Bảo Hoàng – Giám đốc Kinh doanh', moment: '' } },
-{ key: 'seo-nsv', title: 'Bài SEO: làm việc tại Nguồn Sống Việt', why: 'Dùng cho Website. Nội dung chính điền sẵn từ điểm nổi bật thật của NSV.', type: 'seo', channel: 'Website', pillar: 'recruit', f: { kw: 'làm việc tại Nguồn Sống Việt', kws: 'môi trường làm việc, phúc lợi nhân viên', facts: 'Lương trả đúng hạn 100%\nMôi trường trẻ, cởi mở, không drama\nTập gym miễn phí tại Gymaster Fitness Center\nƯu đãi 50% sản phẩm trong hệ sinh thái NSV', intent: 'ứng viên tìm hiểu môi trường làm việc tại NSV' } }
-];
-}
-sugPatch(key) {
-const d = this.sugDefs().filter((x) => x.key === key)[0];
-if (!d) { return null; }
-const nf = Object.assign({}, this.state.f);
-nf[d.type] = Object.assign({}, nf[d.type], d.f);
-return { type: d.type, channel: d.channel, pillar: d.pillar, f: nf, len: (d.type !== 'seo' && this.state.len === 'Dài') ? 'Vừa' : this.state.len, sug: key, gen: 'idle', snap: null, view: 'write', approved: false, scheduled: false };
-}
-generate() {
-if (this.state.gen === 'loading') { return; }
+words(s) { return s.trim().split(/\s+/).filter((x) => x !== '').length; }
+derive() {
 const st = this.state;
-const snap = { type: st.type, channel: st.channel, pillar: st.pillar, extra: st.extraTags.trim(), tones: st.tones.slice(), len: (st.type !== 'seo' && st.len === 'Dài') ? 'Vừa' : st.len, note: st.note.trim(), f: Object.assign({}, st.f[st.type]) };
-this.setState({ gen: 'loading', view: 'write', approved: false, scheduled: false });
-setTimeout(() => { this.setState({ gen: 'done', snap: snap, snapId: this.state.snapId + 1, edits: {}, variant: 'A' }); }, 900);
+const SC = this.scenarioDefs()[st.scenario];
+const vers = st.tones.map((t) => SC.vers.filter((v) => v.tone === t)[0] || { tone: t, stub: true, title: 'Giọng ' + t + ' chưa viết sẵn trong bản demo', paras: ['Bản demo chỉ viết sẵn 4 giọng: Năng động, Tinh tế, Sáng tạo, Chuyên nghiệp. Với giọng ' + t + ', bạn nhờ mình viết trong chat: mình viết đúng giọng và đúng yêu cầu ở cột bên trái.'] });
+const vi = Math.min(st.ver, vers.length - 1);
+const V = vers[vi];
+const text = V.title + ' ' + V.paras.join(' ');
+const sigKind = st.fChan === 'Fanpage NSV' ? 'Fanpage' : (st.fChan === 'Website' ? 'Website' : '');
+const sig = sigKind === 'Fanpage' ? st.sigFan : (sigKind === 'Website' ? st.sigWeb : '');
+const sigFills = V.stub ? 0 : (sig.match(/\[điền/g) || []).length;
+return { SC: SC, vers: vers, vi: vi, V: V, sigKind: sigKind, sig: sig, wc: V.stub ? 0 : this.words(text), fills: V.stub ? 0 : (text.match(/\[điền/g) || []).length + sigFills };
+}
+saveSched(q) { try { localStorage.setItem('nsv-lichdang-v1', JSON.stringify(q)); } catch (e) { /* bỏ qua */ } }
+missingOf(d) {
+const m = [];
+if (d.fills > 0) { m.push(d.fills + ' chỗ [điền]'); }
+if (this.state.checks.length < 6) { m.push((6 - this.state.checks.length) + ' mục kiểm tra chưa tick'); }
+return m;
+}
+schedItem(d, id) {
+const s = this.state;
+const tags = (s.fPil.indexOf('j4f') >= 0 || s.fChan === 'Website') ? '' : d.SC.tags;
+const body = d.V.paras.join('\n\n');
+const miss = this.missingOf(d);
+const full = d.V.title + '\n\n' + body + (d.sig === '' ? '' : '\n\n' + d.sig) + (tags === '' ? '' : '\n\n' + tags);
+return { id: id, key: s.scenario + '|' + d.V.tone, title: d.V.title, tone: d.V.tone, type: s.fType, chan: s.fChan, aud: s.fAud, goal: s.goal, size: s.size, body: body, sig: d.sig, tags: tags, full: full, status: miss.length === 0 ? 'Chờ duyệt' : 'Nháp', missing: miss, planDate: '', created: new Date().toISOString(), source: 'content' };
+}
+syncSched() {
+const s = this.state; const d = this.derive();
+if (d.V.stub) { return; }
+const key = s.scenario + '|' + d.V.tone;
+const cur = s.sched.filter((x) => x.key === key)[0];
+if (!cur || cur.status === 'Đã duyệt' || cur.status === 'Đã khóa') { return; }
+const n = this.schedItem(d, cur.id); n.planDate = cur.planDate; n.created = cur.created;
+const q = s.sched.map((x) => (x.id === cur.id ? n : x));
+this.setState({ sched: q }); this.saveSched(q);
+}
+saveSig(fan, web) { try { localStorage.setItem('nsv-sig-v1', JSON.stringify({ fan: fan, web: web })); } catch (e) { /* bỏ qua */ } }
+saveKho(chot, past) { try { localStorage.setItem('nsv-kho-v1', JSON.stringify({ chot: chot, past: past })); } catch (e) { /* bỏ qua */ } }
+loadScenario(key) {
+const sc = this.scenarioDefs()[key];
+this.setState(Object.assign({ scenario: key, ver: 0, tab: 'post', genState: 'loading', planned: false, toast: '', checks: [], prompt: sc.prompt, goal: sc.goal }, sc.form));
+setTimeout(() => { this.setState({ genState: 'done' }); }, 900);
+}
+runGen() {
+if (this.state.genState === 'loading') { return; }
+this.setState({ genState: 'loading', ver: 0, tab: 'post', toast: '' });
+setTimeout(() => { this.setState({ genState: 'done' }); }, 900);
+}
+say(msg) {
+this.setState({ toast: msg });
+setTimeout(() => { if (this.state.toast === msg) { this.setState({ toast: '' }); } }, 6000);
+}
+toggleTone(x) {
+const cur = this.state.tones;
+let next = cur;
+let msg = '';
+if (cur.indexOf(x) >= 0) {
+if (cur.length <= 2) { msg = 'Chọn tối thiểu 2 giọng văn.'; } else { next = cur.filter((y) => y !== x); }
+} else if (cur.length >= 4) { msg = 'Tối đa 4 giọng. Bỏ bớt một giọng để chọn giọng khác.'; }
+else { next = cur.concat([x]); }
+const order = ['Năng động', 'Tinh tế', 'Sáng tạo', 'Chuyên nghiệp', 'Thu hút', 'Viral'];
+next = order.filter((y) => next.indexOf(y) >= 0);
+this.setState({ tones: next, toneMsg: msg, ver: 0 });
+}
+khoItems(kind) {
+const list = this.state[kind];
+return list.slice().reverse().map((it) => ({
+title: it.title, meta: [it.tone, it.type, it.chan, it.date].filter((x) => x).join(' · '),
+text: it.text || '', hasText: !!it.text, link: it.link || '', hasLink: !!it.link,
+starLabel: it.star ? '★ Đang dùng làm mẫu giọng' : '☆ Dùng làm mẫu giọng', starBg: it.star ? '#FBF1F2' : '#FFFFFF', starFg: it.star ? '#8F2333' : '#342D29', starBorder: it.star ? '#8F2333' : '#E4DCCB',
+toggle: () => {
+const nl = this.state[kind].map((x) => (x.id === it.id ? Object.assign({}, x, { star: !x.star }) : x));
+this.setState({ [kind]: nl });
+this.saveKho(kind === 'chot' ? nl : this.state.chot, kind === 'past' ? nl : this.state.past);
+},
+remove: () => {
+const nl = this.state[kind].filter((x) => x.id !== it.id);
+this.setState({ [kind]: nl });
+this.saveKho(kind === 'chot' ? nl : this.state.chot, kind === 'past' ? nl : this.state.past);
+this.say('Đã xóa khỏi kho.');
+},
+copy: () => {
+try { if (navigator.clipboard) { navigator.clipboard.writeText((it.title ? it.title + '\n\n' : '') + (it.text || it.link || '')); } } catch (e) { /* bỏ qua */ }
+this.say('Đã sao chép.');
+}
+}));
 }
 renderVals() {
 const st = this.state;
-const chip = (on) => ({ bg: on ? '#8F2333' : '#FFFFFF', fg: on ? '#FFFFFF' : '#342D29', border: on ? '#8F2333' : '#817971', on: on });
-const lines = (v) => v.split('\n').map((x) => x.trim()).filter((x) => x !== '');
+const D = this.derive();
+const SC = D.SC; const V = D.V; const wc = D.wc; const fills = D.fills;
+const loading = st.genState === 'loading';
+const A5 = 'Bản tin nội bộ · A5 14,8 × 21 cm'; const SOC = 'Social · 1200 × 1200 px';
 
-// ---- brief config
-const TYPES = [
-{ k: 'bantin', label: 'Bản tin nội bộ', emoji: [2, 4], labels: ['MỞ', 'THÂN', 'KẾT'], fields: [
-{ k: 'topic', label: 'Chủ đề bản tin', hint: 'VD: lịch nghỉ lễ cuối năm' },
-{ k: 'points', label: 'Nội dung chính (mỗi ý một dòng)', hint: 'Mỗi dòng một ý, đúng thông tin cần thông báo', area: true },
-{ k: 'scope', label: 'Thời gian và đối tượng áp dụng', hint: 'VD: toàn thể NSVers từ 01/12' },
-{ k: 'contact', label: 'Đầu mối liên hệ', hint: 'VD: bộ phận Hành chính nhân sự' }] },
-{ k: 'tuyendung', label: 'Tin tuyển dụng', emoji: [3, 6], labels: ['MỞ', 'THÂN', 'KẾT'], fields: [
-{ k: 'pos', label: 'Vị trí tuyển dụng', hint: 'VD: Thực tập sinh Content' },
-{ k: 'loc', label: 'Địa điểm làm việc', hint: 'VD: TP.HCM' },
-{ k: 'dl', label: 'Hạn nộp hồ sơ', hint: 'VD: 30/11' },
-{ k: 'cv', label: 'Kênh nhận CV', hint: 'Email hoặc link nhận CV' },
-{ k: 'perks', label: 'Quyền lợi nổi bật (mỗi ý một dòng)', hint: 'Mỗi dòng một quyền lợi có thật', area: true }] },
-{ k: 'vanhoa', label: 'Truyền thông văn hóa', emoji: [2, 4], labels: ['MỞ', 'THÂN', 'KẾT'], fields: [
-{ k: 'value', label: 'Giá trị hoặc chủ đề văn hóa', hint: 'VD: tinh thần giúp đỡ đồng nghiệp' },
-{ k: 'story', label: 'Câu chuyện hoặc khoảnh khắc thật', hint: 'Chuyện gì, ở đâu, khi nào, cụ thể', area: true },
-{ k: 'who', label: 'Nhân vật hoặc bộ phận liên quan', hint: 'VD: nhóm Kinh doanh' },
-{ k: 'msg', label: 'Thông điệp hoặc hành động mong muốn', hint: 'VD: mời NSVers kể câu chuyện của mình' }] },
-{ k: 'recap', label: 'Recap sự kiện', emoji: [2, 3], labels: ['MỞ', 'THÂN', 'KẾT'], fields: [
-{ k: 'event', label: 'Tên sự kiện', hint: 'VD: Đào tạo ứng dụng AI trong công việc' },
-{ k: 'when', label: 'Ngày và địa điểm', hint: 'VD: 15/11/2026 tại văn phòng NSV' },
-{ k: 'host', label: 'Người dẫn dắt hoặc đơn vị tổ chức', hint: 'Anh/Chị Họ tên – Chức danh' },
-{ k: 'moment', label: 'Một khoảnh khắc hoặc điều học được cụ thể', hint: 'Chi tiết thật của sự kiện' }] },
-{ k: 'video', label: 'Kịch bản video', emoji: null, labels: ['HOOK', 'CẢNH', 'KẾT'], fields: [
-{ k: 'topic', label: 'Chủ đề hoặc ý tưởng video', hint: 'VD: một ngày làm việc của NSVer' },
-{ k: 'dur', label: 'Thời lượng', hint: 'VD: 30 giây' },
-{ k: 'cast', label: 'Nhân vật và địa điểm quay', hint: 'VD: 1 NSVer, văn phòng NSV' },
-{ k: 'cta', label: 'Thông điệp chính và lời kêu gọi', hint: 'VD: gửi CV về email tuyển dụng' }] },
-{ k: 'seo', label: 'SEO', emoji: null, labels: ['TIÊU ĐỀ', 'DÀN Ý', 'KẾT'], fields: [
-{ k: 'kw', label: 'Từ khóa chính', hint: 'VD: văn hóa doanh nghiệp NSV' },
-{ k: 'kws', label: 'Từ khóa phụ (cách nhau bằng dấu phẩy)', hint: 'VD: môi trường làm việc, phúc lợi nhân viên' },
-{ k: 'facts', label: 'Nội dung cần có (mỗi ý một dòng, thông tin chính xác)', hint: 'Mỗi dòng một ý, chỉ ghi điều chắc chắn đúng', area: true },
-{ k: 'intent', label: 'Đối tượng đọc và mục đích tìm kiếm', hint: 'VD: ứng viên tìm hiểu môi trường làm việc' }] }
-];
-const T = TYPES.filter((x) => x.k === st.type)[0];
-const DEFP = { bantin: 'news', tuyendung: 'recruit', vanhoa: 'news', recap: 'news', video: 'edu', seo: 'edu' };
-const PIL = [
-{ k: 'news', tag: '#NSVnews', name: 'Tin tức', fixed: '#NSVnews #nguonsongvietgroup', desc: 'Tin ngắn trong ngày, hoạt động và sự kiện của công ty.' },
-{ k: 'edu', tag: '#NSVedu', name: 'Chia sẻ', fixed: '#NSVedu #nguonsongvietgroup #chiasekienthuc #phattrienbanthan', desc: 'Tips cho ứng viên, kiến thức ngành tuyển dụng, phát triển bản thân.' },
-{ k: 'luv', tag: '#NSVluv', name: 'Holiday', fixed: '#NSVluv #nguonsongvietgroup #holiday', desc: 'Ngày lễ trong năm (ý nghĩa, lịch nghỉ) và các chiến dịch trong năm.' },
-{ k: 'recruit', tag: '#NSVrecruit', name: 'Tuyển dụng', fixed: '#NSVrecruit #nguonsongvietgroup #tuyendung #hotjobs', desc: 'Danh sách vị trí theo tháng, tin tuyển vị trí quan trọng.' },
-{ k: 'j4f', tag: '#NSVj4f', name: 'Giải trí', fixed: '', desc: 'Bài giải trí theo trend, sức khỏe tinh thần, minigame. Đu trend phải hợp văn hóa công ty.' }
-];
-const PL = PIL.filter((x) => x.k === st.pillar)[0];
-const pillarChips = PIL.map((x) => Object.assign({ label: x.tag + ' · ' + x.name, pick: () => this.setState({ pillar: x.k }) }, chip(st.pillar === x.k)));
-const noTag = st.pillar === 'j4f' || st.channel === 'Website';
-const pillarNote = PL.desc + (st.pillar === 'j4f' ? ' Quy định: không kèm hashtag.' : (st.channel === 'Website' ? ' Kênh Website: không kèm hashtag.' : ' Hashtag cố định: ' + PL.fixed + ', thêm 1–2 hashtag theo chủ đề.'));
-const showExtra = !noTag;
-const tagLine = (sn) => {
-const P = PIL.filter((x) => x.k === sn.pillar)[0];
-if (P.k === 'j4f' || sn.channel === 'Website') { return ''; }
-return P.fixed + ' ' + (sn.extra === '' ? '[điền: 1–2 hashtag theo chủ đề]' : sn.extra);
-};
-const TL = {}; TYPES.forEach((x) => { TL[x.k] = x.label; });
-const PTAG = { news: '#NSVnews', edu: '#NSVedu', luv: '#NSVluv', recruit: '#NSVrecruit', j4f: '#NSVj4f' };
-const sugCards = this.sugDefs().map((g) => { const on = st.sug === g.key; return { title: g.title, why: g.why, pillar: PTAG[g.pillar], typeCh: TL[g.type] + ' · ' + g.channel, bg: on ? '#F7F2E9' : '#FFFFFF', border: on ? '#8F2333' : '#F0EBE2', btnBg: on ? '#8F2333' : '#FFFFFF', btnFg: on ? '#FFFFFF' : '#8F2333', btnLabel: on ? 'Đang dùng làm brief' : 'Dùng làm brief', pick: () => this.setState(this.sugPatch(g.key)) }; });
-const typeChips = TYPES.map((x) => Object.assign({ label: x.label, pick: () => this.setState({ pillar: DEFP[x.k], type: x.k, len: (x.k !== 'seo' && st.len === 'Dài') ? 'Vừa' : st.len }) }, chip(st.type === x.k)));
-const CH = ['Fanpage', 'TikTok', 'Zalo', 'Website'];
-const channelChips = CH.map((x) => Object.assign({ label: x, pick: () => this.setState({ channel: x }) }, chip(st.channel === x)));
-const chNotes = { 'Fanpage': 'Fanpage: bài đầy đủ 3 phần, hợp độ dài Vừa.', 'TikTok': 'TikTok: nên chọn độ dài Ngắn làm caption, hoặc loại bài Kịch bản video.', 'Zalo': 'Zalo: giữ giọng nội bộ, gần gũi, hợp Bản tin nội bộ và Recap.', 'Website': 'Website: bài đầy đủ, hợp loại SEO, Tin tuyển dụng, Truyền thông văn hóa. Không kèm hashtag.' };
-const cur = st.f[st.type];
-const fieldRows = T.fields.map((fl) => ({ id: 'fld-' + st.type + '-' + fl.k, label: fl.label, hint: fl.hint, value: cur[fl.k], isArea: !!fl.area, isText: !fl.area,
-onChange: (e) => { const nf = Object.assign({}, st.f); nf[st.type] = Object.assign({}, nf[st.type]); nf[st.type][fl.k] = e.target.value; this.setState({ f: nf }); } }));
-const need = T.fields.filter((fl) => !(st.type === 'seo' && fl.k === 'kws'));
-const miss = need.filter((fl) => cur[fl.k].trim() === '').length;
-const missText = miss === 0 ? 'Đã đủ thông tin.' : 'Còn ' + miss + ' ô chưa điền. Bài sẽ để [điền: …] ở chỗ đó, trợ lý không tự đoán.';
-const TONES = ['Chuyên nghiệp', 'Năng động', 'Sáng tạo', 'Thu hút', 'Tinh tế', 'Viral'];
+// ---- gợi ý bắt đầu nhanh
+const starters = [['nhagiao', 'Bài Nhà giáo 20/11 · hạn 19/11'], ['tuyendung', 'Bài tuyển dụng tuần']].map((x) => {
+const on = st.scenario === x[0];
+return { label: x[1], bg: on ? '#8F2333' : '#FFFFFF', fg: on ? '#FFFFFF' : '#342D29', border: on ? '#8F2333' : '#817971', pick: () => this.loadScenario(x[0]) };
+});
+
+// ---- giọng văn (chọn 2 đến 4)
+const TONES = ['Năng động', 'Tinh tế', 'Sáng tạo', 'Chuyên nghiệp', 'Thu hút', 'Viral'];
 const toneChips = TONES.map((x) => {
 const on = st.tones.indexOf(x) >= 0;
-return Object.assign({ label: x, pick: () => {
-if (on) { this.setState({ tones: st.tones.filter((y) => y !== x), toneMsg: false }); }
-else if (st.tones.length >= 4) { this.setState({ toneMsg: true }); }
-else { this.setState({ tones: st.tones.concat([x]), toneMsg: false }); }
-} }, chip(on));
+return { label: (on ? '✓ ' : '') + x, bg: on ? '#8F2333' : '#FFFFFF', fg: on ? '#FFFFFF' : '#342D29', border: on ? '#8F2333' : '#D8CFBE', pick: () => this.toggleTone(x) };
 });
-const toneCount = st.tones.length + ' / 4';
-const toneNote = st.toneMsg ? 'Đã chọn đủ 4 giọng. Bỏ một giọng để chọn giọng khác.' : 'Bản mẫu dùng giọng để xếp thứ tự 3 phương án. Bản thật AI sẽ viết theo tổ hợp giọng chị chọn.';
-const LENS = [['Ngắn', 'Ngắn (dưới 150 chữ)', 150], ['Vừa', 'Vừa (dưới 400 chữ)', 400], ['Dài', 'Dài (400–800 chữ, cho SEO)', 800]];
-const lenChips = LENS.map((x) => {
-const off = x[0] === 'Dài' && st.type !== 'seo';
-const c = chip(st.len === x[0] && !off);
-return Object.assign({ label: x[1], pick: () => { if (!off) { this.setState({ len: x[0] }); } } }, c, off ? { bg: '#F0EBE2', fg: '#342D29', border: '#F0EBE2' } : {});
-});
-const lenNote = st.type !== 'seo' ? 'Độ dài Dài chỉ áp dụng cho loại bài SEO.' : 'SEO nên chọn Dài để có dàn ý và đoạn nội dung đầy đủ.';
 
-// ---- drafting
-const FALL = { topic: 'chủ đề', points: 'nội dung chính', scope: 'thời gian và đối tượng áp dụng', contact: 'đầu mối liên hệ', pos: 'vị trí', loc: 'địa điểm', dl: 'hạn nộp', cv: 'email hoặc link nhận CV', perks: 'quyền lợi nổi bật', value: 'giá trị hoặc chủ đề văn hóa', story: 'câu chuyện hoặc khoảnh khắc thật', who: 'nhân vật hoặc bộ phận', msg: 'thông điệp hoặc hành động mong muốn', event: 'tên sự kiện', when: 'ngày và địa điểm', host: 'Anh/Chị Họ tên – Chức danh', moment: 'một khoảnh khắc hoặc điều học được', dur: 'thời lượng', cast: 'nhân vật và địa điểm quay', cta: 'thông điệp và lời kêu gọi', kw: 'từ khóa chính', kws: 'từ khóa phụ', facts: 'nội dung cần có', intent: 'đối tượng đọc và mục đích tìm kiếm' };
-const build = (snap, vk) => {
-const g = (k) => (snap.f[k].trim() === '' ? '[điền: ' + FALL[k] + ']' : snap.f[k].trim());
-const ls = (k) => { const a = lines(snap.f[k]); return a.length === 0 ? ['[điền: ' + FALL[k] + ']'] : a; };
-const short = (h) => h.split(' – ')[0];
-let title = ''; let quote = ''; let open = []; let body = []; let close = []; let raw = null;
-const t = snap.type;
-if (t === 'bantin') {
-const topic = g('topic'); const scope = g('scope'); const ct = g('contact'); const pts = ls('points');
-title = '📢 BẢN TIN NỘI BỘ | NGUỒN SỐNG VIỆT GROUP | ' + topic;
-if (vk === 'A') { open = ['NSVers ơi, có tin mới cần nắm!', topic + ' áp dụng cho ' + scope + '.']; body = ['📌 Nội dung chính:'].concat(pts.map((p) => '• ' + p)); close = ['👉 Cần hỗ trợ, NSVers liên hệ ' + ct + '.']; }
-else if (vk === 'B') { open = ['Kính gửi toàn thể NSVers,', 'Nguồn Sống Việt Group xin thông tin về ' + topic + ', áp dụng cho ' + scope + '.']; body = ['📌 Nội dung cụ thể:'].concat(pts.map((p) => '• ' + p)); close = ['Mọi thắc mắc, NSVers vui lòng liên hệ ' + ct + '. Trân trọng cảm ơn!']; }
-else { open = ['Đọc nhanh trong 1 phút: ' + topic + '.', 'Áp dụng cho: ' + scope + '.']; body = ['📌 Tóm tắt nhanh:'].concat(pts.map((p, i) => (i + 1) + '. ' + p)); close = ['💬 Điều gì chưa rõ? Hỏi ' + ct + ' nhé.']; }
-} else if (t === 'tuyendung') {
-const pos = g('pos'); const loc = g('loc'); const dl = g('dl'); const cv = g('cv'); const pk = ls('perks');
-if (vk === 'A') { title = '🎯 TUYỂN DỤNG | NGUỒN SỐNG VIỆT GROUP | ' + pos; open = ['Bạn muốn một nơi làm việc trẻ, nhanh và không drama?', 'Chúng mình đang tìm ' + pos + ' tại ' + loc + '.']; body = ['✨ Quyền lợi của Bạn:'].concat(pk.map((p) => '• ' + p)); close = ['👉 Gửi CV về ' + cv + ' trước ' + dl + ' nhé!']; }
-else if (vk === 'B') { title = '🎯 BẢN TIN TUYỂN DỤNG | NGUỒN SỐNG VIỆT GROUP | ' + pos; open = ['Một vị trí mới đang chờ Bạn tại ' + loc + ': ' + pos + '.', 'Nếu Bạn đang tìm một nơi làm việc phù hợp, chúng mình rất muốn được trò chuyện.']; body = ['✨ Khi đồng hành cùng NSV, Bạn nhận được:'].concat(pk.map((p) => '• ' + p)); close = ['👉 Hãy gửi CV về ' + cv + ' trước ' + dl + ' để chúng mình cùng bắt đầu nhé.']; }
-else { title = '🎯 TUYỂN DỤNG | NGUỒN SỐNG VIỆT GROUP | ' + pk.length + ' lý do để Bạn là ' + pos + ' tiếp theo'; open = ['Bạn có 1 phút? Đọc các lý do dưới đây rồi quyết định nhé.', 'Vị trí: ' + pos + ' · Địa điểm: ' + loc + '.']; body = pk.map((p, i) => '💼 Lý do ' + (i + 1) + ': ' + p + '.'); close = ['Gửi CV về ' + cv + ' trước ' + dl + '. Lý do tiếp theo sẽ do chính Bạn viết.']; }
-} else if (t === 'vanhoa') {
-const v = g('value'); const sto = g('story'); const who = g('who'); const msg = g('msg');
-title = '💚 VĂN HÓA NSV | NGUỒN SỐNG VIỆT GROUP | ' + v;
-if (vk === 'A') { open = [v + ' ở NSV trông như thế nào?', 'Câu chuyện hôm nay đến từ ' + who + '.']; body = ['💡 ' + sto, 'Một khoảnh khắc nhỏ để NSVers cùng nhìn lại giá trị ' + v + '.']; close = ['✨ ' + msg]; }
-else if (vk === 'B') { open = ['Văn hóa nằm ở những việc chúng mình làm cùng nhau mỗi ngày.', 'Hôm nay, chúng mình cùng nhìn lại ' + v + ' qua câu chuyện của ' + who + '.']; body = ['💡 ' + sto]; close = ['✨ ' + msg]; }
-else { open = ['Một khoảnh khắc, một giá trị: ' + v + '.']; body = ['💡 Chuyện gì đã xảy ra? ' + sto, 'Ai trong câu chuyện? ' + who + '.']; close = ['✨ ' + msg]; }
-} else if (t === 'recap') {
-const ev = g('event'); const wh = g('when'); const ho = g('host'); const mo = g('moment');
-title = '🚀 [RECAP SỰ KIỆN] NGUỒN SỐNG VIỆT GROUP | ' + ev.toUpperCase();
-quote = '“[điền: câu trích ngắn gợi chủ đề, nên là lời người dẫn dắt nói trong sự kiện]”';
-if (vk === 'A') { open = ['Mỗi sự kiện là một dịp để NSVers cùng học hỏi và kết nối. ' + wh + ', Nguồn Sống Việt Group đã tổ chức ' + ev + ', với ' + ho + ' dẫn dắt.']; body = ['💡 Cùng ' + short(ho) + ', NSVers đã trao đổi và thực hành những nội dung thiết thực ngay tại sự kiện. Điểm đáng nhớ: ' + mo + '.', 'Quan trọng hơn, mỗi thành viên có thêm một cách nhìn mới để áp dụng vào công việc hằng ngày.']; close = ['💚 Chúng mình xin cảm ơn ' + short(ho) + ' vì những chia sẻ thiết thực.', 'Mong mỗi NSVer sẽ thử áp dụng ngay từ tuần này.']; }
-else if (vk === 'B') { open = ['Để NSVers có thêm hành trang trong công việc, ' + wh + ', Nguồn Sống Việt Group đã tổ chức ' + ev + ' dành cho NSVers, dưới sự dẫn dắt của ' + ho + '.']; body = ['💡 Qua những chia sẻ của ' + short(ho) + ', NSVers có cơ hội tìm hiểu, trao đổi và thực hành. Một điều đọng lại sau sự kiện: ' + mo + '.', 'Quan trọng hơn, mỗi thành viên có thêm góc nhìn chủ động trong cách học và làm việc của mình.']; close = ['💚 Trân trọng cảm ơn ' + short(ho) + ' đã dành thời gian chia sẻ.', 'Chúng mình tin những điều học được hôm nay sẽ giúp mỗi cá nhân phát triển và tập thể Nguồn Sống Việt Group ngày càng vững vàng.']; }
-else { open = ['Một sự kiện, một điều đáng mang về. ' + wh + ', NSVers cùng tham gia ' + ev + ' do ' + ho + ' dẫn dắt.']; body = ['💡 Nếu chỉ chọn một điều để nhớ, đó là: ' + mo + '.', 'NSVers cũng đã cùng ' + short(ho) + ' trao đổi trực tiếp để biết cách áp dụng vào công việc của mình.']; close = ['💚 Cảm ơn ' + short(ho) + ' vì buổi chia sẻ.', 'NSVers chưa kịp tham gia đừng ngại hỏi đồng nghiệp về sự kiện này nhé.']; }
-} else if (t === 'video') {
-const topic = g('topic'); const cast = g('cast'); const cta = g('cta');
-const m = snap.f.dur.match(/\d+/); let D = m ? parseInt(m[0], 10) : 0; if (D > 0 && /phút/i.test(snap.f.dur)) { D = D * 60; }
-const tm = (a, b) => (D > 0 ? '[' + a + '–' + b + 's]' : '[điền: mốc thời gian]');
-const e1 = Math.round(D * 0.5); const e2 = Math.round(D * 0.85);
-const hook = vk === 'A' ? 'POV: ' + topic : (vk === 'B' ? topic + ' trong ' + (snap.f.dur.trim() === '' ? '[điền: thời lượng]' : snap.f.dur.trim()) : 'Bạn đã thấy ' + topic + ' như thế này chưa?');
-const rhythm = vk === 'A' ? 'Cắt nhanh, 1–2 giây mỗi cảnh, chữ chạy trên hình.' : (vk === 'B' ? 'Nhịp vừa, có giọng dẫn xuyên suốt.' : 'Mở bằng câu hỏi, kết bằng một cú lật nhẹ.');
-title = 'KỊCH BẢN VIDEO | ' + topic;
-const head = 'Thời lượng: ' + g('dur') + ' · Kênh: ' + snap.channel + ' · Gợi ý dựng: ' + rhythm;
-const hk = [tm(0, 3) + ' HOOK', 'Hình: ' + cast + '.', 'Chữ trên màn hình: ' + hook];
-const s1 = [tm(3, e1) + ' CẢNH 1', 'Hình: ' + cast + '.', 'Lời thoại hoặc voice-over: [điền: lời thoại, đúng thông tin trong brief]'];
-const s2 = [tm(e1, e2) + ' CẢNH 2', 'Hình: [điền: cảnh minh họa ý chính]', 'Chữ trên màn hình: [điền: một ý chính]'];
-const en = [tm(e2, D) + ' KẾT', 'Thông điệp và kêu gọi: ' + cta];
-open = [head]; raw = { hook: hk, scenes: [s1, s2], end: en };
-body = [hk.join('\n')]; close = [en.join('\n')];
-if (snap.len !== 'Ngắn') { body = [hk.join('\n'), s1.join('\n'), s2.join('\n')]; }
-} else {
-const kw = g('kw'); const intent = g('intent'); const fa = ls('facts');
-const kwsT = snap.f.kws.trim();
-const f0 = fa[0];
-const ttl = vk === 'A' ? kw + ': ' + f0 + ' | Nguồn Sống Việt Group' : (vk === 'B' ? 'Hướng dẫn ' + kw + ' cho ' + intent : kw + ': ' + fa.length + ' điều cần biết');
-const meta = vk === 'A' ? 'Thông tin về ' + kw + ' dành cho ' + intent + '. ' + f0 + '. Xem chi tiết tại Nguồn Sống Việt Group.' : (vk === 'B' ? 'Bài viết dành cho ' + intent + ', cung cấp thông tin về ' + kw + (kwsT === '' ? '' : ', gồm ' + kwsT) + '.' : kw + ': ' + fa.join('; ') + '.');
-const h1 = vk === 'A' ? kw : (vk === 'B' ? 'Hướng dẫn ' + kw : kw + ': ' + fa.length + ' điều cần biết');
-title = 'TIÊU ĐỀ SEO: ' + ttl + '\nMÔ TẢ: ' + meta + '\nH1: ' + h1;
-open = ['MỞ BÀI', 'Bài viết này dành cho ' + intent + ', cung cấp thông tin về ' + kw + (kwsT === '' ? '' : ', gồm ' + kwsT) + '.'];
-const dl = snap.len === 'Dài';
-body = ['DÀN Ý'].concat(fa.map((f) => 'H2: ' + f + (dl ? '\n' + f + '. [điền: giải thích chi tiết, số liệu và nguồn kiểm chứng]' : '')));
-close = ['KẾT BÀI', 'Liên hệ [điền: kênh liên hệ] để biết thêm về ' + kw + '.'];
-if (snap.len === 'Ngắn') { open = []; body = []; close = []; }
-}
-if (snap.note !== '') { body = body.concat([snap.note]); }
-const tl = tagLine(snap);
-if (snap.len === 'Ngắn' && ['bantin', 'tuyendung', 'vanhoa', 'recap'].indexOf(t) >= 0) { open = open.slice(0, 1); body = body.slice(0, 2); close = close.slice(0, 1); }
-const parts = [title];
-if (quote !== '') { parts.push(quote); }
-let text = parts.join('\n');
-if (open.length) { text += '\n\n' + (t === 'seo' ? open.join('\n') : open.join(' ')); }
-if (body.length) { text += '\n\n' + body.join('\n' + (t === 'video' ? '\n' : '')); }
-if (close.length) { text += '\n\n' + (t === 'seo' ? close.join('\n') : close.join(' ')); }
-if (tl !== '') { text += '\n\n' + (t === 'video' ? 'Hashtag caption: ' : '') + tl; }
-return text;
+// ---- link tham khảo
+const links = st.links.map((l, i) => ({ url: l.url, host: l.host, remove: () => this.setState({ links: this.state.links.filter((y, j) => j !== i) }) }));
+const starCount = st.chot.filter((x) => x.star).length + st.past.filter((x) => x.star).length;
+
+// ---- bài viết
+const noTag = st.fPil.indexOf('j4f') >= 0 || st.fChan === 'Website' || V.stub;
+const tags = noTag ? '' : SC.tags;
+const versions = D.vers.map((v, i) => {
+const on = i === D.vi;
+return { tone: 'Bản ' + v.tone, words: v.stub ? 'chưa viết sẵn' : '~ ' + this.words(v.title + ' ' + v.paras.join(' ')) + ' từ', title: v.title, lead: v.paras[0], border: on ? '#8F2333' : '#E4DCCB', btnBg: on ? '#8F2333' : '#FFFFFF', btnFg: on ? '#FFFFFF' : '#8F2333', btnLabel: on ? 'Đang dùng bản này' : 'Dùng bản này', use: () => this.setState({ ver: i, tab: 'post' }) };
+});
+const checkLabels = ['Đúng nhận diện thương hiệu', 'Không lỗi chính tả', 'Hình ảnh, kích thước đúng', 'Có CTA và thông tin liên hệ', 'Thông tin chính xác', 'Đủ logo footer'];
+const checks = checkLabels.map((l, i) => {
+const on = st.checks.indexOf(i) >= 0;
+return { label: (on ? '✓ ' : '') + l, on: on, bg: on ? '#8F2333' : '#FFFFFF', fg: on ? '#FFFFFF' : '#342D29', border: on ? '#8F2333' : '#D8CFBE',
+toggle: () => { this.setState({ checks: on ? this.state.checks.filter((x) => x !== i) : this.state.checks.concat([i]) }); this.syncSched(); } };
+});
+const chotKey = st.scenario + '|' + V.tone;
+const isChot = st.chot.filter((x) => x.key === chotKey).length > 0;
+const missing = [];
+if (fills > 0) { missing.push(fills + ' chỗ [điền]'); }
+if (st.checks.length < 6) { missing.push((6 - st.checks.length) + ' mục kiểm tra chưa tick'); }
+const readyText = missing.length === 0 ? 'Đủ điều kiện: chốt bài thì vào Lịch đăng ở trạng thái Chờ duyệt.' : 'Còn thiếu: ' + missing.join(', ') + '. Chốt lúc này bài vào Lịch đăng ở trạng thái Nháp.';
+const curSched = st.sched.filter((x) => x.key === chotKey)[0];
+const inSched = !!curSched && !V.stub;
+
+// ---- hình ảnh
+const RATIO = { 'Social · 1200 × 1200 px': 1, 'Bản tin nội bộ · A5 14,8 × 21 cm': 148 / 210, 'Facebook dọc · 1080 × 1350 px': 4 / 5, 'Story · TikTok 1080 × 1920 px': 9 / 16, 'Banner · 1200 × 628 px': 1200 / 628 };
+const ratio = RATIO[st.size] || 1;
+const BW = 290; const BH = 400;
+let pw = BW; let ph = BW / ratio;
+if (ph > BH) { ph = BH; pw = BH * ratio; }
+const STY = {
+brand: { bg: '#FBF6EA', fg: '#8F2333', accent: '#B8860B', foot: '#8F2333', footFg: '#FFFFFF', border: '1px solid #E4DCCB', chipBg: '#8F2333', chipFg: '#FFFFFF' },
+modern: { bg: 'linear-gradient(160deg, #8F2333 0%, #A83243 100%)', fg: '#FFFFFF', accent: '#E8D3A0', foot: 'rgba(0,0,0,0.22)', footFg: '#FFFFFF', border: '0', chipBg: '#C8A96B', chipFg: '#342D29' },
+minimal: { bg: '#FFFFFF', fg: '#342D29', accent: '#8F2333', foot: '#F7F2E9', footFg: '#342D29', border: '1px solid #E4DCCB', chipBg: '#FFFFFF', chipFg: '#8F2333' }
 };
-
-const gen = st.gen;
-const snap = st.snap;
-const VMAP = { 'Năng động': 'A', 'Viral': 'A', 'Chuyên nghiệp': 'B', 'Tinh tế': 'B', 'Sáng tạo': 'C', 'Thu hút': 'C' };
-const sel = snap ? snap.tones : st.tones;
-const score = { A: 0, B: 0, C: 0 };
-sel.forEach((x) => { score[VMAP[x]] += 1; });
-const order = ['A', 'B', 'C'].sort((a, b) => score[b] - score[a] || (a < b ? -1 : 1));
-const vname = { A: 'Nhịp nhanh', B: 'Chỉn chu', C: 'Kể chuyện' };
-const variantTabs = snap ? order.map((x, i) => Object.assign({ label: 'Phương án ' + (i + 1) + ' · ' + vname[x], star: score[x] > 0 ? 'Hợp: ' + sel.filter((y) => VMAP[y] === x).join(', ') : '', starOp: score[x] > 0 ? 1 : 0,
-pick: () => this.setState({ variant: x, copied: false }) }, chip(st.variant === x))) : [];
-const toneLine = snap ? 'Giọng đã chọn: ' + (sel.length === 0 ? 'chưa chọn' : sel.join(', ')) + '. Bản mẫu dùng giọng để xếp thứ tự, nội dung ghép từ khuôn và thông tin trong brief.' : '';
-const gentext = snap ? build(snap, st.variant) : '';
-const ekey = st.snapId + '-' + st.variant;
-const draftText = snap ? (st.edits[ekey] !== undefined ? st.edits[ekey] : gentext) : '';
-const typeCfg = snap ? TYPES.filter((x) => x.k === snap.type)[0] : T;
-const words = draftText.trim() === '' ? 0 : draftText.trim().split(/\s+/).length;
-const holes = (draftText.match(/\[điền:/g) || []).length;
-const emo = (draftText.match(/\p{Extended_Pictographic}/gu) || []).length;
-const ban = ['bứt phá', 'chinh phục', 'viết tiếp hành trình', 'siêu hấp dẫn', 'điểm đến đáng khám phá', 'lan tỏa tri thức', 'vươn xa', 'chuyển biến tích cực', 'kiến tạo tương lai', 'không ngừng phát triển', 'tiềm năng vô hạn'];
-const banN = ban.filter((b) => draftText.toLowerCase().indexOf(b) >= 0).length;
-let checks = [];
-if (snap) {
-const lim = snap.len === 'Ngắn' ? 150 : (snap.len === 'Vừa' ? 400 : 800);
-const wOk = snap.len === 'Dài' ? (words >= 400 && words <= 800) : words < lim;
-checks.push({ text: 'Đủ 3 phần: ' + typeCfg.labels.join(' · '), color: '#27845D' });
-checks.push({ text: words + ' chữ (' + (snap.len === 'Dài' ? '400–800' : 'dưới ' + lim) + ')', color: wOk ? '#27845D' : (words > lim ? '#C94B4B' : '#D99A32') });
-checks.push({ text: holes === 0 ? 'Không còn chỗ cần điền' : holes + ' chỗ cần điền', color: holes === 0 ? '#27845D' : '#D99A32' });
-if (typeCfg.emoji) { checks.push({ text: 'Emoji ' + emo + ' (chuẩn ' + typeCfg.emoji[0] + '–' + typeCfg.emoji[1] + ')', color: (emo >= typeCfg.emoji[0] && emo <= typeCfg.emoji[1]) || (snap.len === 'Ngắn' && emo <= typeCfg.emoji[1]) ? '#27845D' : '#D99A32' }); }
-if (snap.type === 'seo') {
-const tt = (draftText.match(/^TIÊU ĐỀ SEO: (.*)$/m) || ['', ''])[1];
-const mt = (draftText.match(/^MÔ TẢ: (.*)$/m) || ['', ''])[1];
-const h1 = (draftText.match(/^H1: (.*)$/m) || ['', ''])[1];
-const k = snap.f.kw.trim().toLowerCase();
-checks.push({ text: 'Tiêu đề ' + tt.length + ' ký tự (nên ≤ 60)', color: tt.length <= 60 ? '#27845D' : '#D99A32' });
-checks.push({ text: 'Mô tả ' + mt.length + ' ký tự (nên ≤ 155)', color: mt.length <= 155 ? '#27845D' : '#D99A32' });
-checks.push({ text: k === '' ? 'Chưa có từ khóa chính' : (tt.toLowerCase().indexOf(k) >= 0 && h1.toLowerCase().indexOf(k) >= 0 ? 'Từ khóa có trong tiêu đề và H1' : 'Từ khóa chưa có đủ ở tiêu đề và H1'), color: k !== '' && tt.toLowerCase().indexOf(k) >= 0 && h1.toLowerCase().indexOf(k) >= 0 ? '#27845D' : '#D99A32' });
-}
-const ptl = tagLine(snap);
-if (ptl === '') { checks.push({ text: snap.pillar === 'j4f' ? 'Pillar j4f: không kèm hashtag' : 'Website: không kèm hashtag', color: '#27845D' }); }
-else { checks.push({ text: draftText.indexOf(PIL.filter((x) => x.k === snap.pillar)[0].fixed) >= 0 ? 'Hashtag cố định đủ' : 'Thiếu hashtag cố định', color: draftText.indexOf(PIL.filter((x) => x.k === snap.pillar)[0].fixed) >= 0 ? '#27845D' : '#D99A32' }); }
-checks.push({ text: banN === 0 ? 'Không dùng cụm sáo rỗng' : banN + ' cụm nên hạn chế', color: banN <= 2 ? '#27845D' : '#D99A32' });
-}
-const usedRows = snap ? [{ label: 'Kênh · Pillar', value: snap.channel + ' · ' + PIL.filter((x) => x.k === snap.pillar)[0].tag }].concat(typeCfg.fields.map((fl) => ({ label: fl.label.replace(/ \(.*\)$/, ''), value: snap.f[fl.k].trim() === '' ? 'Chưa điền, bài để [điền: …]' : snap.f[fl.k].trim() }))) : [];
-
-// ---- design
-const dsnap = snap || { type: st.type, channel: st.channel, f: Object.assign({}, cur), note: '', len: 'Vừa', tones: [] };
-const dg = (k) => (dsnap.f[k].trim() === '' ? '[điền: ' + FALL[k] + ']' : dsnap.f[k].trim());
-const dl = (k) => { const a = lines(dsnap.f[k]); return a.length === 0 ? ['[điền: ' + FALL[k] + ']'] : a; };
-let content = null;
-const dt = dsnap.type;
-if (dt === 'bantin') { content = { kicker: 'BẢN TIN NỘI BỘ', headline: dg('topic'), sub: dg('scope'), items: dl('points').slice(0, 5), cta: 'Liên hệ: ' + dg('contact'), meta: 'Dành cho toàn thể NSVers' }; }
-else if (dt === 'tuyendung') { content = { kicker: 'ĐANG TUYỂN', headline: dg('pos'), sub: dg('loc'), items: dl('perks').slice(0, 5), cta: 'Gửi CV về ' + dg('cv'), meta: 'Hạn nộp: ' + dg('dl') }; }
-else if (dt === 'vanhoa') { content = { kicker: 'VĂN HÓA NSV', headline: dg('value'), sub: dg('who'), items: [dg('story')], cta: dg('msg'), meta: 'Văn hóa NSV' }; }
-else if (dt === 'recap') { const e = dg('event'); content = { kicker: 'RECAP SỰ KIỆN', headline: e.charAt(0).toUpperCase() + e.slice(1), sub: dg('when'), items: ['Dẫn dắt: ' + dg('host'), 'Điểm đáng nhớ: ' + dg('moment')], cta: 'Cảm ơn NSVers đã tham gia', meta: dg('host').split(' – ')[0] }; }
-else if (dt === 'video') { content = { kicker: 'VIDEO', headline: dg('topic'), sub: 'Thời lượng: ' + dg('dur'), items: ['Nhân vật và địa điểm: ' + dg('cast')], cta: dg('cta'), meta: 'Ảnh bìa video (thumbnail)' }; }
-else { content = { kicker: 'BÀI VIẾT', headline: dg('kw'), sub: dg('intent'), items: dl('facts').slice(0, 5), cta: 'Đọc thêm trên website NSV', meta: 'Ảnh bìa bài SEO' }; }
-const half = Math.ceil(content.items.length / 2);
-content.slides = [[content.kicker, content.headline, content.sub], ['ĐIỂM CHÍNH', 'Nội dung nổi bật', content.items.slice(0, half).join('\n')], ['CHI TIẾT', 'Thông tin thêm', content.items.slice(half).join('\n') || '[điền: nội dung thêm]'], ['KẾT', content.cta, content.meta]];
-const ruby = st.style === 'ruby';
-const art = { kicker: content.kicker, headline: content.headline, sub: content.sub, cta: content.cta, meta: content.meta,
-bg: ruby ? 'linear-gradient(160deg, #8F2333 0%, #A83243 100%)' : '#F7F2E9', fg: ruby ? '#FFFFFF' : '#342D29', accent: ruby ? '#C8A96B' : '#8F2333',
-itemBg: ruby ? 'rgba(255,255,255,0.14)' : '#FFFFFF', itemBorder: ruby ? 'rgba(255,255,255,0.28)' : '#F0EBE2',
-ctaBg: ruby ? '#FFFFFF' : 'linear-gradient(135deg, #8F2333, #A83243)', ctaFg: ruby ? '#8F2333' : '#FFFFFF' };
-const artItems = content.items.map((x) => ({ text: x }));
-const slides = content.slides.map((s, i) => {
-const dark = i === 0 || i === 3;
-return { idx: (i + 1) + '/4', kicker: s[0], headline: s[1], body: s[2], bg: dark ? 'linear-gradient(160deg, #8F2333 0%, #A83243 100%)' : (ruby ? '#F7F2E9' : '#FFFFFF'), fg: dark ? '#FFFFFF' : '#342D29', accent: dark ? '#C8A96B' : '#8F2333', border: dark ? '#8F2333' : '#F0EBE2' };
+const S = st.bgImg === '' ? STY[st.style] : Object.assign({}, STY.modern, { bg: "linear-gradient(180deg, rgba(40,15,20,0.42), rgba(40,15,20,0.82)), url('" + st.bgImg + "') center / cover no-repeat", foot: 'rgba(0,0,0,0.38)' });
+const wide = ratio > 1.5; const tall = ratio < 0.75;
+const left = st.layout === 1;
+const P = SC.poster;
+const styles = [['brand', 'Thương hiệu NSV'], ['modern', 'Hiện đại'], ['minimal', 'Tối giản']].map((x) => {
+const on = st.style === x[0] && st.bgImg === '';
+return { label: x[1], bg: on ? '#FBF1F2' : '#FFFFFF', fg: on ? '#8F2333' : '#342D29', border: on ? '#8F2333' : '#E4DCCB', pick: () => this.setState({ style: x[0], bgImg: '' }) };
 });
-const FMT = [['poster', 'Poster'], ['standee', 'Standee'], ['carousel', 'Carousel 4 slide']];
-const fmtChips = FMT.map((x) => Object.assign({ label: x[1], pick: () => this.setState({ fmt: x[0] }) }, chip(st.fmt === x[0])));
-const styleChips = [['ruby', 'Nền Ruby'], ['ivory', 'Nền Ivory']].map((x) => Object.assign({ label: x[1], pick: () => this.setState({ style: x[0] }) }, chip(st.style === x[0])));
+const imgs = st.imgs.map((m, i) => {
+const on = st.bgImg === m.url;
+return { name: m.name, bg: "url('" + m.url + "') center / cover no-repeat", border: on ? '3px solid #8F2333' : '1.5px solid #E4DCCB', tag: on ? 'Đang làm nền' : 'Dùng làm nền',
+tagBg: on ? '#8F2333' : 'rgba(52,45,41,0.7)',
+pick: () => this.setState({ bgImg: on ? '' : m.url }),
+remove: () => this.setState({ imgs: this.state.imgs.filter((y, j) => j !== i), bgImg: this.state.bgImg === m.url ? '' : this.state.bgImg }) };
+});
 
-// ---- flow
-const hasDraft = gen === 'done' && snap !== null;
-const steps = [
-{ n: '1', label: 'Brief', state: snap ? 'Đã gửi brief' : (miss === 0 ? 'Đủ thông tin' : 'Còn ' + miss + ' ô trống'), done: !!snap },
-{ n: '2', label: 'Bản nháp', state: hasDraft ? '3 phương án, đang sửa' : (gen === 'loading' ? 'Đang ghép...' : 'Chưa tạo'), done: hasDraft },
-{ n: '3', label: 'Hình demo', state: hasDraft ? FMT.filter((x) => x[0] === st.fmt)[0][1] : 'Cần bản nháp trước', done: hasDraft && st.view === 'design' },
-{ n: '4', label: 'Duyệt và Lịch đăng', state: st.scheduled ? 'Đã đưa sang (bản mẫu)' : (st.approved ? 'Đã duyệt' : 'Chờ duyệt'), done: st.scheduled }
-].map((p) => Object.assign({}, p, { bg: p.done ? '#8F2333' : '#FFFFFF', fg: p.done ? '#FFFFFF' : '#8F2333' }));
-const schedDateText = st.schedDate.split('-').reverse().join('/');
-const canSched = st.approved && hasDraft;
-const labs = typeCfg.labels;
 return {
-steps: steps, typeChips: typeChips, channelChips: channelChips, channelNote: chNotes[st.channel], fieldRows: fieldRows, missText: missText,
-sugCards: sugCards, pillarChips: pillarChips, pillarNote: pillarNote, showExtra: showExtra, extraTags: st.extraTags, onExtra: (e) => this.setState({ extraTags: e.target.value }), toneChips: toneChips, toneCount: toneCount, toneNote: toneNote, lenChips: lenChips, lenNote: lenNote, note: st.note, onNote: (e) => this.setState({ note: e.target.value }),
-generate: () => this.generate(), genLabel: gen === 'loading' ? 'Đang tạo...' : (hasDraft ? 'Tạo lại 3 phương án' : 'Tạo bản nháp'),
-tabWrite: chip(st.view === 'write'), tabDesign: chip(st.view === 'design'),
-goWrite: () => this.setState({ view: 'write' }), goDesign: () => this.setState({ view: 'design' }),
-noDraft: gen === 'idle', isLoading: gen === 'loading',
-showWrite: hasDraft && st.view === 'write', showDesign: hasDraft && st.view === 'design', showApprove: hasDraft,
-variantTabs: variantTabs, toneLine: toneLine, checks: checks, usedRows: usedRows, l1: labs[0], l2: labs[1], l3: labs[2], draftText: draftText,
-draftMeta: snap ? typeCfg.label + ' · ' + snap.channel + ' · ' + PIL.filter((x) => x.k === snap.pillar)[0].tag + ' · ' + snap.len : '',
-onDraft: (e) => { const ne = Object.assign({}, st.edits); ne[ekey] = e.target.value; this.setState({ edits: ne }); },
-resetDraft: () => { const ne = Object.assign({}, st.edits); delete ne[ekey]; this.setState({ edits: ne }); },
-copyLabel: st.copied ? 'Đã sao chép' : 'Sao chép bài',
-copyDraft: () => { try { navigator.clipboard.writeText(draftText); } catch (err) { } this.setState({ copied: true }); },
-fmtChips: fmtChips, styleChips: styleChips, art: art, artItems: artItems, slides: slides,
-isPoster: st.fmt === 'poster', isStandee: st.fmt === 'standee', isCarousel: st.fmt === 'carousel',
-apprText: st.approved ? 'Đã duyệt' : 'Chưa duyệt', apprColor: st.approved ? '#27845D' : '#D99A32',
-apprBtn: st.approved ? 'Bỏ duyệt' : 'Đánh dấu đã duyệt', apprBtnBg: st.approved ? '#FFFFFF' : '#8F2333', apprBtnFg: st.approved ? '#8F2333' : '#FFFFFF',
-toggleApprove: () => this.setState({ approved: !st.approved, scheduled: false }),
-variantName: vname[st.variant], designName: FMT.filter((x) => x[0] === st.fmt)[0][1] + ' · ' + (ruby ? 'Nền Ruby' : 'Nền Ivory'),
-schedDate: st.schedDate, onSchedDate: (e) => this.setState({ schedDate: e.target.value, scheduled: false }),
-schedTime: st.schedTime, onSchedTime: (e) => this.setState({ schedTime: e.target.value, scheduled: false }),
-toSchedule: () => { if (canSched) { this.setState({ scheduled: true }); } else { this.setState({ scheduled: false, tryFail: true }); } },
-toSchedOp: canSched ? 1 : 0.55,
-schedMsgShow: st.scheduled || (!!st.tryFail && !canSched),
-schedMsg: st.scheduled ? 'Đã thêm vào Lịch đăng (bản mẫu): ' + typeCfg.label + ' · ' + (snap ? snap.channel : '') + ' · ' + schedDateText + ' lúc ' + st.schedTime + '. Bản mẫu chưa ghi vào Lịch đăng thật, bản thật sẽ lưu và gửi theo giờ.' : 'Cần bấm Đánh dấu đã duyệt trước khi đưa sang Lịch đăng.',
-schedMsgColor: st.scheduled ? '#27845D' : '#D99A32'
+starters: starters,
+prompt: st.prompt, onPrompt: (e) => this.setState({ prompt: e.target.value }), promptCount: st.prompt.length.toLocaleString('vi-VN'),
+fType: st.fType, onType: (e) => { const v = e.target.value; const o = { fType: v }; if (v === 'Bản tin nội bộ') { o.size = A5; } else if (this.state.size === A5) { o.size = SOC; } this.setState(o); },
+fChan: st.fChan, onChan: (e) => this.setState({ fChan: e.target.value }),
+fAud: st.fAud, onAud: (e) => this.setState({ fAud: e.target.value }),
+fLen: st.fLen, onLen: (e) => this.setState({ fLen: e.target.value }),
+fPil: st.fPil, onPil: (e) => this.setState({ fPil: e.target.value }),
+goal: st.goal, onGoal: (e) => this.setState({ goal: e.target.value }),
+toneChips: toneChips, toneCount: st.tones.length + ' / 4', toneNote: st.toneMsg === '' ? 'Chọn 2 đến 4 giọng, mỗi giọng ra một phiên bản để bạn so sánh.' : st.toneMsg, toneNoteColor: st.toneMsg === '' ? '#817971' : '#C94B4B',
+linkInput: st.linkInput, onLinkInput: (e) => this.setState({ linkInput: e.target.value }),
+addLink: () => {
+const s = this.state; let u = s.linkInput.trim();
+if (u === '') { this.say('Dán link bài mẫu vào ô trước nhé.'); return; }
+if (!/^https?:\/\//i.test(u)) { u = 'https://' + u; }
+if (u.indexOf('.') < 0) { this.say('Link chưa đúng định dạng.'); return; }
+if (s.links.length >= 5) { this.say('Tối đa 5 link cho mỗi bài.'); return; }
+this.setState({ links: s.links.concat([{ url: u, host: u.replace(/^https?:\/\//i, '').split('/')[0] }]), linkInput: '' });
+},
+links: links, hasLinks: links.length > 0,
+starLine: starCount === 0 ? 'Kho chưa có bài nào được chọn làm mẫu giọng.' : 'Đang học giọng từ ' + starCount + ' bài trong kho.',
+runGen: () => this.runGen(), genLabel: loading ? 'AI đang viết...' : 'Tạo nội dung bằng AI',
+genNote: 'Bản demo: bài và hình bên cạnh là nội dung viết sẵn theo gợi ý đang chọn. Bản thật AI viết mới theo yêu cầu và tùy chọn. Chỗ [điền: …] là thông tin còn thiếu, trợ lý không tự bịa.',
+
+tabPost: st.tab === 'post', tabVer: st.tab === 'ver', verCount: 'Các phiên bản (' + D.vers.length + ')',
+tabPostBg: st.tab === 'post' ? '#F7F2E9' : 'transparent', tabPostFg: st.tab === 'post' ? '#8F2333' : '#342D29',
+tabVerBg: st.tab === 'ver' ? '#F7F2E9' : 'transparent', tabVerFg: st.tab === 'ver' ? '#8F2333' : '#342D29',
+goPost: () => this.setState({ tab: 'post' }), goVer: () => this.setState({ tab: 'ver' }),
+statusText: loading ? 'Đang tạo...' : '✓ Đã tạo', statusColor: loading ? '#D99A32' : '#27845D',
+isPost: st.tab === 'post', isVer: st.tab === 'ver',
+verTone: V.tone, title: V.title, paras: V.paras.map((p) => ({ text: p })), tags: tags, versions: versions,
+wordText: V.stub ? 'Giọng này chưa có bài viết sẵn trong demo.' : '~ ' + wc + ' từ · ' + (wc <= 400 ? 'đạt: 3 phần Mở, Thân, Kết, dưới 400 chữ' : 'vượt 400 chữ, cần cắt bớt'), wordColor: V.stub ? '#817971' : (wc <= 400 ? '#27845D' : '#C94B4B'),
+fillText: V.stub ? '' : (fills === 0 ? 'Đã đủ thông tin, không còn chỗ trống.' : 'Còn ' + fills + ' chỗ [điền: …] cần bổ sung trước khi đăng.'), fillColor: fills === 0 ? '#27845D' : '#B8860B',
+chotLabel: isChot ? '✓ Đã chốt · lưu trong kho' : 'Chốt bài này', chotBg: isChot ? '#27845D' : '#8F2333',
+actChot: () => {
+const d = this.derive(); const s = this.state;
+if (d.V.stub) { this.say('Giọng này chưa có bài để chốt. Chọn một phiên bản đã viết.'); return; }
+const key = s.scenario + '|' + d.V.tone;
+if (s.chot.filter((x) => x.key === key).length > 0) {
+const chot = s.chot.filter((x) => x.key !== key);
+const locked = s.sched.filter((x) => x.key === key && (x.status === 'Đã duyệt' || x.status === 'Đã khóa')).length > 0;
+const q = locked ? s.sched : s.sched.filter((x) => x.key !== key);
+this.setState({ chot: chot, sched: q }); this.saveKho(chot, s.past); this.saveSched(q);
+this.say(locked ? 'Đã bỏ chốt khỏi Kho. Bài đã được duyệt nên vẫn ở trong Lịch đăng.' : 'Đã bỏ chốt: bài rút khỏi Kho và Lịch đăng.');
+return;
+}
+const id = String(Date.now());
+const chot = s.chot.concat([{ id: id, key: key, title: d.V.title, tone: d.V.tone, type: s.fType, chan: s.fChan, goal: s.goal, size: s.size, date: new Date().toLocaleDateString('vi-VN'), text: d.V.paras.join('\n\n'), tags: d.SC.tags, star: true }]);
+const item = this.schedItem(d, id);
+const q = s.sched.concat([item]);
+this.setState({ chot: chot, sched: q }); this.saveKho(chot, s.past); this.saveSched(q);
+this.say('Đã chốt: bài vào Kho và chuyển sang Lịch đăng, trạng thái ' + item.status + (item.missing.length ? '. Còn thiếu: ' + item.missing.join(', ') + '.' : '. Chờ sếp duyệt.'));
+},
+copyPost: () => {
+const text = V.title + '\n\n' + V.paras.join('\n\n') + (D.sig === '' || V.stub ? '' : '\n\n' + D.sig) + (tags === '' ? '' : '\n\n' + tags);
+try { if (navigator.clipboard) { navigator.clipboard.writeText(text); } } catch (e) { /* bỏ qua */ }
+this.say('Đã sao chép bài viết.');
+},
+checks: checks, checkDone: st.checks.length, readyText: readyText, readyColor: missing.length === 0 ? '#27845D' : '#B8860B',
+
+pw: Math.round(pw), ph: Math.round(ph), pBg: S.bg, pFg: S.fg, pBorder: S.border, pAccent: S.accent, pFootBg: S.foot, pFootFg: S.footFg,
+pChipBg: st.layout === 2 ? 'transparent' : S.chipBg, pChipFg: st.layout === 2 ? S.accent : S.chipFg,
+pAlign: left ? 'flex-start' : 'center', pText: left ? 'left' : 'center', pLogoJ: left ? 'flex-start' : 'center',
+pKick: wide ? 6 : (tall ? 10 : 9), pHead: wide ? 5.4 : (tall ? 9.2 : 8), pBig: wide ? 4.8 : (tall ? 10 : 8.4),
+pKicker: P.kicker, pTitle: P.title, pBigText: P.big, pSub: P.sub,
+size: st.size, onSize: (e) => this.setState({ size: e.target.value }),
+imgs: imgs, hasImgs: imgs.length > 0, imgCount: st.imgs.length + ' / 6',
+onImgs: (e) => {
+const files = Array.prototype.slice.call(e.target.files || []);
+const cur = this.state.imgs.slice();
+files.forEach((f) => { if (cur.length < 6 && /^image\//.test(f.type)) { cur.push({ name: f.name, url: URL.createObjectURL(f) }); } });
+this.setState({ imgs: cur });
+},
+styles: styles, nextLayout: () => this.setState({ layout: (st.layout + 1) % 3 }), layoutNo: st.layout + 1,
+
+actDownload: () => this.say('Bản thật tải file đúng kích thước đã chọn: ' + st.size + '.'),
+inSched: inSched, notInSched: !inSched,
+schedStatusText: curSched ? 'Trạng thái: ' + curSched.status : '', schedColor: curSched && curSched.status === 'Chờ duyệt' ? '#27845D' : '#B8860B',
+schedMissText: curSched && curSched.missing && curSched.missing.length ? 'Còn thiếu: ' + curSched.missing.join(', ') + '.' : 'Đủ điều kiện để sếp duyệt.',
+actShare: () => this.say('Bản thật tạo link xem trước để gửi Quản lý duyệt (chưa bật trong demo).'),
+toast: st.toast,
+
+// ---- chữ ký cố định
+hasSig: D.sig !== '' && !V.stub, sigLabel: 'Chữ ký cố định · ' + D.sigKind, sigText: D.sig,
+openSig: () => this.setState({ sigOpen: true }), closeSig: () => this.setState({ sigOpen: false }), sigOpen: st.sigOpen,
+sigFan: st.sigFan, sigWeb: st.sigWeb,
+onSigFan: (e) => { const v = e.target.value; this.setState({ sigFan: v }); this.saveSig(v, this.state.sigWeb); this.syncSched(); },
+onSigWeb: (e) => { const v = e.target.value; this.setState({ sigWeb: v }); this.saveSig(this.state.sigFan, v); this.syncSched(); },
+
+// ---- kho
+khoCount: st.chot.length + st.past.length,
+openKho: () => this.setState({ khoOpen: true }), closeKho: () => this.setState({ khoOpen: false }),
+khoOpen: st.khoOpen, khoChot: st.khoTab === 'chot', khoPast: st.khoTab === 'past',
+tabChotBg: st.khoTab === 'chot' ? '#FFFFFF' : 'transparent', tabChotFg: st.khoTab === 'chot' ? '#8F2333' : '#342D29',
+tabPastBg: st.khoTab === 'past' ? '#FFFFFF' : 'transparent', tabPastFg: st.khoTab === 'past' ? '#8F2333' : '#342D29',
+goKhoChot: () => this.setState({ khoTab: 'chot' }), goKhoPast: () => this.setState({ khoTab: 'past' }),
+chotLabelTab: 'Bài đã chốt (' + st.chot.length + ')', pastLabelTab: 'Bài tôi từng làm (' + st.past.length + ')',
+chotList: this.khoItems('chot'), chotEmpty: st.chot.length === 0,
+pastList: this.khoItems('past'), pastEmpty: st.past.length === 0,
+pfTitle: st.pfTitle, onPfTitle: (e) => this.setState({ pfTitle: e.target.value }),
+pfType: st.pfType, onPfType: (e) => this.setState({ pfType: e.target.value }),
+pfChan: st.pfChan, onPfChan: (e) => this.setState({ pfChan: e.target.value }),
+pfLink: st.pfLink, onPfLink: (e) => this.setState({ pfLink: e.target.value }),
+pfText: st.pfText, onPfText: (e) => this.setState({ pfText: e.target.value }),
+addPast: () => {
+const s = this.state;
+if (s.pfTitle.trim() === '' && s.pfText.trim() === '' && s.pfLink.trim() === '') { this.say('Nhập tên bài, dán nội dung hoặc dán link trước khi thêm.'); return; }
+const past = s.past.concat([{ id: String(Date.now()), title: s.pfTitle.trim() === '' ? '(Chưa đặt tên)' : s.pfTitle.trim(), type: s.pfType, chan: s.pfChan, link: s.pfLink.trim(), text: s.pfText.trim(), date: new Date().toLocaleDateString('vi-VN'), star: true }]);
+this.setState({ past: past, pfTitle: '', pfLink: '', pfText: '' });
+this.saveKho(s.chot, past);
+this.say('Đã thêm vào kho. Bài này được dùng làm mẫu giọng cho các lần viết sau.');
+},
+exportKho: () => {
+try {
+const blob = new Blob([JSON.stringify({ chot: this.state.chot, past: this.state.past }, null, 2)], { type: 'application/json' });
+const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'kho-bai-viet-nsv.json';
+document.body.appendChild(a); a.click(); a.remove();
+} catch (e) { /* bỏ qua */ }
+this.say('Đã tải file kho về máy.');
+}
 };
 }
 }
 </script>
+
 </body>
 </html>
