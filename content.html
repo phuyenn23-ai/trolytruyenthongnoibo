@@ -186,6 +186,7 @@ E-learning &amp; báo cáo
 <div style="border-top: 1px solid #F0EBE2; padding-top: 12px; display: flex; flex-direction: column; gap: 10px">
 <span style="font-size: 12px; font-weight: 700; color: {{ wordColor }}">{{ wordText }}</span>
 <span style="font-size: 12px; line-height: 1.5; color: {{ fillColor }}">{{ fillText }}</span>
+<span style="font-size: 12px; line-height: 1.5; font-weight: 700; color: {{ nameColor }}">{{ nameText }}</span>
 <div style="display: flex; gap: 8px">
 <button type="button" onClick="{{ actChot }}" style="min-height: 42px; border-radius: 12px; font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer; flex: 1; border: 0; background: {{ chotBg }}; color: #FFFFFF">{{ chotLabel }}</button>
 <button type="button" aria-label="Sao chép bài" onClick="{{ copyPost }}" style="width: 46px; border-radius: 12px; border: 1px solid #E4DCCB; background: #FFFFFF; cursor: pointer; color: #342D29"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg></button>
@@ -426,7 +427,7 @@ vers: [
 ]
 },
 tuyendung: {
-prompt: 'Viết bài tuyển dụng tuần cho Fanpage NSV. Vị trí [điền: vị trí đang tuyển], hạn nộp [điền: ngày], nhận CV qua [điền: email hoặc link]. Nêu quyền lợi thật của Nguồn Sống Việt Group, kèm hình ảnh đăng Fanpage.',
+prompt: 'Viết bài tuyển dụng tuần cho Fanpage Nguồn Sống Việt Group. Vị trí [điền: vị trí đang tuyển], hạn nộp [điền: ngày], nhận CV qua [điền: email hoặc link]. Nêu quyền lợi thật của Nguồn Sống Việt Group, kèm hình ảnh đăng Fanpage.',
 goal: 'Thu hút ứng viên cho vị trí đang tuyển; giới thiệu môi trường làm việc thật của Nguồn Sống Việt Group; có đủ CV trước hạn nộp.',
 form: { fType: 'Tuyển dụng', fChan: 'Fanpage NSV', fAud: 'Ứng viên', fLen: 'Vừa (<400 chữ)', fPil: '#NSVrecruit · Tuyển dụng' },
 tags: '#NSVrecruit #nguonsongvietgroup #tuyendung #hotjobs [điền: 1–2 hashtag theo chủ đề]',
@@ -434,9 +435,9 @@ poster: { kicker: 'Cùng Nguồn Sống Việt Group', title: '[điền: vị tr
 vers: [
 { tone: 'Năng động', title: '🎯 BẢN TIN TUYỂN DỤNG TUẦN | NGUỒN SỐNG VIỆT GROUP | [điền: vị trí]', paras: [
 '🚀 Bạn đã sẵn sàng cho một bước tiến mới trong sự nghiệp? Nguồn Sống Việt Group đang tìm kiếm [điền: vị trí], làm việc tại [điền: địa điểm]. Nếu Bạn muốn thử sức với những điều mới mẻ và phát triển cùng một tập thể trẻ, đây là cơ hội dành cho Bạn!',
-'💼 Tại Nguồn Sống Việt Group, chúng mình tin rằng mỗi cá nhân đều có tiềm năng để tỏa sáng. Không chỉ là nơi làm việc, Nguồn Sống Việt Group còn là môi trường để Bạn học hỏi, trải nghiệm thực tế và cùng đồng đội làm nên những điều mới. Tại đây, năng lực được ghi nhận và tinh thần chủ động được khuyến khích. [điền: một chi tiết thật của vị trí, ví dụ việc đầu tiên Bạn sẽ làm].',
+'💼 Hình dung một ngày làm việc cùng một đội trẻ, cởi mở, không drama, nơi AI được ứng dụng vào công việc để Bạn có thêm thời gian học điều mới và làm cho ra việc. Tại Nguồn Sống Việt Group, năng lực được ghi nhận và tinh thần chủ động được khuyến khích. [điền: một chi tiết thật của vị trí, ví dụ việc đầu tiên Bạn sẽ làm].',
 '✨ Gia nhập Nguồn Sống Việt Group, Bạn sẽ nhận được:\n💰 Thu nhập xứng đáng với năng lực – trả lương đúng hạn 100%.\n🤖 Ứng dụng trí tuệ nhân tạo (AI) vào công việc – tối ưu quy trình, tiết kiệm thời gian, nâng cao hiệu suất.\n💼 Môi trường trẻ, cởi mở, không drama – khuyến khích sáng tạo và phát triển.\n💪 Tập gym miễn phí tại Gymaster Fitness Center – chăm sóc sức khỏe thể chất và tinh thần.\n🛍️ Ưu đãi 50% khi mua sắm các sản phẩm trong hệ sinh thái Nguồn Sống Việt Group.',
-'👉 Hạn nộp hồ sơ: [điền: ngày]. Nếu Bạn đã sẵn sàng thử thách bản thân, hãy gửi CV về [điền: email hoặc link] ngay hôm nay nhé!'] },
+'👉 Hạn nộp hồ sơ: [điền: ngày]. Khi Bạn thấy mình hợp với vị trí này, chúng mình rất vui nếu nhận được CV của Bạn qua [điền: email hoặc link].'] },
 { tone: 'Tinh tế', title: '🌱 BẢN TIN TUYỂN DỤNG TUẦN | NGUỒN SỐNG VIỆT GROUP | MỘT CHỖ ĐỨNG MỚI CHO BẠN', paras: [
 '🌱 Nếu Bạn đang tìm một nơi để học thật, làm thật và được ghi nhận đúng năng lực, Nguồn Sống Việt Group đang mở vị trí [điền: vị trí] tại [điền: địa điểm].',
 '💼 Tại Nguồn Sống Việt Group, Bạn làm việc trong một môi trường trẻ, cởi mở, không drama, nơi sáng tạo được khuyến khích và AI được ứng dụng vào công việc hằng ngày để Bạn dành thời gian cho những việc đáng làm. Lương được trả đúng hạn 100%. Bạn còn được tập gym miễn phí tại Gymaster Fitness Center và hưởng ưu đãi 50% khi mua sắm sản phẩm trong hệ sinh thái Nguồn Sống Việt Group. [điền: một chi tiết thật của vị trí, ví dụ việc đầu tiên Bạn sẽ làm].',
@@ -469,6 +470,8 @@ return { SC: SC, vers: vers, vi: vi, V: V, sigKind: sigKind, sig: sig, wc: V.stu
 saveSched(q) { try { localStorage.setItem('nsv-lichdang-v1', JSON.stringify(q)); } catch (e) { /* bỏ qua */ } }
 missingOf(d) {
 const m = [];
+const nh = d.V.stub ? 0 : ((d.V.title + ' ' + d.V.paras.join(' ') + ' ' + d.sig).match(/\bNSV\b/g) || []).length;
+if (nh > 0) { m.push(nh + ' chỗ viết tắt NSV'); }
 if (d.fills > 0) { m.push(d.fills + ' chỗ [điền]'); }
 if (this.state.checks.length < 6) { m.push((6 - this.state.checks.length) + ' mục kiểm tra chưa tick'); }
 return m;
@@ -581,7 +584,9 @@ toggle: () => { this.setState({ checks: on ? this.state.checks.filter((x) => x !
 });
 const chotKey = st.scenario + '|' + V.tone;
 const isChot = st.chot.filter((x) => x.key === chotKey).length > 0;
+const nameHits = V.stub ? 0 : ((V.title + ' ' + V.paras.join(' ') + ' ' + D.sig).match(/\bNSV\b/g) || []).length;
 const missing = [];
+if (nameHits > 0) { missing.push(nameHits + ' chỗ viết tắt NSV'); }
 if (fills > 0) { missing.push(fills + ' chỗ [điền]'); }
 if (st.checks.length < 6) { missing.push((6 - st.checks.length) + ' mục kiểm tra chưa tick'); }
 const readyText = missing.length === 0 ? 'Đủ điều kiện: chốt bài thì vào Lịch đăng ở trạng thái Chờ duyệt.' : 'Còn thiếu: ' + missing.join(', ') + '. Chốt lúc này bài vào Lịch đăng ở trạng thái Nháp.';
@@ -624,7 +629,7 @@ fAud: st.fAud, onAud: (e) => this.setState({ fAud: e.target.value }),
 fLen: st.fLen, onLen: (e) => this.setState({ fLen: e.target.value }),
 fPil: st.fPil, onPil: (e) => this.setState({ fPil: e.target.value }),
 goal: st.goal, onGoal: (e) => this.setState({ goal: e.target.value }),
-toneChips: toneChips, toneCount: st.tones.length + ' / 4', toneNote: st.toneMsg === '' ? 'Chọn 2 đến 4 giọng, mỗi giọng ra một phiên bản để bạn so sánh.' : st.toneMsg, toneNoteColor: st.toneMsg === '' ? '#817971' : '#C94B4B',
+toneChips: toneChips, toneCount: st.tones.length + ' / 4', toneNote: st.toneMsg === '' ? 'Chọn 2 đến 4 giọng, mỗi giọng ra một phiên bản để bạn so sánh. Mọi bản đều theo brief: giọng lifestyle cảm xúc, tinh tế, 3 phần Mở, Thân, Kết, CTA mềm, luôn viết đầy đủ Nguồn Sống Việt Group.' : st.toneMsg, toneNoteColor: st.toneMsg === '' ? '#817971' : '#C94B4B',
 linkInput: st.linkInput, onLinkInput: (e) => this.setState({ linkInput: e.target.value }),
 addLink: () => {
 const s = this.state; let u = s.linkInput.trim();
@@ -647,6 +652,7 @@ statusText: loading ? 'Đang tạo...' : '✓ Đã tạo', statusColor: loading 
 isPost: st.tab === 'post', isVer: st.tab === 'ver',
 verTone: V.tone, title: V.title, paras: V.paras.map((p) => ({ text: p })), tags: tags, versions: versions,
 wordText: V.stub ? 'Giọng này chưa có bài viết sẵn trong demo.' : '~ ' + wc + ' từ · ' + (wc <= 400 ? 'đạt: 3 phần Mở, Thân, Kết, dưới 400 chữ' : 'vượt 400 chữ, cần cắt bớt'), wordColor: V.stub ? '#817971' : (wc <= 400 ? '#27845D' : '#C94B4B'),
+nameText: V.stub ? '' : (nameHits === 0 ? '✓ Gọi đầy đủ Nguồn Sống Việt Group, không viết tắt NSV.' : 'Còn ' + nameHits + ' chỗ viết tắt NSV: cần đổi thành Nguồn Sống Việt Group.'), nameColor: nameHits === 0 ? '#27845D' : '#C94B4B',
 fillText: V.stub ? '' : (fills === 0 ? 'Đã đủ thông tin, không còn chỗ trống.' : 'Còn ' + fills + ' chỗ [điền: …] cần bổ sung trước khi đăng.'), fillColor: fills === 0 ? '#27845D' : '#B8860B',
 chotLabel: isChot ? '✓ Đã chốt · lưu trong kho' : 'Chốt bài này', chotBg: isChot ? '#27845D' : '#8F2333',
 actChot: () => {
