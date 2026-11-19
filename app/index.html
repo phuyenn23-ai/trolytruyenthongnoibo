@@ -660,7 +660,7 @@ var KIND={mini:'Minigame',main:'Event tháng',adhoc:'Phát sinh',bday:'Sinh nh�
 var STEPS=[['Tiếp nhận','Nhận yêu cầu, ghi rõ người đề xuất và thời hạn.'],['Mục tiêu','Chốt mục tiêu, đối tượng, số người và thông điệp.'],['Ý tưởng','Brainstorm concept, chọn 1 phương án.'],['Lập kế hoạch','Timeline, phân công, dự toán ngân sách.'],['Trình duyệt','Gửi sếp duyệt kế hoạch và ngân sách.'],['Truyền thông trước','Thông báo, nhắc lịch, đăng bài giới thiệu.'],['Tổ chức','Ngày diễn ra: setup, chạy chương trình, chụp ảnh.'],['Truyền thông sau','Bài recap, ảnh, clip, cảm ơn.'],['Tổng kết','Chốt chi phí, rút kinh nghiệm, lưu hồ sơ.']];
 var GATE={3:'Mốc duyệt 1 · Kế hoạch',4:'Mốc duyệt 2 · Ngân sách',5:'Mốc duyệt 3 · Truyền thông'};
 var PHN=['Trước sự kiện','Trong sự kiện','Sau sự kiện'];
-var ROLES=['Điều phối chung','MC / dẫn chương trình','Hậu cần · check-in','Mua sắm · thanh toán','Kỹ thuật · âm thanh','Media · chụp ảnh','Người hỗ trợ khác'];
+var ROLES=['Điều phối chung','Đồng chịu trách nhiệm','MC','Chụp ảnh','Design'];var ROLE_OLD={'MC / dẫn chương trình':'MC','Media · chụp ảnh':'Chụp ảnh','Người hỗ trợ khác':'Đồng chịu trách nhiệm'},ROLE_DROP=['Hậu cần · check-in','Mua sắm · thanh toán','Kỹ thuật · âm thanh'];
 var TPL={
  mini:[[0,'Lên ý tưởng & luật chơi',-7],[0,'Chốt quà / giải thưởng',-5],[0,'Mua quà, chuẩn bị đạo cụ',-3],[0,'Gửi thông báo mời tham gia',-2],[0,'Test loa, mic, máy chiếu',-1],[1,'Setup phòng, đạo cụ',0],[1,'Dẫn chương trình, trao quà',0],[1,'Chụp ảnh, quay clip',0],[2,'Thu dọn',0],[2,'Thanh toán, chốt chi phí',2],[2,'Bài recap đăng kênh nội bộ',3]],
  main:[[0,'Chốt mục tiêu & ngân sách',-21],[0,'Chốt địa điểm, đặt cọc',-18],[0,'Chốt MC & kịch bản chương trình',-14],[0,'Trình duyệt kế hoạch & ngân sách',-12],[0,'In thiệp mời, bảng tên, backdrop',-8],[0,'Đặt bánh, nước, quà tặng',-5],[0,'Gửi lịch & nhắc nhân sự tham dự',-3],[0,'Test loa, mic, máy chiếu, điện',-1],[1,'Check-in, phát bảng tên',0],[1,'Chạy chương trình theo kịch bản',0],[1,'Chụp ảnh, quay clip',0],[2,'Thu dọn, trả dụng cụ mượn',1],[2,'Thanh toán, chốt chi phí',3],[2,'Bài recap đăng fanpage / nội bộ',3],[2,'Báo cáo tổng kết, lưu hồ sơ',7]],
@@ -682,7 +682,8 @@ function ymLab(ym){return 'Tháng '+(+ym.slice(5))+'/'+ym.slice(0,4)}
 function lastFri(ym){var y=+ym.slice(0,4),m=+ym.slice(5),n=new Date(y,m,0).getDate();for(var d=n;d>0;d--){if(new Date(ym+'-'+pad2(d)+'T12:00:00').getDay()===5)return ym+'-'+pad2(d)}return ym+'-01'}
 function nextFri(ym){var t=TODAY.slice(0,7),n=new Date(+ym.slice(0,4),+ym.slice(5),0).getDate();for(var d=1;d<=n;d++){var s=ym+'-'+pad2(d);if(new Date(s+'T12:00:00').getDay()===5&&(ym!==t||s>=TODAY))return s}return ym+'-01'}
 function stN(done,cur){var a=[0,0,0,0,0,0,0,0,0];for(var i=0;i<done;i++)a[i]=3;if(cur!=null&&done<9)a[done]=cur;return a}
-function mkEv(o){o.id=o.id||'e'+uid();o.st=o.st||stN(0);o.asg=o.asg||{};o.budget=o.budget||[];o.bs=o.bs||{};o.chosen=o.chosen||[];return o}
+function asgFix(o){o.asg=o.asg||{};Object.keys(ROLE_OLD).forEach(function(k){if(k in o.asg){if(o.asg[k]&&!o.asg[ROLE_OLD[k]])o.asg[ROLE_OLD[k]]=o.asg[k];delete o.asg[k]}});ROLE_DROP.forEach(function(k){if(k in o.asg&&!o.asg[k])delete o.asg[k]})}
+function mkEv(o){o.id=o.id||'e'+uid();o.st=o.st||stN(0);o.asg=o.asg||{};Object.keys(ROLE_OLD).forEach(function(k){if(k in o.asg){if(o.asg[k]&&!o.asg[ROLE_OLD[k]])o.asg[ROLE_OLD[k]]=o.asg[k];delete o.asg[k]}});ROLE_DROP.forEach(function(k){if(k in o.asg&&!o.asg[k])delete o.asg[k]});o.budget=o.budget||[];o.bs=o.bs||{};o.chosen=o.chosen||[];return o}
 function evSample(){return []}
 var EV;try{EV=JSON.parse(localStorage.getItem('uyennpu.event.v1'))}catch(e){}
 if(!EV||!EV.list){EV={list:[],seed:0}}
@@ -773,8 +774,8 @@ function evDetail(e,inline){if(e.kind==='mini')return miniDetail(e,inline);var c
  var foot='<div class="row" style="justify-content:flex-end"><button class="btn ghost danger" data-e="delev">'+(ev.delArm===e.id?'Bấm lần nữa để xóa event này':'Xóa event')+'</button></div>';
  return (inline?'':'<div class="ev-back" data-e="back">← Quay lại danh sách</div>')+head+tabs+body+foot}
 function dWork(e){var T=evTasks(e),done=T.filter(function(t){return tStt(t)===2}).length;
- var roles=ROLES.slice();Object.keys(e.asg).forEach(function(k){if(roles.indexOf(k)<0)roles.push(k)});
- var asg='<section class="card"><h2>Phân công nhân sự <small>Điền tên một lần cho mỗi event. Mọi việc gắn vai trò sẽ tự hiện đúng tên người</small></h2><div class="ev-asg">'+roles.map(function(r){return '<div><label class="fl">'+E(r)+'</label><input class="ev-in'+(e.asg[r]?' fill':'')+'" data-e="asg" data-r="'+E(r)+'" value="'+E(e.asg[r]||'')+'" placeholder="Điền tên..."></div>'}).join('')+'</div><div class="row"><input class="ev-in" id="evrole" style="width:220px" placeholder="Thêm vai trò mới..."><button class="btn sm" data-e="addrole">+ Thêm vai trò</button></div></section>';
+ asgFix(e);var roles=ROLES.slice();Object.keys(e.asg).forEach(function(k){if(roles.indexOf(k)<0)roles.push(k)});
+ var asg='<section class="card"><h2>Phân công nhân sự <small>5 vai trò chính, điền tên cho từng event. Cần thêm vai trò khác thì thêm ở ô bên dưới</small></h2><div class="ev-asg">'+roles.map(function(r){return '<div><label class="fl">'+E(r)+'</label><input class="ev-in'+(e.asg[r]?' fill':'')+'" data-e="asg" data-r="'+E(r)+'" value="'+E(e.asg[r]||'')+'" placeholder="Điền tên..."></div>'}).join('')+'</div><div class="row"><input class="ev-in" id="evrole" style="width:220px" placeholder="Thêm vai trò mới..."><button class="btn sm" data-e="addrole">+ Thêm vai trò</button></div></section>';
  var hd='<tr><th>Tình trạng</th><th>Hạng mục</th><th>Công việc</th><th>Chi tiết</th><th>Người phụ trách</th><th>Phối hợp</th><th>Bắt đầu</th><th>Kết thúc</th><th>Kết quả</th><th></th></tr>';
  function ta(k,t,v,ph){return '<textarea class="ev-in sm ev-ag" rows="1" data-e="'+k+'" data-t="'+t.id+'" placeholder="'+ph+'">'+E(v||'')+'</textarea>'}
  var ck=PHN.map(function(p,pi){var L=T.filter(function(t){return t.ph===pi}).sort(function(a,b){return a.d<b.d?-1:1}),dn=L.filter(function(z){return tStt(z)===2}).length;
@@ -1029,7 +1030,7 @@ function plParse(S,fname){
  var pcg=plSheet(S,['phan cong'])[0];
  if(pcg){var r6=pcg.r,h6=plHdr(r6,['nhiem vu','ten nhan su']);if(h6>-1){var hd6=r6[h6].map(function(c){return norm(sv2(c))}),cr=plCol(hd6,['nhiem vu']),cn6=plCol(hd6,['ten nhan su']),cc6=plCol(hd6,['cu the']);
    for(var i6=h6+1;i6<r6.length;i6++){var q6=r6[i6]||[],role=sv2(q6[cr]),who=sv2(q6[cn6]);if(!role||!who)continue;o.asg[role]=o.asg[role]?o.asg[role]+', '+who:who}}}
- if(o.pic&&!o.asg['Điều phối chung'])o.asg['Điều phối chung']=o.pic;if(o.co&&!o.asg['Người hỗ trợ khác'])o.asg['Người hỗ trợ khác']=o.co;
+ if(o.pic&&!o.asg['Điều phối chung'])o.asg['Điều phối chung']=o.pic;if(o.co&&!o.asg['Đồng chịu trách nhiệm'])o.asg['Đồng chịu trách nhiệm']=o.co;
  /* danh sách tham gia: chỉ đếm */
  var ds2=plSheet(S,['danh sach tham gia'])[0];if(ds2){var r7=ds2.r,h7=plHdr(r7,['ho va ten']);if(h7>-1){var cn7=plCol(r7[h7].map(function(c){return norm(sv2(c))}),['ho va ten']),cnt7=0;for(var i7=h7+1;i7<r7.length;i7++){var nm7=sv2((r7[i7]||[])[cn7]);if(nm7&&!plEmpty(r7[i7],cn7))cnt7++}if(cnt7){o.regCount=cnt7;if(o.people==='')o.people=cnt7}}}
  /* kịch bản hạng mục (các sheet 3 cột HẠNG MỤC / NỘI DUNG KẾ HOẠCH) */
