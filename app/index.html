@@ -933,7 +933,7 @@ function evHead(){var sub={all:'Kho tất cả sự kiện đã và đang làm, 
  '<div class="tabs2">'+t('all','Tất cả sự kiện',evShown().length)+t('mini','Minigame',mn)+t('main','Event tháng',me)+t('bday','Sinh nhật tháng',bd)+'</div>'}
 function addForm(){if(!ev.add)return '';var k=ev.add,dflt=k==='mini'?nextFri(ev.ym):k==='bday'?lastFri(ev.ym):(ev.ym===TODAY.slice(0,7)?addD(TODAY,7):ev.ym+'-15');
  var ks=ev.tab==='all'||ev.add==='adhoc'?'<div><label class="fl">Loại</label><select class="ev-sel" id="evk"><option value="main"'+(k==='main'?' selected':'')+'>Event tháng</option><option value="mini"'+(k==='mini'?' selected':'')+'>Minigame</option><option value="adhoc"'+(k==='adhoc'?' selected':'')+'>Phát sinh</option><option value="bday"'+(k==='bday'?' selected':'')+'>Sinh nhật</option></select></div>':'<input type="hidden" id="evk" value="'+k+'">';
- return '<section class="card"><h2>Tạo '+(k==='adhoc'?'event phát sinh':KIND[k].toLowerCase())+' mới <small>checklist mẫu tự được tạo theo ngày diễn ra</small></h2><div class="ev-form"><div><label class="fl">Tên</label><input class="ev-in" id="evn" placeholder="'+(k==='mini'?'VD: Minigame #4':'Tên sự kiện')+'"></div><div><label class="fl">Ngày</label><input type="date" class="ev-in" id="evd" value="'+dflt+'"></div><div><label class="fl">Địa điểm</label><input class="ev-in" id="evpl" placeholder="[điền]"></div>'+ks+'<div class="row" style="margin:0"><button class="btn primary" data-e="create">Tạo</button><button class="btn ghost" data-e="cancel">Hủy</button></div></div></section>'}
+ return '<section class="card"><h2>Tạo '+(k==='adhoc'?'event phát sinh':KIND[k].toLowerCase())+' mới <small>checklist mẫu tự được tạo theo ngày diễn ra</small></h2><div class="ev-form"><div><label class="fl">Tên</label><input class="ev-in" id="evn" placeholder="'+(k==='mini'?'VD: Minigame #4':'Tên sự kiện')+'"></div><div><label class="fl">Ngày</label><input type="date" class="ev-in" id="evd" value="'+dflt+'"></div><div><label class="fl">Địa điểm</label><input class="ev-in" id="evpl" placeholder="[điền]"></div>'+ks+(k==='main'||k==='adhoc'?yepForm():'')+'<div class="row" style="margin:0"><button class="btn primary" data-e="create">Tạo</button><button class="btn ghost" data-e="cancel">Hủy</button></div></div></section>'}
 function prioCard(ym){var P=evPrio(ym);return '<section class="card"><h2>Công việc ưu tiên <small>gom từ mọi event trong tháng, hạn trong 7 ngày</small></h2>'+(P.length?P.slice(0,8).map(function(x){var u=uTag(x.t.d);return '<div class="ev-pri"><span class="ev-box" data-e="ptick" data-id="'+x.e.id+'" data-t="'+x.t.id+'"></span><span class="ev-u '+u[0]+'">'+u[1]+'</span><span style="flex:1;cursor:pointer" data-e="open" data-id="'+x.e.id+'">'+E(x.t.n)+'<br><small class="muted">'+E(x.e.name)+'</small></span><span class="muted" style="font-size:12px">'+E(x.t.who)+'</span></div>'}).join(''):'<p class="muted" style="margin:0">Không có việc gấp. Quá tốt!</p>')+'</section>'}
 function remCard(k){return '<section class="card"><h2>Nhắc dễ quên</h2>'+(REM[k==='adhoc'?'main':k]||REM.main).map(function(s){return '<div class="ev-note">'+E(s)+'</div>'}).join('')+'</section>'}
 function evRow(e){var s=evStat(e);return '<div class="ev-row" data-e="open" data-id="'+e.id+'"><div class="dd">'+dm(e.date)+'</div><div style="flex:1;min-width:0">'+kTag(e.kind)+'<b>'+E(e.name)+'</b><br><small class="muted">'+E(e.place||'Chưa có địa điểm')+(e.people!==''&&e.people!=null?' · '+e.people+' người':'')+'</small></div><div class="ev-pg"><small style="color:'+s.c+'">'+s.l+'</small><div class="ev-bar"><i style="width:'+s.p+'%;background:'+s.c+'"></i></div></div></div>'}
@@ -1122,7 +1122,7 @@ document.addEventListener('click',function(x){if(page!=='event')return;var t=x.t
  else if(a==='back'){ev.open=null;ev.stepSel=null}
  else if(a==='add'){var k=t.dataset.k;ev.add=ev.add===k&&k!=='main'?null:k}
  else if(a==='cancel')ev.add=null;
- else if(a==='create'){var nm=document.getElementById('evn').value.trim();if(!nm){toast('Bạn nhập tên sự kiện trước nhé');return}var d=document.getElementById('evd').value;if(!d){toast('Chọn ngày tổ chức');return}var n=mkEv({kind:document.getElementById('evk').value,name:nm,date:d,place:document.getElementById('evpl').value.trim(),people:''});if(n.kind==='mini'){n.held=true;winOf(n).forEach(function(w){w.paid=true});mgSync(n)}EV.list.push(n);evsv();ev.add=null;ev.ym=d.slice(0,7);ev.msel=n.id;if(ev.tab==='all'||n.kind==='mini'||n.kind==='bday'||n.kind==='adhoc'){ev.open=n.id}else ev.open=null;ev.dtab='info';ev.stepSel=null;toast('Đã tạo. Checklist mẫu đã sẵn sàng.')}
+ else if(a==='create'){var nm=document.getElementById('evn').value.trim();if(!nm){toast('Bạn nhập tên sự kiện trước nhé');return}var d=document.getElementById('evd').value;if(!d){toast('Chọn ngày tổ chức');return}var n=mkEv({kind:document.getElementById('evk').value,name:nm,date:d,place:document.getElementById('evpl').value.trim(),people:''});if(n.kind==='mini'){n.held=true;winOf(n).forEach(function(w){w.paid=true});mgSync(n)}if(n.kind==='main'||n.kind==='adhoc')yepApply(n);EV.list.push(n);evsv();ev.add=null;ev.ym=d.slice(0,7);ev.msel=n.id;if(ev.tab==='all'||n.kind==='mini'||n.kind==='bday'||n.kind==='adhoc'){ev.open=n.id}else ev.open=null;ev.dtab='info';ev.stepSel=null;toast(n.yep?'Đã dựng kế hoạch tiệc cuối năm: '+n.tasks.length+' việc, '+n.budget.length+' khoản chi, '+n.gear.length+' dụng cụ.':'Đã tạo. Checklist mẫu đã sẵn sàng.')}
  else if(a==='step'){var i=+t.dataset.i;ev.stepSel=ev.stepSel===i?null:i}
  else if(a==='adv'&&e){evAdvance(e);evsv()}
  else if(a==='back1'&&e){evBack(e);evsv()}
@@ -1206,6 +1206,149 @@ function all(){document.querySelectorAll('.ev-ag').forEach(ag)}
 document.addEventListener('input',function(e){if(e.target.classList&&e.target.classList.contains('ev-ag'))ag(e.target)});
 var q=0;new MutationObserver(function(){if(q)return;q=1;requestAnimationFrame(function(){q=0;all()})}).observe(document.body,{childList:true,subtree:true});
 window.evAG=all;window.addEventListener('resize',all)})();
+
+var YL_B=[
+ [0,'Chốt mục tiêu, ngân sách, số người',-45,'KẾ HOẠCH & NGÂN SÁCH','','Điều phối chung'],
+ [0,'Chốt idea chương trình',-42,'KẾ HOẠCH & NGÂN SÁCH','','Điều phối chung'],
+ [0,'Trình bày idea, Sếp duyệt',-40,'KẾ HOẠCH & NGÂN SÁCH','',''],
+ [0,'Liên hệ 2-3 nhà hàng, xin báo giá',-42,'NHÀ HÀNG','',''],
+ [0,'Đi xem địa điểm thực tế',-38,'NHÀ HÀNG','',''],
+ [0,'So sánh nhà hàng (giá, sức chứa, sân khấu, âm thanh, bãi xe)',-36,'NHÀ HÀNG','',''],
+ [0,'Sếp duyệt chọn nhà hàng',-34,'NHÀ HÀNG','',''],
+ [0,'Chốt nhà hàng, ký hợp đồng (kiểm tra thông tin VAT)',-32,'NHÀ HÀNG','',''],
+ [0,'Chọn menu mặn, menu chay',-28,'NHÀ HÀNG','',''],
+ [0,'Chốt màu bàn ghế, sơ đồ bàn',-24,'NHÀ HÀNG','',''],
+ [0,'Chốt số lượng bàn, số suất chay với nhà hàng',-21,'NHÀ HÀNG','',''],
+ [0,'Tạo đề xuất thanh toán đặt cọc',-30,'NHÀ HÀNG','',''],
+ [0,'Book đơn vị chụp hình, quay phim',-35,'MC, CHỤP HÌNH','','Chụp ảnh'],
+ [0,'Book MC, trao đổi cát-xê bồi dưỡng',-35,'MC, CHỤP HÌNH','','MC'],
+ [0,'Soạn văn bản thông báo chương trình',-32,'THÔNG BÁO & ĐĂNG KÝ','',''],
+ [0,'Sếp ký duyệt thông báo',-30,'THÔNG BÁO & ĐĂNG KÝ','',''],
+ [0,'Truyền thông thông báo đăng ký (nhắc 3 đợt)',-29,'THÔNG BÁO & ĐĂNG KÝ','',''],
+ [0,'Chốt hạn đăng ký, tổng hợp danh sách CBNV (ăn chay, dị ứng)',-21,'THÔNG BÁO & ĐĂNG KÝ','',''],
+ [0,'Chốt danh sách khách mời',-24,'KHÁCH MỜI','',''],
+ [0,'Thiết kế thiệp mời',-21,'KHÁCH MỜI','','Design'],
+ [0,'Gửi thư mời, theo dõi phản hồi',-18,'KHÁCH MỜI','',''],
+ [0,'Chốt quà tặng khách mời',-18,'QUÀ & MUA SẮM','',''],
+ [0,'Xuất kho hoặc mua quà, đóng gói',-10,'QUÀ & MUA SẮM','',''],
+ [0,'Đề xuất ngân sách mua sắm, lên danh sách mua hàng',-21,'QUÀ & MUA SẮM','',''],
+ [0,'Họp triển khai idea với thiết kế, chốt checklist thiết kế',-24,'THIẾT KẾ & BACKDROP','','Design'],
+ [0,'Thiết kế ấn phẩm (backdrop, bục check-in, slide)',-18,'THIẾT KẾ & BACKDROP','','Design'],
+ [0,'Duyệt thiết kế',-14,'THIẾT KẾ & BACKDROP','',''],
+ [0,'In và đặt backdrop, thảm, bục logo',-8,'THIẾT KẾ & BACKDROP','',''],
+ [0,'Làm video hành trình, video khai tiệc, slide trình chiếu',-10,'THIẾT KẾ & BACKDROP','',''],
+ [0,'Chốt phòng ban diễn văn nghệ',-30,'VĂN NGHỆ','vn',''],
+ [0,'Liên hệ trưởng nhóm, chốt bài hát',-21,'VĂN NGHỆ','vn',''],
+ [0,'Gửi form đăng ký và nhận file âm thanh, file trình chiếu',-8,'VĂN NGHỆ','vn',''],
+ [0,'Cấp kinh phí hỗ trợ các team văn nghệ',-7,'VĂN NGHỆ','vn',''],
+ [0,'Chốt hạng mục giải thưởng và tiêu chí xét',-30,'VINH DANH','vd',''],
+ [0,'Soạn quy định xét vinh danh, mở link đề cử',-28,'VINH DANH','vd',''],
+ [0,'Trưởng phòng đề cử cá nhân, tập thể',-18,'VINH DANH','vd',''],
+ [0,'Sếp phê duyệt danh sách vinh danh',-14,'VINH DANH','vd',''],
+ [0,'Kiểm tồn kho quà tặng giải thưởng',-14,'VINH DANH','vd',''],
+ [0,'Thiết kế, in bằng khen, Sếp ký và đóng dấu',-9,'VINH DANH','vd','Design'],
+ [0,'Lồng khung bằng khen, đặt bình cây, khắc nội dung tri ân',-5,'VINH DANH','vd',''],
+ [0,'Thông báo người nhận giải, tổng hợp hình ảnh vinh danh',-7,'VINH DANH','vd',''],
+ [0,'Chốt danh sách quà và số lượng giải',-30,'BỐC THĂM','bt',''],
+ [0,'Liên hệ nhà cung cấp in thẻ cào, dán decal thùng bốc thăm',-12,'BỐC THĂM','bt',''],
+ [0,'Lên kế hoạch và kịch bản cuộc thi',-35,'CUỘC THI','ct',''],
+ [0,'Truyền thông cuộc thi đến CBNV, chốt danh sách cặp đôi',-21,'CUỘC THI','ct',''],
+ [0,'Đặt sash, in số báo danh, làm bảng điểm',-8,'CUỘC THI','ct',''],
+ [0,'Chuẩn bị chậu cây, liễn, thẻ ký, đề mục tiêu',-14,'NGHI THỨC','nt',''],
+ [0,'Chốt agenda chương trình',-21,'MC SCRIPT','','MC'],
+ [0,'Viết lời dẫn, định dạng A5, in 3 bản',-8,'MC SCRIPT','','MC'],
+ [0,'Xác nhận lịch tập dượt với nhà hàng và với Sếp',-5,'TẬP DƯỢT','',''],
+ [0,'Duyệt thử chương trình (MC đọc lời dẫn, chạy slide)',-3,'TẬP DƯỢT','',''],
+ [0,'Phân công nhân sự hỗ trợ ngày sự kiện',-7,'TẬP DƯỢT','','Điều phối chung'],
+ [0,'Checklist và đóng đồ vào thùng, book xe kho',-2,'TẬP DƯỢT','',''],
+ [0,'Chạy thử slide, mang đồ sang nhà hàng, setup backdrop',-1,'TẬP DƯỢT','',''],
+ [1,'Điều phối tổng, theo agenda',0,'TRONG SỰ KIỆN','','Điều phối chung'],
+ [1,'Check-in CBNV và khách mời',0,'TRONG SỰ KIỆN','',''],
+ [1,'Dẫn chương trình',0,'TRONG SỰ KIỆN','','MC'],
+ [1,'Chụp ảnh, quay phim',0,'TRONG SỰ KIỆN','','Chụp ảnh'],
+ [1,'Trao giải, bốc thăm, điều phối cuộc thi',0,'TRONG SỰ KIỆN','',''],
+ [1,'Kỹ thuật âm thanh, ánh sáng, slide',0,'TRONG SỰ KIỆN','',''],
+ [2,'Thu dọn, kiểm đồ, mang đồ về',1,'SAU SỰ KIỆN','',''],
+ [2,'Thanh toán nhà hàng, nhà cung cấp, xuất hóa đơn VAT',5,'SAU SỰ KIỆN','',''],
+ [2,'Quyết toán, so sánh dự trù và thực tế',10,'SAU SỰ KIỆN','',''],
+ [2,'Cảm ơn nhà hàng, MC, đội hỗ trợ',2,'SAU SỰ KIỆN','',''],
+ [2,'Tổng hợp ảnh, đăng bài recap, gửi ảnh cho CBNV',3,'SAU SỰ KIỆN','',''],
+ [2,'Báo cáo sau sự kiện, họp rút kinh nghiệm',12,'SAU SỰ KIỆN','',''],
+ [0,'Dự phòng: nhà hàng đổi sảnh hoặc giờ (xin xác nhận bằng văn bản)',-5,'RỦI RO DỰ PHÒNG','',''],
+ [0,'Dự phòng: số người tăng (đệm 5% suất, ghế phụ)',-3,'RỦI RO DỰ PHÒNG','',''],
+ [0,'Dự phòng: MC hoặc kỹ thuật vắng (người thay thế, bản lời dẫn dự phòng)',-3,'RỦI RO DỰ PHÒNG','',''],
+ [0,'Dự phòng: đồ đặt trễ (mốc chốt sớm 3 ngày, phương án mua nhanh)',-4,'RỦI RO DỰ PHÒNG','',''],
+ [0,'Dự phòng: mất điện, lỗi slide (bản sao USB, laptop dự phòng)',-1,'RỦI RO DỰ PHÒNG','','']
+];
+
+var YL_X=[
+ [0,'Chốt địa điểm, lộ trình, thời gian',-30,'TEAM BUILDING','',''],
+ [0,'Book xe, tài xế, điểm đón',-14,'TEAM BUILDING','',''],
+ [0,'Chốt chương trình trò chơi và đội thi',-14,'TEAM BUILDING','',''],
+ [0,'Mua bảo hiểm, chuẩn bị thuốc và hộp y tế',-7,'TEAM BUILDING','',''],
+ [0,'Chốt ăn uống, nước uống, phương án mưa',-7,'TEAM BUILDING','',''],
+ [0,'Thông báo lịch trình và danh sách đội cho CBNV',-5,'TEAM BUILDING','',''],
+ [1,'Điểm danh lên xe, điều phối đội',0,'TEAM BUILDING','','Điều phối chung'],
+ [0,'Chốt giảng viên, nội dung, thời lượng',-21,'ĐÀO TẠO','',''],
+ [0,'Chốt phòng học, thiết bị, sơ đồ chỗ ngồi',-10,'ĐÀO TẠO','',''],
+ [0,'Soạn, in tài liệu, thẻ tên, chứng nhận',-5,'ĐÀO TẠO','',''],
+ [0,'Gửi thông báo, nhận đăng ký, điểm danh',-14,'ĐÀO TẠO','',''],
+ [1,'Điểm danh, hỗ trợ giảng viên, chụp ảnh',0,'ĐÀO TẠO','','Chụp ảnh'],
+ [2,'Khảo sát sau đào tạo, gửi tài liệu, cấp chứng nhận',3,'ĐÀO TẠO','','']
+];
+var YP_PRE=[['','Không chọn sẵn việc nào'],['yep','Tiệc cuối năm (YEP)'],['tb','Team building'],['dt','Đào tạo nội bộ']];
+var YP_GRP={yep:['KẾ HOẠCH & NGÂN SÁCH','NHÀ HÀNG','MC, CHỤP HÌNH','THÔNG BÁO & ĐĂNG KÝ','KHÁCH MỜI','QUÀ & MUA SẮM','THIẾT KẾ & BACKDROP','VĂN NGHỆ','VINH DANH','BỐC THĂM','CUỘC THI','NGHI THỨC','MC SCRIPT','TẬP DƯỢT','TRONG SỰ KIỆN','SAU SỰ KIỆN','RỦI RO DỰ PHÒNG'],tb:['TEAM BUILDING'],dt:['ĐÀO TẠO']};
+function yLib(){var c=(EV.lib&&EV.lib.custom)||[];return YL_B.concat(YL_X).concat(c)}
+function yGroups(){var g=[],L=yLib();L.forEach(function(t){if(g.indexOf(t[3])<0)g.push(t[3])});return g}
+function yepForm(){
+ var L=yLib(),G=yGroups();
+ var body=G.map(function(g){var it=[];L.forEach(function(t,i){if(t[3]===g)it.push(i)});
+  return '<details class="yp-g" data-g="'+E(g)+'"><summary><label><input type="checkbox" class="yp-gc" data-g="'+E(g)+'"> <b>'+E(g)+'</b></label> <small class="muted yp-cnt" data-g="'+E(g)+'">0/'+it.length+'</small></summary>'+it.map(function(i){var t=L[i];return '<label class="yp-t"><input type="checkbox" class="yp-c" data-i="'+i+'" data-g="'+E(g)+'"> '+E(t[1])+' <small class="muted">'+(t[2]===0?'ngày diễn ra':(t[2]<0?'trước '+(-t[2]):'sau '+t[2])+' ngày')+'</small></label>'}).join('')+'</details>'}).join('');
+ return '<div class="ev-yep" style="grid-column:1/-1;border:1px dashed var(--line,#ddd);border-radius:12px;padding:12px 14px"><label class="fl">Chọn việc cho event này</label>'
+ +'<div class="ev-3"><div><label class="fl">Chọn sẵn theo mẫu</label><select class="ev-sel" id="evtp">'+YP_PRE.map(function(p){return '<option value="'+p[0]+'">'+p[1]+'</option>'}).join('')+'</select></div><div><label class="fl">Số người</label><input class="ev-in" id="evpp" type="number" min="0" placeholder="VD: 170"></div><div><label class="fl">Tổng ngân sách (đ), có thể bỏ trống</label><input class="ev-in" id="evbg" type="number" min="0" placeholder="VD: 150000000"></div></div>'
+ +'<div class="row" style="margin:10px 0 4px"><button type="button" class="btn sm ghost" id="ypall">Chọn tất cả</button><button type="button" class="btn sm ghost" id="ypnone">Bỏ chọn hết</button><span class="muted" id="yptot" style="margin-left:auto;font-size:13px"></span></div>'
+ +'<div class="yp-list" style="max-height:340px;overflow:auto;border:1px solid var(--line,#e8e2e0);border-radius:10px;padding:6px 10px">'+body+'<details class="yp-g" id="ypcust" open><summary><b>VIỆC RIÊNG CỦA EVENT NÀY</b> <small class="muted">gõ thêm việc chỉ có ở event này</small></summary><div id="ypcl"></div><div class="row" style="margin:6px 0;gap:6px;flex-wrap:wrap"><input class="ev-in sm" id="ypn" placeholder="Tên việc" style="flex:2;min-width:180px"><input class="ev-in sm" id="ypd" type="number" placeholder="Trước ngày (VD: 7)" style="flex:1;min-width:130px"><label style="font-size:12px"><input type="checkbox" id="ypsv"> Lưu vào thư viện</label><button type="button" class="btn sm" id="ypadd">+ Thêm</button></div></details></div>'
+ +'<div class="ev-note">Tick đúng việc event này có. Web chỉ sinh các việc đã tick, tự tính hạn lùi từ ngày tổ chức, rồi tạo khung ngân sách và dụng cụ theo nhóm việc bạn chọn. Người phụ trách gán ở bước sau.</div></div>'}
+function ypCount(){var n=0,tot=0;document.querySelectorAll('.yp-c').forEach(function(c){tot++;if(c.checked)n++});var x=document.querySelectorAll('.yp-cx:checked').length;var el=document.getElementById('yptot');if(el)el.textContent='Đã chọn '+(n+x)+' việc';
+ document.querySelectorAll('.yp-cnt').forEach(function(e){var g=e.dataset.g,a=document.querySelectorAll('.yp-c[data-g="'+g+'"]'),k=0;a.forEach(function(c){if(c.checked)k++});e.textContent=k+'/'+a.length;var gc=document.querySelector('.yp-gc[data-g="'+g+'"]');if(gc){gc.checked=a.length&&k===a.length;gc.indeterminate=k>0&&k<a.length}})}
+var YP_BUD={'NHÀ HÀNG':function(P,f){f('ĂN UỐNG','Tiệc tại nhà hàng','Tiệc cho CBNV và khách mời',P.n||1,'suất',P.food,P.vat,P.food?'Tạm tính 60% ngân sách, sửa theo báo giá':'[điền: theo báo giá nhà hàng]')},
+ 'MC, CHỤP HÌNH':function(P,f){f('BỒI DƯỠNG','Bồi dưỡng MC','MC',1,'lần',2000000,0,'Tham khảo YEP năm trước');f('CHỤP HÌNH','Thuê chụp hình, quay phim','Ghi hình sự kiện',1,'lần','',P.vat,'[điền: theo báo giá]')},
+ 'QUÀ & MUA SẮM':function(P,f){f('QUÀ TẶNG','Quà tặng','Quà cho khách mời, CBNV',20,'phần','',P.vat,'[điền: chốt số lượng]')},
+ 'THIẾT KẾ & BACKDROP':function(P,f){f('BACKDROP','Backdrop, thảm, bục check-in','Check-in và chụp hình',1,'gói','',P.vat,'[điền: theo báo giá]')},
+ 'VINH DANH':function(P,f){f('VINH DANH','Bằng khen khung A5','Vinh danh cá nhân, tập thể',30,'khung',50000,P.vat,'Tham khảo YEP năm trước');f('VINH DANH','Bình cây tri ân','Tri ân',9,'cái','',P.vat,'[điền]')},
+ 'NGHI THỨC':function(P,f){f('HỢP LỰC','Cây, liễn, thẻ ký, nơ','Nghi thức',1,'bộ','',P.vat,'[điền]')},
+ 'BỐC THĂM':function(P,f){f('BỐC THĂM','Quà bốc thăm, thẻ cào, thùng','Bốc thăm trúng thưởng',P.n||1,'thẻ','',P.vat,'[điền: danh sách giải]')},
+ 'CUỘC THI':function(P,f){f('CUỘC THI','Sash, số báo danh, giải thưởng','Cuộc thi',1,'gói','',P.vat,'[điền]')},
+ 'VĂN NGHỆ':function(P,f){f('BỒI DƯỠNG','Bồi dưỡng team văn nghệ','Hỗ trợ team',4,'team',2000000,0,'Tham khảo YEP năm trước, sửa theo số team')},
+ 'TEAM BUILDING':function(P,f){f('VẬN CHUYỂN','Thuê xe','Đưa đón',1,'chuyến','',P.vat,'[điền: theo báo giá]');f('ĂN UỐNG','Ăn uống, nước uống','Cho CBNV',P.n||1,'suất',P.food,P.vat,'[điền]');f('TRÒ CHƠI & QUÀ','Trò chơi, quà, giải thưởng','Hoạt động',1,'gói','',P.vat,'[điền]');f('Y TẾ','Bảo hiểm, thuốc, hộp y tế','An toàn',P.n||1,'người','',0,'[điền]')},
+ 'ĐÀO TẠO':function(P,f){f('GIẢNG VIÊN','Thù lao giảng viên','Giảng dạy',1,'buổi','',0,'[điền]');f('TÀI LIỆU','In tài liệu, chứng nhận','Tài liệu',P.n||1,'bộ','',P.vat,'[điền]');f('ĐỊA ĐIỂM','Thuê phòng, thiết bị','Địa điểm',1,'buổi','',P.vat,'[điền]')}};
+var YP_GEAR={'KHÁCH MỜI':[['CHECK-IN','Danh sách khách mời',3,'bản']],'THÔNG BÁO & ĐĂNG KÝ':[['CHECK-IN','Danh sách điểm danh theo khối',4,'bản'],['CHECK-IN','Bút, kéo, băng keo, dao rọc giấy',1,'bộ']],'VINH DANH':[['VINH DANH','Bằng khen lồng khung',30,'khung'],['VINH DANH','Bình cây tri ân',9,'bình'],['VINH DANH','Mockup trao giải',1,'bộ']],'BỐC THĂM':[['BỐC THĂM','Thùng bốc thăm',2,'thùng'],['BỐC THĂM','Thẻ cào trúng thưởng','','thẻ'],['BỐC THĂM','Mockup trao thưởng',1,'bộ']],'NGHI THỨC':[['NGHI THỨC','Chậu cây, liễn, thẻ ký, bút ký',1,'bộ']],'CUỘC THI':[['CUỘC THI','Số báo danh, sash, bảng điểm',1,'bộ']],'MC SCRIPT':[['MC','Bản lời dẫn A5 có bìa kẹp',3,'bản']],'TRONG SỰ KIỆN':[['KỸ THUẬT','Laptop, USB sao lưu slide, dây nối',1,'bộ']],'TEAM BUILDING':[['Y TẾ','Hộp y tế, thuốc cơ bản',1,'hộp'],['TRÒ CHƠI','Dụng cụ trò chơi, cờ đội',1,'bộ']],'ĐÀO TẠO':[['ĐÀO TẠO','Thẻ tên, bút, giấy ghi chú','','bộ'],['ĐÀO TẠO','Máy chiếu, micro',1,'bộ']]};
+function yepApply(n){
+ var picked=[];document.querySelectorAll('.yp-c:checked').forEach(function(c){picked.push(yLib()[+c.dataset.i])});
+ var X=[];document.querySelectorAll('.yp-cx:checked').forEach(function(c){X.push([0,c.dataset.n,-(+c.dataset.o||0),'VIỆC RIÊNG','',''])});
+ picked=picked.concat(X);if(!picked.length)return;
+ var ppl=+(document.getElementById('evpp').value)||0,tot=+(document.getElementById('evbg').value)||0;
+ n.people=ppl||'';n.yep=1;
+ n.tasks=picked.map(function(t){return{id:uid(),ph:t[0],n:t[1],h:t[3],role:t[5]||'',who:'',co:'',s:'',d:addD(n.date,t[2]),note:'',det:'',res:'',stt:0,done:false}});
+ var gs={};picked.forEach(function(t){gs[t[3]]=1});
+ var P={n:ppl,vat:cfg().vat,food:tot&&ppl?Math.round(tot*0.6/ppl/1000)*1000:''},B=[],f=function(h,nm,pu,q,u,p,v,nt){B.push({id:'b'+uid(),h:h,n:nm,pu:pu,q:q,u:u,p:p,v:v,nt:nt||''})};
+ Object.keys(YP_BUD).forEach(function(g){if(gs[g])YP_BUD[g](P,f)});
+ var s0=B.reduce(function(s,b){return s+Math.round((+b.q||0)*(+b.p||0))},0);
+ f('DỰ PHÒNG','Dự phòng','Phát sinh ngoài dự kiến',1,'lần',tot?Math.round(tot*0.1/100000)*100000:Math.round(s0*0.1/100000)*100000,0,'10%');
+ n.budget=B;
+ var G=[];Object.keys(YP_GEAR).forEach(function(g){if(gs[g])YP_GEAR[g].forEach(function(x){G.push({id:'g'+uid(),g:x[0],n:x[1],q:x[2],u:x[3],who:'',ok:false})})});n.gear=G;
+}
+document.addEventListener('change',function(e){var t=e.target;if(!t||!t.className||typeof t.className!=='string')return;
+ if(t.id==='evtp'){var gs=YP_GRP[t.value]||[];document.querySelectorAll('.yp-c').forEach(function(c){c.checked=gs.indexOf(c.dataset.g)>-1});ypCount()}
+ else if(t.classList.contains('yp-gc')){document.querySelectorAll('.yp-c[data-g="'+t.dataset.g+'"]').forEach(function(c){c.checked=t.checked});ypCount()}
+ else if(t.classList.contains('yp-c')||t.classList.contains('yp-cx'))ypCount()});
+document.addEventListener('click',function(e){var t=e.target;if(!t||!t.id)return;
+ if(t.id==='ypall'||t.id==='ypnone'){document.querySelectorAll('.yp-c,.yp-cx').forEach(function(c){c.checked=t.id==='ypall'});ypCount()}
+ else if(t.id==='ypadd'){var nm=document.getElementById('ypn').value.trim(),o=+document.getElementById('ypd').value||0;if(!nm){toast('Nhập tên việc');return}
+  var h=document.createElement('label');h.className='yp-t';h.innerHTML='<input type="checkbox" class="yp-cx" checked data-n="'+E(nm)+'" data-o="'+o+'"> '+E(nm)+' <small class="muted">trước '+o+' ngày</small>';document.getElementById('ypcl').appendChild(h);
+  if(document.getElementById('ypsv').checked){EV.lib=EV.lib||{};EV.lib.custom=EV.lib.custom||[];EV.lib.custom.push([0,nm,-o,'VIỆC RIÊNG ĐÃ LƯU','','']);evsv()}
+  document.getElementById('ypn').value='';document.getElementById('ypd').value='';ypCount()}});
+(function(){var s=document.createElement('style');s.textContent='.yp-t{display:block;padding:4px 0 4px 26px;font-size:13.5px;line-height:1.4}.yp-g summary{cursor:pointer;padding:7px 0;font-size:14px}.yp-g summary b{font-size:13.5px;letter-spacing:.2px}.yp-g{border-bottom:1px solid var(--line,#eee)}.yp-g:last-child{border:0}';document.head.appendChild(s)})();
 
 /* ===== NHẬP KẾ HOẠCH CONTENT TỪ EXCEL ===== */
 var PSYN={title:['title','tieu de','ten noi dung (tu dien)','ten noi dung','chu de','ten bai','noi dung','bai viet'],
